@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Map.css'
+import './Map.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import 'leaflet.markercluster';
@@ -49,7 +49,9 @@ function Map() {
     setShowTrace(false);
   };
   const mymap = useRef(null);
-  const markerCluster = useRef(L.markerClusterGroup());
+  const markerCluster = useRef(L.markerClusterGroup({
+    showCoverageOnHover: false,
+  }));
   const caseFeatures = useRef(L.featureGroup());
 
   const [showClusters, setShowClusters] = useState(true);
@@ -63,9 +65,9 @@ function Map() {
     mymap.current = L.map('map', {
       center: [-40.9006, 172.586],
       zoom: 6
-    })
+    });
     // mymap.current.zoomControl.setPosition('topright');
-    
+
     L.tileLayer(
       'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrN3ljNDcwZDA2MHozbXFncWxoZnV0MDcifQ.MhhGCM9OGXnzn1TWu6d9gg',
       {
@@ -84,7 +86,33 @@ function Map() {
 
     // mymap.current.on('click', () => updateMap())
     // mymap.current.on('click', onMapClick);
-  }
+
+    var lastZoom;
+   mymap.current.on('zoomend', function() {
+      var zoom =mymap.current.getZoom();
+      let threshold = 15;
+      if (zoom < threshold && (!lastZoom || lastZoom >= threshold)) {
+       mymap.current.eachLayer(function(l) {
+          if (l.getTooltip) {
+            var toolTip = l.getTooltip();
+            if (toolTip) {
+              mymap.current.closeTooltip(toolTip);
+            }
+          }
+        });
+      } else if (zoom >= threshold && (!lastZoom || lastZoom < threshold)) {
+       mymap.current.eachLayer(function(l) {
+          if (l.getTooltip) {
+            var toolTip = l.getTooltip();
+            if (toolTip) {
+              mymap.current.addLayer(toolTip);
+            }
+          }
+        });
+      }
+      lastZoom = zoom;
+    });
+  };
   useEffect(initMap, []);
 
   // get user location
@@ -96,10 +124,9 @@ function Map() {
       // L.circleMarker(e.latlng)
       //   .addTo(mymap.current)
 
-      L.circle(e.latlng, radius)
-        .addTo(mymap.current)
-        // .bindPopup('You are within ' + radius + ' meters from this point')
-        // .openPopup();
+      L.circle(e.latlng, radius).addTo(mymap.current);
+      // .bindPopup('You are within ' + radius + ' meters from this point')
+      // .openPopup();
     }
 
     mymap.current.on('locationfound', onLocationFound);
@@ -109,15 +136,16 @@ function Map() {
 
     // mymap.current.on('locationerror', onLocationError);
   };
-  useEffect(getUserLocation,[]);
+  useEffect(getUserLocation, []);
 
   const generateClusters = () => {
     // markerCluster = ;
     data.cases.forEach(async virusCase => {
       // console.log(virusCase.location_history[0].location)
       // console.log()
+      const locationHistory = virusCase.location_history;
       const coords = await getCoordinates(
-        virusCase.location_history[0].location
+        locationHistory[locationHistory.length-1].location
       );
 
       const marker = L.marker(coords, {
@@ -133,6 +161,15 @@ function Map() {
           // .openTooltip()
           {
             interactive: true
+          }
+        )
+        .bindTooltip(
+          `Case ${virusCase.case_number}<br>${new Date(
+            virusCase.date_confirmed
+          ).toLocaleDateString('en-NZ')}`,
+          // .openTooltip()
+          {
+            permanent : true
           }
         )
         .on('click', () => {
@@ -154,7 +191,9 @@ function Map() {
     });
 
     markerCluster.current.on('clusterclick', function(a) {
-      a.layer.zoomToBounds({ maxZoom: 15 });
+      a.layer.zoomToBounds(
+        // { maxZoom: 18 }
+        );
     });
 
     // setShowClusters(markerCluster)
@@ -169,8 +208,6 @@ function Map() {
     else markerCluster.current.remove();
   };
   useEffect(displayClusters, [showClusters]);
-  
-  
 
   // const updateMap = () => {
   //   showClusters && mymap.current.addLayer(showClusters);
@@ -212,11 +249,11 @@ function Map() {
     caseFeatures.current = L.featureGroup(caseConnections);
     // caseFeatures.addTo(mymap.current);
     // console.log(caseFeatures);
-    setShowTrace(true)
+    setShowTrace(true);
     console.log(caseFeatures.current.getBounds());
     mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
       padding: [30, 30],
-      duration: 1
+      duration: 2
     });
   };
 
@@ -226,10 +263,8 @@ function Map() {
   };
   useEffect(displayTrace, [showTrace]);
 
-
   return <div id="map"></div>;
 }
-
 
 const getFormattedDateString = date => {
   const newDate = new Date(date);

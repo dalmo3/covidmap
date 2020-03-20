@@ -9,25 +9,25 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '28 Feb, 2020',
-          location: 'Auckland Hospital',
+          date: '26 Feb, 2020',
+          location: 'Denpasar International Airport',
           // lat: -37.0082,
           // lon: 174.785,
-          description: ''
+          description: 'EK450'
         },
         {
-          date: '27 Feb, 2020 5:55',
+          date: '27 Feb, 2020',
           location: 'Auckland Airport',
           lat: -37.0082,
           lon: 174.785,
           description: 'EK450'
         },
         {
-          date: '26 Feb, 2020 17:08',
-          location: 'Denpasar International Airport',
+          date: '28 Feb, 2020',
+          location: 'Auckland Hospital',
           // lat: -37.0082,
           // lon: 174.785,
-          description: 'EK450'
+          description: ''
         }
       ],
       media_release_url:
@@ -73,19 +73,10 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '26 Feb, 2020 09:28',
+          date: '2020-03-19T07:27:06.075Z',
           location: 'Auckland',
-          // lat: -37.0082,
-          // lon: 174.785,
           description: ''
-        },
-        {
-          date: ' 25 Feb, 2020 18:45',
-          location: 'Singapore Changi Airport',
-          // lat: -37.0082,
-          // lon: 174.785,
-          description: ''
-        },
+        }
       ],
       media_release_url: '',
       media_release_description: '',
@@ -98,11 +89,12 @@ const data = {
       related_cases: [
         {
           case_number: 4,
-          relation: 'Same Flight'
+          relation: 'Same Flight',
+          source_url: '',
         }
       ],
-      gender: '',
-      age_bracket: 0
+      gender: 'Female',
+      age_bracket: 30
     },
     {
       id: 3,
@@ -137,38 +129,6 @@ const data = {
       age_bracket: 40
     },
     {
-      id: 5,
-      case_number: 5,
-      status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
-      date_suspected: '',
-      location_history: [
-        {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Wellington',
-          lat: -41.3276,
-          lon: 174.8076,
-          description: ''
-        }
-      ],
-      media_release_url: '',
-      media_release_description: '',
-      additional_info: [
-        {
-          info: '',
-          source_url: ''
-        }
-      ],
-      related_cases: [
-        {
-          case_number: 3,
-          relation: 'infected | infected by'
-        }
-      ],
-      gender: 'Female',
-      age_bracket: 40
-    },
-    {
       id: 4,
       case_number: 4,
       status: 'active',
@@ -199,6 +159,38 @@ const data = {
       ],
       gender: '',
       age_bracket: 0
+    },
+    {
+      id: 5,
+      case_number: 5,
+      status: 'active',
+      date_confirmed: '2020-03-19T07:27:06.075Z',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '19 Mar 2020 8:43',
+          location: 'Wellington',
+          lat: -41.3276,
+          lon: 174.8076,
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+        {
+          case_number: 3,
+          relation: 'infected | infected by'
+        }
+      ],
+      gender: 'Female',
+      age_bracket: 40
     }
   ]
 };
