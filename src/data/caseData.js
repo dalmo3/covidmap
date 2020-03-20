@@ -9,21 +9,21 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: new Date('28 Feb, 2020'),
+          date: '28 Feb, 2020',
           location: 'Auckland Hospital',
           // lat: -37.0082,
           // lon: 174.785,
           description: ''
         },
         {
-          date: new Date('27 Feb, 2020'),
+          date: '27 Feb, 2020 5:55',
           location: 'Auckland Airport',
           lat: -37.0082,
           lon: 174.785,
           description: 'EK450'
         },
         {
-          date: new Date('26 Feb, 2020'),
+          date: '26 Feb, 2020 17:08',
           location: 'Denpasar International Airport',
           // lat: -37.0082,
           // lon: 174.785,
@@ -73,12 +73,19 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
+          date: '26 Feb, 2020 09:28',
           location: 'Auckland',
-          lat: -37.0082,
-          lon: 174.785,
+          // lat: -37.0082,
+          // lon: 174.785,
           description: ''
-        }
+        },
+        {
+          date: ' 25 Feb, 2020 18:45',
+          location: 'Singapore Changi Airport',
+          // lat: -37.0082,
+          // lon: 174.785,
+          description: ''
+        },
       ],
       media_release_url: '',
       media_release_description: '',

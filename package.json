@@ -8,8 +8,10 @@
     "@testing-library/user-event": "^7.2.1",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
+    "leaflet.polyline.snakeanim": "^0.2.0",
     "node-open-geocoder": "^4.0.1",
     "react": "^16.13.0",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
