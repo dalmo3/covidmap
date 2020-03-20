@@ -93,7 +93,9 @@ function Map() {
     data.cases.forEach(async virusCase => {
       // console.log(virusCase.location_history[0].location)
       // console.log()
-      const coords = await getCoordinates(virusCase.location_history[0].location);
+      const coords = await getCoordinates(
+        virusCase.location_history[0].location
+      );
       // console.log(a[0]);
       // const lat = await getCoordinates(virusCase.location_history[0].location)[0].lat
       //     const lon =
@@ -107,7 +109,9 @@ function Map() {
 
       // ]
 
-      const marker = L.marker([coords[0].lat, coords[0].lon], { icon: getMarkerIcon() })
+      const marker = L.marker([coords[0].lat, coords[0].lon], {
+        icon: getMarkerIcon()
+      })
         // .on('click',()=>L.popup())
         // .bindPopup(`Case ${virusCase.case_number}`)
         .bindPopup(
@@ -119,7 +123,7 @@ function Map() {
             interactive: true
           }
         )
-        .on('click',() => traceCase(virusCase))
+        .on('click', () => traceCase(virusCase));
 
       // const popup = L.popup()
       //   .setContent(`Case ${virusCase.case_number}<br>${new Date(virusCase.date_confirmed).toLocaleDateString("en-NZ")}`,
@@ -130,7 +134,7 @@ function Map() {
       //     interactive: true,
       //   })
       //   .openOn(mymap);
-          
+
       markers.addLayer(marker);
     });
     // markers.addLayer(L.marker([51.538, -0.1], { icon: getMarkerIcon() }));
@@ -142,78 +146,43 @@ function Map() {
     });
   }, []);
 
-  const traceCase = async (virusCase) => {
-
-    const markers = await Promise.all(virusCase.location_history.map(async loc => {
-      // console.log(loc)
-      console.log(loc.location)
-      const coords = await getCoordinates(loc.location);
-      // console.log(coords[0])
-      const [lat, lon] = [Number.parseFloat(coords[0].lat), Number.parseFloat(coords[0].lon)];
-      return L.marker([lat, lon],{icon: getMarkerIcon()})
-    }))
+  const traceCase = async virusCase => {
+    const caseMarkers = await Promise.all(
+      virusCase.location_history.map(async loc => {
+        // console.log(loc)
+        console.log(loc.location);
+        const coords = await getCoordinates(loc.location);
+        // console.log(coords[0])
+        const [lat, lon] = [
+          Number.parseFloat(coords[0].lat),
+          Number.parseFloat(coords[0].lon)
+        ];
+        return L.marker([lat, lon], { icon: getMarkerIcon() });
+      })
+    );
     // console.log(await markers)
 
-    const grp = markers.reduce((grp,marker,i,arr) => {
+    const caseConnections = caseMarkers.reduce((grp, marker, i, arr) => {
       // console.log(marker)
       grp.push(marker);
-      if (arr[i+1]) {
-        const line = L.polyline([marker.getLatLng(),arr[i+1].getLatLng()]);
-        grp.push(line)
+      if (arr[i + 1]) {
+        const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
+        grp.push(line);
       }
       return grp;
-    },[])
-      
-    //   const locationGroup = virusCase.location_history.reduce((group,loc,i) => {
-    //     const coords = await getCoordinates(locA.location);
-    //     const [lat, lon] = [Number.parseFloat(coords[0].lat), Number.parseFloat(coords[0].lon)];
-    //   group.push(L.marker([lat, lon],{icon: getMarkerIcon()}),
-    //   const previous = group[i-2];
-    //   previous && group.push(L.polyline)
-    // },[])
+    }, []);
 
-    // const coords = await getCoordinates(virusCase.location_history[0].location)
-    // const [lat, lon] = [Number.parseFloat(coords[0].lat), Number.parseFloat(coords[0].lon)];
-    // console.log(lat,lon,lon)
-    // var route = L.layerGroup([
-    //   L.marker([lat, lon],{icon: getMarkerIcon()}),
-    //   L.polyline([[lat,lon], [lat+1,lon+1]]),
-    //   L.marker([lat+1,lon+1],{icon: getMarkerIcon()}),
-    //   // L.marker([lat+1,lon+3],{icon: getMarkerIcon()}),
-    //   // L.marker([lat+1,lon+1],{icon: getMarkerIcon()})
-    //   // L.marker([-40.9006, 172.586],{icon: getMarkerIcon()}),
-    //   // L.polyline([[-40.9006, 172.586], [-40.9006, 173.586]]),
-    //   // L.marker([-40.9006, 173.586],{icon: getMarkerIcon()})
-    // ]);
-    // route.addTo(mymap.current);
-    // mymap.current.flyToBounds([[lat,lon], [lat+1,lon+1]],{padding:[20,20], duration: 0.25})
-    const lg = L.featureGroup(grp)
-    lg.addTo(mymap.current);
-    console.log(lg)
-    console.log(lg.getBounds())
-    mymap.current.flyToBounds(lg.getBounds(),{padding:[20,20], duration: 0.25})
-  }
-  
-  const traceCase_old = async (virusCase) => {
-    const coords = await getCoordinates(virusCase.location_history[0].location)
-    const [lat, lon] = [Number.parseFloat(coords[0].lat), Number.parseFloat(coords[0].lon)];
-    console.log(lat,lon,lon)
-    var route = L.layerGroup([
-      L.marker([lat, lon],{icon: getMarkerIcon()}),
-      L.polyline([[lat,lon], [lat+1,lon+1]]),
-      L.marker([lat+1,lon+1],{icon: getMarkerIcon()}),
-      // L.marker([lat+1,lon+3],{icon: getMarkerIcon()}),
-      // L.marker([lat+1,lon+1],{icon: getMarkerIcon()})
-      // L.marker([-40.9006, 172.586],{icon: getMarkerIcon()}),
-      // L.polyline([[-40.9006, 172.586], [-40.9006, 173.586]]),
-      // L.marker([-40.9006, 173.586],{icon: getMarkerIcon()})
-    ]);
-    route.addTo(mymap.current);
-    mymap.current.flyToBounds([[lat,lon], [lat+1,lon+1]],{padding:[20,20], duration: 0.25})
-  }
-  
+    const caseFeatures = L.featureGroup(caseConnections);
+    caseFeatures.addTo(mymap.current);
+    console.log(caseFeatures);
+    console.log(caseFeatures.getBounds());
+    mymap.current.flyToBounds(caseFeatures.getBounds(), {
+      padding: [20, 20],
+      duration: 0.25
+    });
+  };
+
   return <div id="map"></div>;
 }
-
 
 export default Map;
