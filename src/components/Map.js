@@ -232,6 +232,7 @@ function Map() {
   // display case paths
   const traceCase = async virusCase => {
     // find all markers
+    const hasConnections = virusCase.location_history.length > 1;
     const caseMarkers = await Promise.all(
       virusCase.location_history.map(async loc => {
         // console.log(loc)
@@ -241,12 +242,12 @@ function Map() {
         // console.log(lat, lon)
         const locDate = getFormattedDateString(loc.date);
         // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
-        const locMarker = L.marker(coords, { icon: getMarkerIcon(virusCase.case_number) })
+        const locMarker = L.marker(coords, { icon: getMarkerIcon_old(virusCase.case_number) })
           .bindTooltip(`${loc.location}<br>${locDate}`, {
-            permanent: true
+            permanent: hasConnections
           })
           .bindPopup(`${loc.location}<br>${locDate}`)
-          .openTooltip();
+          // .openTooltip();
         return locMarker;
       })
     );
@@ -265,7 +266,7 @@ function Map() {
           featureGroup.push(line);
         }
         return featureGroup;
-      },
+      }, 
       []
     );
     caseFeatures.current = L.featureGroup(caseConnections);
@@ -273,9 +274,16 @@ function Map() {
     // console.log(caseFeatures);
     setShowTrace(true);
     console.log(caseFeatures.current.getBounds());
+
+    const maxZoom = 
+      hasConnections 
+      ? Math.min(12,mymap.current.getZoom())
+      : Math.max(8,mymap.current.getZoom())
+
     mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
       padding: [30, 30],
-      duration: 2
+      duration: 1,
+      maxZoom  
     });
   };
 
