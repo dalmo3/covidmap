@@ -5,7 +5,7 @@ const data = {
       id: 1,
       case_number: 1,
       status: 'active',
-      date_confirmed: new Date('28 Feb 2020'),
+      date_confirmed: '28 Feb 2020',
       date_suspected: '',
       location_history: [
         {
