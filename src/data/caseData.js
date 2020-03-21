@@ -73,7 +73,7 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
+          date: '4 Mar 2020',
           location: 'Auckland',
           description: ''
         }
