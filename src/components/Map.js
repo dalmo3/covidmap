@@ -320,6 +320,8 @@ const getMarkerIcon = (number) => {
     ${number}`,
     iconShape: 'circle',
     iconSize: [36,36],
+    iconAnchor: [18,18],
+    tooltipAnchor: [20,0],
     borderColor: '#333',
     textColor: '#333'
   };
@@ -337,6 +339,7 @@ const getMarkerIcon_old = () => {
     iconUrl: defaultMarker,
     iconAnchor: [12, 41],
     popupAnchor: [0, -41],
+    tooltipAnchor: [14, -30],
     shadowUrl: defaultMarkerShadow
   });
 };
