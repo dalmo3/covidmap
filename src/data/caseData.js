@@ -9,24 +9,28 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '26 Feb, 2020',
-          location: 'Denpasar International Airport',
-          // lat: -37.0082,
-          // lon: 174.785,
+          date: '',
+          location: 'Tehran ',
+          description: ''
+        },
+        {
+          date: '25 Feb 2020',
+          location: 'Dubai International Airport',
           description: 'EK450'
         },
         {
-          date: '27 Feb, 2020',
+          date: '25 Feb 2020',
+          location: 'Denpasar International Airport',
+          description: 'EK450'
+        },
+        {
+          date: '26 Feb, 2020',
           location: 'Auckland Airport',
-          lat: -37.0082,
-          lon: 174.785,
           description: 'EK450'
         },
         {
           date: '28 Feb, 2020',
           location: 'Auckland Hospital',
-          // lat: -37.0082,
-          // lon: 174.785,
           description: ''
         }
       ],
@@ -73,9 +77,34 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '4 Mar 2020',
-          location: 'Auckland',
-          description: ''
+          date: '24 Feb 2020',
+          location: 'Singapore Changi Airport',
+          description: 'NZ283'
+        },
+        {
+          date: '25 Feb 2020',
+          location: 'Auckland Airport',
+          description: 'NZ283'
+        },
+        {
+          date: '2 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'NZ5103'
+        },
+        {
+          date: '2 Mar 2020',
+          location: 'Palmerston North Airport',
+          description: 'NZ5103'
+        },
+        {
+          date: '2 Mar 2020',
+          location: 'Palmerston North Airport',
+          description: 'NZ 8114'
+        },
+        {
+          date: '2 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'NZ 8114'
         }
       ],
       media_release_url: '',
@@ -89,8 +118,8 @@ const data = {
       related_cases: [
         {
           case_number: 4,
-          relation: 'Same Flight',
-          source_url: '',
+          relation: 'Spouse',
+          source_url: 'https://www.stuff.co.nz/national/health/120049083/coronavirus-mum-with-virus-says-her-husband-is-nzs-fourth-diagnosed-case',
         }
       ],
       gender: 'Female',
@@ -100,29 +129,33 @@ const data = {
       id: 3,
       case_number: 3,
       status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
+      date_confirmed: '5 Mar, 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Wellington',
-          lat: -41.3276,
-          lon: 174.8076,
-          description: ''
+          date: '22 Feb 2020',
+          location: 'Doha Hamad International Airport ',
+          description: 'QR920'
+        },
+        {
+          date: '23 Feb 2020',
+          location: 'Auckland Airport',
+          description: 'QR920'
         }
       ],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: 'he likely contracted the virus from his father who had returned to Auckland from Iran',
+          source_url: 'https://www.stuff.co.nz/national/health/120025480/coronavirus-third-confirmed-case-for-new-zealand'
         }
       ],
       related_cases: [
         {
           case_number: 5,
-          relation: 'Partner'
+          relation: 'Partner',
+          source_url:'https://www.stuff.co.nz/national/health/120093774/ministry-of-health-to-give-an-update-on-coronavirus-situation-in-nz',
         }
       ],
       gender: 'Male',
@@ -132,16 +165,14 @@ const data = {
       id: 4,
       case_number: 4,
       status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
+      date_confirmed: '6 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Wellington',
-          lat: -41.3276,
-          lon: 174.8076,
-          description: ''
-        }
+          date: '24 Feb 2020',
+          location: 'Singapore Changi Airport ',
+          description: 'NZ0283'
+        },
       ],
       media_release_url: '',
       media_release_description: '',
@@ -157,14 +188,14 @@ const data = {
           relation: 'infected | infected by'
         }
       ],
-      gender: '',
-      age_bracket: 0
+      gender: 'male',
+      age_bracket: 40
     },
     {
       id: 5,
       case_number: 5,
       status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
+      date_confirmed: '7 Mar 2020',
       date_suspected: '',
       location_history: [
         {
