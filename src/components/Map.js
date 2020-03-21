@@ -5,6 +5,7 @@ import L from 'leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+import 'leaflet.geodesic'
 import openGeocoder from 'node-open-geocoder';
 const data = require('../data/caseData').data;
 const locationCache = require('../data/locationCache.json');
@@ -27,7 +28,14 @@ const getCoordinates = async location =>
       const { lat, lon } = cachedLocation[0].geocode;
       const coords = [Number.parseFloat(lat),Number.parseFloat(lon)]
       console.log(lat, lon, '(cached)');
-      resolve(coords);
+      const normalisedLatlng = 
+      L.latLng(
+        
+        Number.parseFloat(lat),
+        L.Util.wrapNum(Number.parseFloat(lon),[0,360],true))
+      // .wrap()
+      resolve(normalisedLatlng);
+      // resolve(coords);
     } else {
 
       openGeocoder()
@@ -226,10 +234,12 @@ function Map() {
       virusCase.location_history.map(async loc => {
         // console.log(loc)
         // console.log(loc.location);
-        const [lat, lon] = await getCoordinates(loc.location);
+        const coords = await getCoordinates(loc.location);
+        // const [lat, lon] = await getCoordinates(loc.location);
         // console.log(lat, lon)
         const locDate = getFormattedDateString(loc.date);
-        const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
+        // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
+        const locMarker = L.marker(coords, { icon: getMarkerIcon() })
           .bindTooltip(`${loc.location}<br>${locDate}`, {
             permanent: true
           })
@@ -245,7 +255,11 @@ function Map() {
         // console.log(marker)
         featureGroup.push(marker);
         if (arr[i + 1]) {
-          const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
+          const line = new L.Geodesic([marker.getLatLng(), arr[i + 1].getLatLng()]
+          , {wrap: false},
+          {steps: 2}
+          );
+          // const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
           featureGroup.push(line);
         }
         return featureGroup;
