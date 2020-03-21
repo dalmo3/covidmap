@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "leaflet": "^1.6.0",
+    "leaflet.beautifymarker": "^1.1.1",
     "leaflet.markercluster": "^1.4.1",
     "leaflet.polyline.snakeanim": "^0.2.0",
     "node-open-geocoder": "^4.0.1",
