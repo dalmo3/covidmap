@@ -179,6 +179,16 @@ const data = {
           location: 'Singapore Changi Airport ',
           description: 'NZ0283'
         },
+        {
+          date: '25 Feb 2020',
+          location: 'Auckland Airport ',
+          description: 'NZ0283'
+        },
+        {
+          date: '28 Feb 2020',
+          location: 'Spark Arena Auckland',
+          description: 'Tool concert, general admission standing area'
+        }
       ],
       media_release_url: '',
       media_release_description: '',
@@ -186,13 +196,14 @@ const data = {
         {
           info:
             'Singapore to Auckland (Air New Zealand 283 on Tuesday 25 February).  ',
-          ssource_url: ''
+          source_url: ''
         }
       ],
       related_cases: [
         {
-          case_number: 0,
-          relation: 'infected | infected by'
+          case_number: 2,
+          relation: 'spouse',
+          source_url: ''
         }
       ],
       gender: 'male',
@@ -206,12 +217,12 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '19 Mar 2020 8:43',
-          location: 'Wellington',
+          date: '',
+          location: 'Auckland',
           description: ''
         }
       ],
-      media_release_url: '',
+      media_release_url: 'https://www.health.govt.nz/news-media/news-items/covid-19-novel-coronavirus-update-7-march',
       media_release_description: '',
       additional_info: [
         {
@@ -223,7 +234,8 @@ const data = {
       related_cases: [
         {
           case_number: 3,
-          relation: 'infected | infected by'
+          relation: 'partner',
+          source_url: 'https://www.stuff.co.nz/national/health/120093774/ministry-of-health-to-give-an-update-on-coronavirus-situation-in-nz'
         }
       ],
       gender: 'Female',
@@ -233,14 +245,24 @@ const data = {
       id: 6,
       case_number: 6,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '14 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Auckland',
-          description: ''
-        }
+          date: '4 Mar 2020',
+          location: 'Houston George Bush Intercontinental Airport',
+          description: 'NZ 029 '
+        },
+        {
+          date: '6 Mar 2020',
+          location: 'Houston George Bush Intercontinental Airport',
+          description: 'NZ 029'
+        },
+        {
+          date: '8 Mar 2020',
+          location: 'Papakura Parish',
+          description: '8.30am Sunday Service '
+        },
       ],
       media_release_url: '',
       media_release_description: '',
@@ -249,6 +271,11 @@ const data = {
           info:
             'Houston to Auckland (Air New Zealand 029 on Friday 6 March).  ',
           source_url: ''
+        },
+        {
+          info:
+            'Patient six shared communion chalice at south Auckland church',
+          source_url: 'https://www.stuff.co.nz/national/health/coronavirus/120317684/coronavirus-patient-six-shared-communion-chalice-at-south-auckland-church'
         }
       ],
       related_cases: [],
@@ -259,13 +286,38 @@ const data = {
       id: 7,
       case_number: 7,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '15 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Dunedin',
-          description: ''
+          date: '9 Mar 2020',
+          location: 'Copenhagen Airport',
+          description: 'QR160'
+        },
+        {
+          date: '9 Mar 2020',
+          location: 'Doha Hamad International Airport',
+          description: 'QR160'
+        },
+        {
+          date: '9 Mar 2020',
+          location: 'Doha Hamad International Airport',
+          description: 'QR920'
+        },
+        {
+          date: '10 Mar 2020, 04:50',
+          location: 'Auckland Airport ',
+          description: 'QR920'
+        },
+        {
+          date: '10 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'JQ225'
+        },
+        {
+          date: '10/03/2020  08:00:00',
+          location: 'Christchurch International Airport',
+          description: 'JQ225'
         }
       ],
       media_release_url: '',
@@ -290,9 +342,24 @@ const data = {
       location_history: [
         {
           date: '',
-          location: 'Wellington',
+          location: 'France',
           description: ''
-        }
+        },
+        {
+          date: '',
+          location: 'Singapore',
+          description: ''
+        },
+        {
+          date: '13 Mar 2020',
+          location: 'Brisbane Airport',
+          description: 'NZ 828'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Wellington International Airport',
+          description: 'NZ 828'
+        },
       ],
       media_release_url: '',
       media_release_description: '',
@@ -311,13 +378,28 @@ const data = {
       id: 9,
       case_number: 9,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '17 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Wellington',
-          description: ''
+          date: '12 Mar 2020',
+          location: 'Los Angeles International Airport',
+          description: 'AA83'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'AA83'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'NZ828'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Wellington International Airport',
+          description: 'NZ828'
         }
       ],
       media_release_url: '',
@@ -329,7 +411,13 @@ const data = {
           source_url: ''
         }
       ],
-      related_cases: [],
+      related_cases: [
+        {
+          case_number: 10,
+          relation: 'son',
+          source_url: ''
+        }
+      ],
       gender: 'Male',
       age_bracket: '30s'
     },
@@ -337,13 +425,28 @@ const data = {
       id: 10,
       case_number: 10,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '17 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Wellington',
-          description: ''
+          date: '12 Mar 2020',
+          location: 'Los Angeles International Airport',
+          description: 'AA83'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'AA83'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'NZ828'
+        },
+        {
+          date: '14 Mar 2020',
+          location: 'Wellington International Airport',
+          description: 'NZ828'
         }
       ],
       media_release_url: '',
@@ -355,7 +458,13 @@ const data = {
           source_url: ''
         }
       ],
-      related_cases: [],
+      related_cases: [
+        {
+          case_number: 9,
+          relation: 'father',
+          source_url: ''
+        }
+      ],
       gender: 'Male',
       age_bracket: '70s'
     },
@@ -363,13 +472,38 @@ const data = {
       id: 11,
       case_number: 11,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '17 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Dunedin',
-          description: ''
+          date: '5 Mar 2020',
+          location: 'Frankfurt Airport',
+          description: 'SQ325'
+        },
+        {
+          date: '6 Mar 2020',
+          location: 'Singapore Changi Airport',
+          description: 'SQ325'
+        },
+        {
+          date: '6 Mar 2020 18:40',
+          location: 'Singapore Changi Airport',
+          description: 'NZ283'
+        },
+        {
+          date: '7 Mar 2020 09:35',
+          location: 'Auckland Airport',
+          description: 'NZ283'
+        },
+        {
+          date: '8 Mar 2020 12:25',
+          location: 'Auckland Airport',
+          description: 'NZ675'
+        },
+        {
+          date: '8 Mar 2020 14:20',
+          location: 'Dunedin International Airport',
+          description: 'NZ675'
         }
       ],
       media_release_url: '',
@@ -381,7 +515,13 @@ const data = {
           source_url: ''
         }
       ],
-      related_cases: [],
+      related_cases: [
+        {
+          case_number: 11,
+          relation: 'father',
+          source_url: 'https://www.stuff.co.nz/national/health/coronavirus/120336762/live-ministry-of-health-coronavirus-press-conference'
+        }
+      ],
       gender: 'Male',
       age_bracket: '40s'
     },
@@ -389,12 +529,12 @@ const data = {
       id: 12,
       case_number: 12,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '17 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
-          location: 'Dunedin',
+          location: 'Logan Park High School',
           description: ''
         }
       ],
@@ -404,9 +544,19 @@ const data = {
         {
           info: 'Associated with travel of case 11.',
           source_url: ''
+        },
+        {
+          info: 'Test results negative for all Logan Park High School contacts',
+          source_url: 'https://www.health.govt.nz/news-media/media-releases/covid-19-test-results-negative-all-logan-park-high-school-contacts'
         }
       ],
-      related_cases: [],
+      related_cases: [
+        {
+          case_number: 11,
+          relation: 'son',
+          source_url: ''
+        }
+      ],
       gender: 'Male',
       age_bracket: 'Teens'
     },
@@ -414,9 +564,14 @@ const data = {
       id: 13,
       case_number: 13,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
+        {
+          date: '',
+          location: 'Europe',
+          description: ''
+        },
         {
           date: '',
           location: 'Auckland',
@@ -439,13 +594,18 @@ const data = {
       id: 14,
       case_number: 14,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'Europe',
+          description: 'flights details to come'
+        },
+        {
+          date: '9 Mar 2020',
           location: 'Auckland',
-          description: ''
+          description: 'flights details to come'
         }
       ],
       media_release_url: '',
@@ -465,13 +625,18 @@ const data = {
       id: 15,
       case_number: 15,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Auckland',
-          description: ''
+          date: '11 mar 2020 19:40',
+          location: 'San Francisco International Airport',
+          description: 'NZ 007'
+        },
+        {
+          date: '13 mar 2020 05:45',
+          location: 'Auckland Airport',
+          description: 'NZ 007'
         }
       ],
       media_release_url: '',
@@ -491,13 +656,13 @@ const data = {
       id: 16,
       case_number: 16,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Auckland',
-          description: ''
+          date: '12 Mar 2020',
+          location: 'Canada',
+          description: 'flights details to come'
         }
       ],
       media_release_url: '',
@@ -517,13 +682,18 @@ const data = {
       id: 17,
       case_number: 17,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'Gold Coast, Australia',
+          description: 'flight details to come'
+        },
+        {
+          date: '5 Mar 2020',
           location: 'Invercargill',
-          description: ''
+          description: 'flight details to come'
         }
       ],
       media_release_url: '',
@@ -543,13 +713,18 @@ const data = {
       id: 18,
       case_number: 18,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'London',
+          description: 'flight details to come'
+        },
+        {
+          date: '16 Mar 2020',
           location: 'Canterbury',
-          description: ''
+          description: 'flight details to come'
         }
       ],
       media_release_url: '',
@@ -569,13 +744,18 @@ const data = {
       id: 19,
       case_number: 19,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'Sydney',
+          description: 'flight details to come.'
+        },
+        {
+          date: '8 Mar 2020',
           location: 'Waikato',
-          description: ''
+          description: 'flight details to come.'
         }
       ],
       media_release_url: '',
@@ -595,13 +775,18 @@ const data = {
       id: 20,
       case_number: 20,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '18 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'Europe',
+          description: 'flight details to come.'
+        },
+        {
+          date: '15 Mar 2020',
           location: 'Waikato',
-          description: ''
+          description: 'flight details to come.'
         }
       ],
       media_release_url: '',
@@ -621,13 +806,28 @@ const data = {
       id: 21,
       case_number: 21,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 Mar 2020',
       date_suspected: '',
       location_history: [
         {
           date: '',
+          location: 'Cairo International Airport',
+          description: 'EK926'
+        },
+        {
+          date: '8 Mar 2020',
+          location: 'Dubai International Airport',
+          description: 'EK448'
+        },
+        {
+          date: '9 Mar, 2020 13:55',
+          location: 'Auckland Airport',
+          description: 'NZ8041'
+        },
+        {
+          date: '9 Mar, 2020 14:49',
           location: 'Taranaki',
-          description: ''
+          description: 'NZ8041'
         }
       ],
       media_release_url: '',
