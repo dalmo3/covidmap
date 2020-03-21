@@ -217,7 +217,7 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '',
+          date: '7 Mar 2020',
           location: 'Auckland',
           description: ''
         }
@@ -250,12 +250,12 @@ const data = {
       location_history: [
         {
           date: '4 Mar 2020',
-          location: 'Houston George Bush Intercontinental Airport',
+          location: 'Houston Intercontinental Airport',
           description: 'NZ 029 '
         },
         {
           date: '6 Mar 2020',
-          location: 'Houston George Bush Intercontinental Airport',
+          location: 'Auckland Airport',
           description: 'NZ 029'
         },
         {
@@ -318,6 +318,11 @@ const data = {
           date: '10/03/2020  08:00:00',
           location: 'Christchurch International Airport',
           description: 'JQ225'
+        },
+        {
+          date: '',
+          location: 'Dunedin',
+          description: ''
         }
       ],
       media_release_url: '',
@@ -337,7 +342,7 @@ const data = {
       id: 8,
       case_number: 8,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '15 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -568,21 +573,21 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '',
-          location: 'Europe',
-          description: ''
+          date: '21 Mar, 2020 10:13',
+          location: 'Dubai International Airport',
+          description: 'EK448 '
         },
         {
-          date: '',
-          location: 'Auckland',
-          description: ''
+          date: '22 Mar, 2020 10:32',
+          location: 'Auckland Airport',
+          description: 'EK448 '
         }
       ],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
         {
-          info: 'Extensive travel through Europe - flight details to come.',
+          info: 'Dubai to Auckland on 14 March – flight EK448.',
           source_url: ''
         }
       ],
@@ -660,8 +665,13 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '12 Mar 2020',
+          date: '11 Mar 2020',
           location: 'Canada',
+          description: 'flights details to come'
+        },
+        {
+          date: '12 Mar 2020',
+          location: 'Auckland Airport',
           description: 'flights details to come'
         }
       ],
@@ -691,7 +701,7 @@ const data = {
           description: 'flight details to come'
         },
         {
-          date: '5 Mar 2020',
+          date: '10 Mar 2020',
           location: 'Invercargill',
           description: 'flight details to come'
         }
@@ -722,9 +732,14 @@ const data = {
           description: 'flight details to come'
         },
         {
-          date: '16 Mar 2020',
-          location: 'Canterbury',
-          description: 'flight details to come'
+          date: '15 Mar, 2020 19:42',
+          location: 'Singapore Changi Airport',
+          description: 'SQ297'
+        },
+        {
+          date: '16 Mar, 2020 10:18',
+          location: 'Christchurch International Airport',
+          description: 'SQ297'
         }
       ],
       media_release_url: '',
@@ -748,14 +763,19 @@ const data = {
       date_suspected: '',
       location_history: [
         {
-          date: '',
+          date: '8 Mar 2020',
           location: 'Sydney',
-          description: 'flight details to come.'
+          description: 'NZ112.'
+        },
+        {
+          date: '8 Mar 2020',
+          location: 'Auckland Airport',
+          description: 'NZ112.'
         },
         {
           date: '8 Mar 2020',
           location: 'Waikato',
-          description: 'flight details to come.'
+          description: ''
         }
       ],
       media_release_url: '',
@@ -847,7 +867,7 @@ const data = {
       id: 22,
       case_number: 22,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -873,7 +893,7 @@ const data = {
       id: 23,
       case_number: 23,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -899,7 +919,7 @@ const data = {
       id: 24,
       case_number: 24,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -925,7 +945,7 @@ const data = {
       id: 25,
       case_number: 25,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -951,7 +971,7 @@ const data = {
       id: 26,
       case_number: 26,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -977,7 +997,7 @@ const data = {
       id: 27,
       case_number: 27,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1002,7 +1022,7 @@ const data = {
       id: 28,
       case_number: 28,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '19 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1027,7 +1047,7 @@ const data = {
       id: 29,
       case_number: 29,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1052,7 +1072,7 @@ const data = {
       id: 30,
       case_number: 30,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1078,7 +1098,7 @@ const data = {
       id: 31,
       case_number: 31,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1104,7 +1124,7 @@ const data = {
       id: 32,
       case_number: 32,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1130,7 +1150,7 @@ const data = {
       id: 33,
       case_number: 33,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1155,7 +1175,7 @@ const data = {
       id: 34,
       case_number: 34,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1180,7 +1200,7 @@ const data = {
       id: 35,
       case_number: 35,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1205,7 +1225,7 @@ const data = {
       id: 36,
       case_number: 36,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1230,7 +1250,7 @@ const data = {
       id: 37,
       case_number: 37,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1256,7 +1276,7 @@ const data = {
       id: 38,
       case_number: 38,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1281,7 +1301,7 @@ const data = {
       id: 39,
       case_number: 39,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '20 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1306,7 +1326,7 @@ const data = {
       id: 40,
       case_number: 40,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1332,7 +1352,7 @@ const data = {
       id: 41,
       case_number: 41,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1358,7 +1378,7 @@ const data = {
       id: 42,
       case_number: 42,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1383,7 +1403,7 @@ const data = {
       id: 43,
       case_number: 43,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1408,7 +1428,7 @@ const data = {
       id: 44,
       case_number: 44,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1434,7 +1454,7 @@ const data = {
       id: 45,
       case_number: 45,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1460,7 +1480,7 @@ const data = {
       id: 46,
       case_number: 46,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1485,7 +1505,7 @@ const data = {
       id: 47,
       case_number: 47,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1510,7 +1530,7 @@ const data = {
       id: 48,
       case_number: 48,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1536,7 +1556,7 @@ const data = {
       id: 49,
       case_number: 49,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1562,7 +1582,7 @@ const data = {
       id: 50,
       case_number: 50,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1587,7 +1607,7 @@ const data = {
       id: 51,
       case_number: 51,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -1618,7 +1638,7 @@ const data = {
       id: 52,
       case_number: 52,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '21 mar 2020',
       date_suspected: '',
       location_history: [
         {
