@@ -1,37 +1,37 @@
 const data = {
-  date: '2020-03-19T07:27:06.075Z',
+  date: "2020-03-19T07:27:06.075Z",
   cases: [
     {
       id: 1,
       case_number: 1,
-      status: 'active',
-      date_confirmed: new Date('28 Feb 2020'),
-      date_suspected: '',
+      status: "active",
+      date_confirmed: "28 Feb 2020",
+      date_suspected: "",
       location_history: [
         {
-          date: '26 Feb, 2020',
-          location: 'Denpasar International Airport',
+          date: "26 Feb, 2021",
+          location: "Denpasar International Airport",
           // lat: -37.0082,
           // lon: 174.785,
-          description: 'EK450'
+          description: "EK450"
         },
         {
-          date: '27 Feb, 2020',
-          location: 'Auckland Airport',
+          date: "27 Feb, 2020",
+          location: "Auckland Airport",
           lat: -37.0082,
           lon: 174.785,
-          description: 'EK450'
+          description: "EK450"
         },
         {
-          date: '28 Feb, 2020',
-          location: 'Auckland Hospital',
+          date: "28 Feb, 2020",
+          location: "Auckland Hospital",
           // lat: -37.0082,
           // lon: 174.785,
-          description: ''
+          description: ""
         }
       ],
       media_release_url:
-        'https://www.health.govt.nz/news-media/media-releases/single-case-covid-19-confirmed-new-zealand',
+        "https://www.health.govt.nz/news-media/media-releases/single-case-covid-19-confirmed-new-zealand",
       media_release_description: `The first case of COVID-19 is now confirmed in New Zealand in a person in their 60s recently returned from Iran.
 
       The results of the test were formally reported to the Ministry at around 4.15pm this afternoon.
@@ -57,139 +57,139 @@ const data = {
       Hospital staff involved in the patient's care are using with appropriate personal protection. District health boards have been preparing for managing cases of COVID-19.`,
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: "",
+          source_url: ""
         }
       ],
       related_cases: [],
-      gender: '',
+      gender: "",
       age_bracket: 60
     },
     {
       id: 2,
       case_number: 2,
-      status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
-      date_suspected: '',
+      status: "active",
+      date_confirmed: "2020-03-19T07:27:06.075Z",
+      date_suspected: "",
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Auckland',
-          description: ''
+          date: "2020-03-19T07:27:06.075Z",
+          location: "Auckland",
+          description: ""
         }
       ],
-      media_release_url: '',
-      media_release_description: '',
+      media_release_url: "",
+      media_release_description: "",
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: "",
+          source_url: ""
         }
       ],
       related_cases: [
         {
           case_number: 4,
-          relation: 'Same Flight',
-          source_url: '',
+          relation: "Same Flight",
+          source_url: ""
         }
       ],
-      gender: 'Female',
+      gender: "Female",
       age_bracket: 30
     },
     {
       id: 3,
       case_number: 3,
-      status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
-      date_suspected: '',
+      status: "active",
+      date_confirmed: "2020-03-19T07:27:06.075Z",
+      date_suspected: "",
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Wellington',
+          date: "2020-03-19T07:27:06.075Z",
+          location: "Wellington",
           lat: -41.3276,
           lon: 174.8076,
-          description: ''
+          description: ""
         }
       ],
-      media_release_url: '',
-      media_release_description: '',
+      media_release_url: "",
+      media_release_description: "",
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: "",
+          source_url: ""
         }
       ],
       related_cases: [
         {
           case_number: 5,
-          relation: 'Partner'
+          relation: "Partner"
         }
       ],
-      gender: 'Male',
+      gender: "Male",
       age_bracket: 40
     },
     {
       id: 4,
       case_number: 4,
-      status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
-      date_suspected: '',
+      status: "active",
+      date_confirmed: "2020-03-19T07:27:06.075Z",
+      date_suspected: "",
       location_history: [
         {
-          date: '2020-03-19T07:27:06.075Z',
-          location: 'Wellington',
+          date: "2020-03-19T07:27:06.075Z",
+          location: "Wellington",
           lat: -41.3276,
           lon: 174.8076,
-          description: ''
+          description: ""
         }
       ],
-      media_release_url: '',
-      media_release_description: '',
+      media_release_url: "",
+      media_release_description: "",
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: "",
+          source_url: ""
         }
       ],
       related_cases: [
         {
           case_number: 0,
-          relation: 'infected | infected by'
+          relation: "infected | infected by"
         }
       ],
-      gender: '',
+      gender: "",
       age_bracket: 0
     },
     {
       id: 5,
       case_number: 5,
-      status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
-      date_suspected: '',
+      status: "active",
+      date_confirmed: "2020-03-19T07:27:06.075Z",
+      date_suspected: "",
       location_history: [
         {
-          date: '19 Mar 2020 8:43',
-          location: 'Wellington',
+          date: "19 Mar 2020 8:43",
+          location: "Wellington",
           lat: -41.3276,
           lon: 174.8076,
-          description: ''
+          description: ""
         }
       ],
-      media_release_url: '',
-      media_release_description: '',
+      media_release_url: "",
+      media_release_description: "",
       additional_info: [
         {
-          info: '',
-          source_url: ''
+          info: "",
+          source_url: ""
         }
       ],
       related_cases: [
         {
           case_number: 3,
-          relation: 'infected | infected by'
+          relation: "infected | infected by"
         }
       ],
-      gender: 'Female',
+      gender: "Female",
       age_bracket: 40
     }
   ]
