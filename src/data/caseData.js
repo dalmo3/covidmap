@@ -170,8 +170,6 @@ const data = {
         {
           date: '19 Mar 2020 8:43',
           location: 'Wellington',
-          lat: -41.3276,
-          lon: 174.8076,
           description: ''
         }
       ],
@@ -191,7 +189,1255 @@ const data = {
       ],
       gender: 'Female',
       age_bracket: 40
-    }
+    },
+    {
+      id: 53,
+      case_number: 53,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 52,
+      case_number: 52,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Nelson',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 51,
+      case_number: 51,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Nelson',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 50,
+      case_number: 50,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Manawatu',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 49,
+      case_number: 49,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Manawatu',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 48,
+      case_number: 48,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Taupo',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 47,
+      case_number: 47,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 46,
+      case_number: 46,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 45,
+      case_number: 45,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 44,
+      case_number: 44,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 43,
+      case_number: 43,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Waikato',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 42,
+      case_number: 42,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 41,
+      case_number: 41,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Taranaki',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 40,
+      case_number: 40,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington Region',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 39,
+      case_number: 39,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 38,
+      case_number: 38,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 37,
+      case_number: 37,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 36,
+      case_number: 36,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 35,
+      case_number: 35,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 34,
+      case_number: 34,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Waikato',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 33,
+      case_number: 33,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Waikato',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 32,
+      case_number: 32,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Hawkes Bay',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 31,
+      case_number: 31,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 30,
+      case_number: 30,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Canterbury',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 29,
+      case_number: 29,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 28,
+      case_number: 28,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Southern DHB',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 27,
+      case_number: 27,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Southern DHB',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 26,
+      case_number: 26,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 25,
+      case_number: 25,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 24,
+      case_number: 24,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Rotorua',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 23,
+      case_number: 23,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Northland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 22,
+      case_number: 22,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Taranaki',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 21,
+      case_number: 21,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Taranaki',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 20,
+      case_number: 20,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Waikato',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 19,
+      case_number: 19,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Waikato',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 18,
+      case_number: 18,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Canterbury',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 17,
+      case_number: 17,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Invercargill',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 16,
+      case_number: 16,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 15,
+      case_number: 15,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 14,
+      case_number: 14,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 13,
+      case_number: 13,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 12,
+      case_number: 12,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Dunedin',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 11,
+      case_number: 11,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Dunedin',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 10,
+      case_number: 10,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 9,
+      case_number: 9,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 8,
+      case_number: 8,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Wellington',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 7,
+      case_number: 7,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Dunedin',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
+    {
+      id: 6,
+      case_number: 6,
+      status: 'active',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        {
+          date: '',
+          location: 'Auckland',
+          description: ''
+        }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: '',
+          source_url: ''
+        }
+      ],
+      related_cases: [
+      ],
+      gender: '',
+      age_bracket: 0
+    },
   ]
 };
 

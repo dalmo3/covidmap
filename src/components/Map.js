@@ -23,12 +23,14 @@ const getCoordinates = async location =>
       loc => loc.location === location
     );
     // console.log(cachedLocation)
-    if (cachedLocation) {
+    if (cachedLocation.length) {
       const { lat, lon } = cachedLocation[0].geocode;
+      const coords = [Number.parseFloat(lat),Number.parseFloat(lon)]
       console.log(lat, lon, '(cached)');
-      resolve([lat, lon]);
-    }
-    openGeocoder()
+      resolve(coords);
+    } else {
+
+      openGeocoder()
       .geocode(location)
       .end((err, response) => {
         if (err) return reject(err);
@@ -36,8 +38,10 @@ const getCoordinates = async location =>
         // parsedCache.push(response);
         // fs.writeFileSync(LOCATION_CACHE_PATH,JSON.stringify(parsedCache))
         const { lat, lon } = response[0];
-        return resolve([lat, lon]);
+        const coords = [Number.parseFloat(lat),Number.parseFloat(lon),]
+        return resolve(coords);
       });
+    }
   });
 
 function Map() {
@@ -51,6 +55,8 @@ function Map() {
   const mymap = useRef(null);
   const markerCluster = useRef(L.markerClusterGroup({
     showCoverageOnHover: false,
+    spiderfyDistanceMultiplier: 3,
+    
   }));
   const caseFeatures = useRef(L.featureGroup());
 
@@ -167,11 +173,11 @@ function Map() {
           `Case ${virusCase.case_number}<br>${new Date(
             virusCase.date_confirmed
           ).toLocaleDateString('en-NZ')}`,
-          // .openTooltip()
           {
             permanent : true
           }
-        )
+          )
+          // .openTooltip()
         .on('click', () => {
           setShowClusters(false);
           traceCase(virusCase);
@@ -190,11 +196,11 @@ function Map() {
       markerCluster.current.addLayer(marker);
     });
 
-    markerCluster.current.on('clusterclick', function(a) {
-      a.layer.zoomToBounds(
-        // { maxZoom: 18 }
-        );
-    });
+    // markerCluster.current.on('clusterclick', function(a) {
+    //   a.layer.zoomToBounds(
+    //     // { maxZoom: 18 }
+    //     );
+    // });
 
     // setShowClusters(markerCluster)
     console.log('cl', showClusters);
