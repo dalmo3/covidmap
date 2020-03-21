@@ -159,9 +159,8 @@ function Map() {
     data.cases.forEach(async virusCase => {
       // console.log(virusCase.location_history[0].location)
       // console.log()
-      const locationHistory = virusCase.location_history;
-      const coords = await getCoordinates(
-        locationHistory[locationHistory.length-1].location
+      const location = virusCase.location_history.slice(-1)[0].location;
+      const coords = await getCoordinates(location
       );
 
       const marker = L.marker(coords, {
@@ -170,17 +169,21 @@ function Map() {
       })
         // .on('click',()=>L.popup())
         // .bindPopup(`Case ${virusCase.case_number}`)
-        .bindPopup(
-          `Case ${virusCase.case_number}<br>${new Date(
-            virusCase.date_confirmed
-          ).toLocaleDateString('en-NZ')}`,
-          // .openTooltip()
-          {
-            interactive: true
-          }
-        )
+        // .bindPopup(
+        //   `Case ${virusCase.case_number}
+        //   ${location}
+        //   ${new Date(
+        //     virusCase.date_confirmed
+        //   ).toLocaleDateString('en-NZ')}`,
+        //   // .openTooltip()
+        //   {
+        //     interactive: true
+        //   }
+        // )
         .bindTooltip(
-          `${new Date(
+          `${location}
+          <br>
+          ${new Date(
             virusCase.date_confirmed
           ).toLocaleDateString('en-NZ')}`,
           {
