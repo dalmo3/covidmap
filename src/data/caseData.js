@@ -342,7 +342,7 @@ const data = {
       id: 8,
       case_number: 8,
       status: 'active',
-      date_confirmed: '',
+      date_confirmed: '15 Mar 2020',
       date_suspected: '',
       location_history: [
         {
@@ -668,6 +668,11 @@ const data = {
           date: '12 Mar 2020',
           location: 'Canada',
           description: 'flights details to come'
+        },
+        {
+          date: '',
+          location: 'Auckland Airport',
+          description: 'flights details to come'
         }
       ],
       media_release_url: '',
@@ -728,7 +733,7 @@ const data = {
         },
         {
           date: '16 Mar 2020',
-          location: 'Canterbury',
+          location: 'Canterbury New Zealand',
           description: 'flight details to come'
         }
       ],
