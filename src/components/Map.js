@@ -26,7 +26,7 @@ const getCoordinates = async location =>
     if (cachedLocation.length) {
       const { lat, lon } = cachedLocation[0].geocode;
       const coords = [Number.parseFloat(lat),Number.parseFloat(lon)]
-      console.log(lat, lon, '(cached)');
+      console.log(location, lat, lon, '(cached)');
       resolve(coords);
     } else {
 

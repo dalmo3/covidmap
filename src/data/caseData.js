@@ -250,12 +250,12 @@ const data = {
       location_history: [
         {
           date: '4 Mar 2020',
-          location: 'Houston George Bush Intercontinental Airport',
+          location: 'Houston Intercontinental Airport',
           description: 'NZ 029 '
         },
         {
           date: '6 Mar 2020',
-          location: 'Houston George Bush Intercontinental Airport',
+          location: 'Auckland Airport',
           description: 'NZ 029'
         },
         {
@@ -318,6 +318,11 @@ const data = {
           date: '10/03/2020  08:00:00',
           location: 'Christchurch International Airport',
           description: 'JQ225'
+        },
+        {
+          date: '',
+          location: 'Dunedin',
+          description: ''
         }
       ],
       media_release_url: '',
