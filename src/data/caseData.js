@@ -69,7 +69,7 @@ const data = {
       id: 2,
       case_number: 2,
       status: 'active',
-      date_confirmed: '2020-03-19T07:27:06.075Z',
+      date_confirmed: '4 Mar 2020',
       date_suspected: '',
       location_history: [
         {
