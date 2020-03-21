@@ -1602,6 +1602,11 @@ const data = {
       location_history: [
         {
           date: '',
+          location: 'Texas',
+          description: ''
+        },
+        {
+          date: '',
           location: 'Nelson',
           description: ''
         }

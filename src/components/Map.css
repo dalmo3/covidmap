@@ -11,3 +11,12 @@ body,
   min-height: 100%;
   width: 100%;
 }
+
+.beautify-marker.circle {
+  display: flex;
+  font-size: 1em;
+  line-height: 1;
+  align-items: center;
+  border: none!important;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}

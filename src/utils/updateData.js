@@ -19,13 +19,14 @@ const updateCache = () => {
     
     // if not, fetch it and save
     if (!cachedLocation.length) {
-      console.log('a')
+      // console.log('a')
       openGeocoder()
       .geocode(caseLoc.location)
       .end((err, response) => {
         // if (err) return reject(err);
         // console.log(response)
-        // delete response[0].geojson;
+        if (!(response && response[0])) return; 
+        delete response[0].geojson;
         const newEntry = {
           location: caseLoc.location,
           geocode: response[0]
