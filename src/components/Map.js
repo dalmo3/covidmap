@@ -192,7 +192,7 @@ function Map() {
 
     // mymap.current.on('locationerror', onLocationError);
   };
-  useEffect(getUserLocation, []);
+  // useEffect(getUserLocation, []);
 
   const generateClusters = () => {
     // markerCluster = ;
