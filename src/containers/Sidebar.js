@@ -10,9 +10,18 @@ const Sidebar = props => (
       pageWrapId={'page-wrap'}
       outerContainerId={'outer-container'}
     >
-      <h2>Built by Dalmo Mendonça</h2>
+      <h4>Built by Dalmo Mendonça</h4>
       <p>More info soon...</p>
-      <a href='https://virtua.nz'>Get in touch</a>
+      <p>Got info on cases? Contact us at <a href='mailto:info@covidmap.nz'>info@covidmap.nz</a></p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p>Sponsored by <a href='https://virtua.nz'>Virtua</a></p>
+      <p><a href='mailto:info@covidmap.nz'>Become a sponsor</a></p>
     </Menu>
     <main id="page-wrap">
       {props.children}
