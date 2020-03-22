@@ -297,7 +297,7 @@ function Map() {
 }
 
 const getFormattedDateString = date => {
-  if (!date) return 'Date Unkown'
+  if (!date) return 'Date Unavailable'
   const newDate = new Date(date);
   const options = {
     day: '2-digit',
