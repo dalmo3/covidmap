@@ -294,9 +294,10 @@ function Map() {
         // console.log(marker)
         featureGroup.push(marker);
         if (arr[i + 1]) {
-          const line = new L.Geodesic(
-            [marker.getLatLng(), arr[i + 1].getLatLng()],
-            { wrap: false, steps: 2 }
+          // const line = new L.Geodesic(
+          const line = new L.polyline(
+            [marker.getLatLng(), arr[i + 1].getLatLng()]
+            ,{ wrap: false, steps: 10 }
           );
           // const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
           featureGroup.push(line);
