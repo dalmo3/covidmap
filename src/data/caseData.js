@@ -2039,6 +2039,16 @@ const data = {
         description: 'NZ 1' 
       },
       {
+        date: '14 Mar, 2020 09:33', 
+        location: 'Auckland Airport', 
+        description: 'NZ 615' 
+      },
+      {
+        date: '14 Mar, 2020 11:22', 
+        location: 'Queenstown Airport', 
+        description: 'NZ 615' 
+      },
+      {
         date: '', 
         location: 'Dunedin', 
         description: '' 
@@ -2084,7 +2094,10 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Waikato', description: '' }],
+      location_history: [
+        { date: '14 Mar, 2020 13:31', location: 'Honolulu International Airport', description: 'HA445' },
+        { date: '15 Mar, 2020 21:49', location: 'Auckland Airport', description: 'HA445' },
+        { date: '', location: 'Waikato', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2106,6 +2119,7 @@ const data = {
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
       location_history: [
+        { date: '', location: 'United States of America', description: 'details to come' },
         { date: '', location: 'Bay of Plenty', description: '' }
       ],
       media_release_url: '',
@@ -2128,7 +2142,12 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Hamilton NZ', description: '' }],
+      location_history: [
+        { date: '', location: 'Ireland', description: 'Details to come' },
+        { date: '', location: 'Dubai', description: 'Details to come' },
+        { date: '', location: 'Australia', description: 'Details to come' },
+        { date: '', location: 'Hamilton NZ', description: '' }
+    ],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2149,7 +2168,8 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      location_history: [{ date: '15 Mar, 2020 15:03', location: 'Dunedin International Airport', description: 'NZ674' },
+      { date: '15 Mar, 2020 16:50', location: 'Auckland Airport', description: 'NZ674' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2191,7 +2211,9 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      location_history: [
+        { date: '15 Mar, 2020 10:26', location: 'Dubai International Airport', description: 'EK448' },
+        { date: '16 Mar, 2020 10:38', location: 'Auckland Airport', description: 'EK448' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2211,7 +2233,9 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      location_history: [
+        { date: '', location: 'Africa', description: 'details to come' },
+        { date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2231,7 +2255,12 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Taranaki', description: '' }],
+      location_history: [
+        { date: '14 Mar, 2020 18:52', location: 'Bangkok Suvarnabhumi Airport', description: 'TG491' },
+        { date: '15 Mar, 2020 11:52', location: 'Auckland Airport', description: 'TG491' },
+        { date: '16 Mar, 2020 13:54', location: 'Auckland Airport', description: 'NZ8041' },
+        { date: '16 Mar, 2020 14:36', location: 'New Plymouth Airport', description: 'NZ8041' },
+        { date: '', location: 'Taranaki', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2252,7 +2281,12 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Taranaki', description: '' }],
+      location_history: 
+      [ { date: '16 Mar, 2020 10:11', location: 'Dubai International Airport', description: 'EK448' },
+      {date: '17 Mar, 2020 11:09', location: 'Auckland Airport', description: 'EK448' },
+      {date: '18 Mar, 2020 13:53', location: 'Auckland Airport', description: 'NZ8041' },
+      {date: '18 Mar, 2020 13:53', location: 'New Plymouth Airport', description: 'NZ8041' },
+        { date: '', location: 'Taranaki', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2273,7 +2307,12 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Canterbury NZ', description: '' }],
+      location_history: [
+        { date: '14 Mar, 2020 20:40', location: 'San Francisco International Airport', description: 'NZ7' },
+        { date: '16 Mar, 2020 05:36', location: 'Auckland Airport', description: 'NZ7' },
+        { date: '17 Mar, 2020 08:07', location: 'Auckland Airport', description: 'NZ523' },
+        { date: '17 Mar, 2020 09:28', location: 'Christchurch International Airport', description: 'NZ523' },
+        { date: '', location: 'Canterbury NZ', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2294,7 +2333,10 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Northland', description: '' }],
+      location_history: [
+        { date: '14 Mar, 2020 23:43', location: 'Melbourne Airport', description: 'JQ217' },
+        { date: '15 Mar, 2020 05:19', location: 'Auckland Airport', description: 'JQ217' },
+        { date: '', location: 'Northland', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2314,7 +2356,9 @@ const data = {
       status: '',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      location_history: [
+        { date: '14 Mar, 2020 10:55', location: 'Dubai International Airport', description: 'EK448' },
+        { date: '15 Mar, 2020 10:52', location: 'Auckland Airport', description: 'EK448' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
