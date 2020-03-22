@@ -1658,6 +1658,297 @@ const data = {
       related_cases: [],
       gender: 'Female',
       age_bracket: '50s'
+    },
+    {
+      id: '53',
+      case_number: '53',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Dunedin', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'LA to Auckland on 14 March – flight NZ1\nAuckland to Queenstown on 14 March – flight NZ615',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '40s'
+    },
+    {
+      id: '54',
+      case_number: '54',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Waikato', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Contact with a confirmed case',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '55',
+      case_number: '55',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Waikato', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Honolulu to Auckland on 14 March – flight HA445 (arrived 15 March)',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '56',
+      case_number: '56',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        { date: '', location: 'Bay of Plenty', description: '' }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Travel history to the United States of America – details to come.',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '30s'
+    },
+    {
+      id: '57',
+      case_number: '57',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Hamilton', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Travel history to Ireland, Dubai and Australia. Details to come.',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '58',
+      case_number: '58',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'No international travel history – exposed at World Herefords Conference in Queenstown. Domestic travel history:\nDunedin to Auckland on Sunday 15 March – flight NZ674',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '59',
+      case_number: '59',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'No international travel history – exposed at World Herefords Conference in Queenstown.',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '60',
+      case_number: '60',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Dubai to Auckland on Monday 16 March – flight EK448',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '61',
+      case_number: '61',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Travel to Africa – details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '62',
+      case_number: '62',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Taranaki', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Bangkok to Auckland on Sunday 15 March – flight TG0491\nAuckland to New Plymouth on 16 March – flight NZ8041',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
+    },
+    {
+      id: '63',
+      case_number: '63',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Taranaki', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Dubai to Auckland on Tuesday 17 March – flight EK448\nAuckland to New Plymouth on 18 March – flight NZ8041',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '64',
+      case_number: '64',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Canterbury', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'San Francisco to Auckland on Monday 16 March – flight NZ7\nAuckland to Christchurch on Tuesday 17 March – flight NZ523 ',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '65',
+      case_number: '65',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Northland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Melbourne to Auckland on Sunday 15 March – flight JQ217',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '66',
+      case_number: '66',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Dubai to Auckland on 15 March - flight EK448',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
     }
   ]
 };

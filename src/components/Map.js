@@ -9,6 +9,8 @@ import 'leaflet.geodesic';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import openGeocoder from 'node-open-geocoder';
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"; 
 const data = require('../data/caseData').data;
 const locationCache = require('../data/locationCache.json');
 // import fs from 'fs'
@@ -29,7 +31,7 @@ const getCoordinates = async location =>
     if (cachedLocation.length) {
       const { lat, lon } = cachedLocation[0].geocode;
       const coords = [Number.parseFloat(lat), Number.parseFloat(lon)];
-      console.log(lat, lon, '(cached)');
+      // console.log(location, lat, lon, '(cached)');
       const normalisedLatlng = L.latLng(
         Number.parseFloat(lat),
         L.Util.wrapNum(Number.parseFloat(lon), [-30, 330], true)
@@ -59,6 +61,11 @@ function Map() {
   const initState = () => {
     setShowClusters(true);
     setShowTrace(false);
+    // setMapView(initialMapView);
+    mymap.current.flyTo(
+      initialMapView.center,
+      initialMapView.zoom
+    )
   };
   const mymap = useRef(null);
   const markerCluster = useRef(
@@ -71,16 +78,41 @@ function Map() {
 
   const [showClusters, setShowClusters] = useState(true);
   const [showTrace, setShowTrace] = useState(false);
-  // const [count, setCount] = useState(1);
+  const initialMapView = {
+    center: [-40.9006, 172.586],
+    zoom: 6,
+  }
+  // const [mapView, setMapView] = useState(initialMapView);
+
+  // useEffect(()=>{
+
+  // })
+  // setup orientation detection
+  // const [portraitMode, setPortraitMode] = useState(window.innerHeight*1.3 > window.innerWidth);
+  // useEffect(() => {
+  //   const updateOrientation = (r) => {
+  //     const isPortrait = window.innerHeight*1.3 > window.innerWidth;
+  //     console.log('port',isPortrait)
+  //     setPortraitMode(isPortrait)
+  //   }
+  
+  //   // document.addEventListener('load', updateOrientation)
+  //   window.addEventListener('orientationchange', updateOrientation)
+  //   window.addEventListener('resize', updateOrientation)
+  // },[])
+
+  const isPortraitMode = () => window.innerHeight*1.3 > window.innerWidth;
+
+  // make changes after orientation change
+  // useEffect(()=>{
+  //   alert(portraitMode ? '1' : '2')
+  // },[portraitMode])
 
   // render map
   const initMap = () => {
     // setClusters(2)
     // create map
-    mymap.current = L.map('map', {
-      center: [-40.9006, 172.586],
-      zoom: 6,
-    });
+    mymap.current = L.map('map', initialMapView);
     // mymap.current.zoomControl.setPosition('topright');
 
     L.tileLayer(
@@ -96,11 +128,14 @@ function Map() {
       }
     ).addTo(mymap.current);
     function onMapClick(e) {
-      alert('You clicked the map at ' + e.latlng);
+      // alert('You clicked the map at ' + e.latlng);
+    
     }
+    // mymap.current.on('click', onMapClick);
+
+    // L.control.addTo(mymap.current)
 
     // mymap.current.on('click', () => updateMap())
-    // mymap.current.on('click', onMapClick);
 
     //   var lastZoom;
     //  mymap.current.on('zoomend', function() {
@@ -212,7 +247,7 @@ function Map() {
     // });
 
     // setShowClusters(markerCluster)
-    console.log('cl', showClusters);
+    // console.log('cl', showClusters);
     // updateMap();
   };
   // add datapoints to map
@@ -280,11 +315,41 @@ function Map() {
       ? Math.min(12, mymap.current.getZoom())
       : Math.max(8, mymap.current.getZoom());
 
+    // setPortraitMode(false)
+    console.log('mode', isPortraitMode())
+    
+    let brPadding = [
+      isPortraitMode() ? 20 : window.innerWidth/3,
+      isPortraitMode() ? window.innerHeight/2 : 20
+    ]
+
     mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
-      padding: [30, 30],
+      paddingBottomRight: brPadding,
+      paddingTopLeft: [20, 20],
       duration: 1,
       maxZoom
     });
+
+    let t = toast(
+    <h2 >Case {virusCase.case_number}</h2>
+    )
+
+    const CloseButton = ({closeToast}) => (
+<button className="Toastify__close-button Toastify__close-button--default" type="button" aria-label="close"
+onClick={() => (initState(),closeToast())}
+>✖︎</button>
+    )
+
+      toast.update(t,{
+        position: "bottom-right",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: false,
+        draggable: true,
+        closeButton: <CloseButton/>,
+        onClose: initState,
+        });
+
   };
 
   const displayTrace = () => {
