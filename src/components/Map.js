@@ -5,9 +5,9 @@ import L from 'leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
-import 'leaflet.geodesic'
-import 'leaflet.beautifymarker/leaflet-beautify-marker-icon'
-import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css'
+import 'leaflet.geodesic';
+import 'leaflet.beautifymarker/leaflet-beautify-marker-icon';
+import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import openGeocoder from 'node-open-geocoder';
 const data = require('../data/caseData').data;
 const locationCache = require('../data/locationCache.json');
@@ -28,29 +28,27 @@ const getCoordinates = async location =>
     // console.log(cachedLocation)
     if (cachedLocation.length) {
       const { lat, lon } = cachedLocation[0].geocode;
-      const coords = [Number.parseFloat(lat),Number.parseFloat(lon)]
+      const coords = [Number.parseFloat(lat), Number.parseFloat(lon)];
       console.log(lat, lon, '(cached)');
-      const normalisedLatlng = 
-      L.latLng(
-        
+      const normalisedLatlng = L.latLng(
         Number.parseFloat(lat),
-        L.Util.wrapNum(Number.parseFloat(lon),[0,360],true))
+        L.Util.wrapNum(Number.parseFloat(lon), [-30, 330], true)
+      );
       // .wrap()
       resolve(normalisedLatlng);
       // resolve(coords);
     } else {
-
       openGeocoder()
-      .geocode(location)
-      .end((err, response) => {
-        if (err) return reject(err);
-        // console.log(response)
-        // parsedCache.push(response);
-        // fs.writeFileSync(LOCATION_CACHE_PATH,JSON.stringify(parsedCache))
-        const { lat, lon } = response[0];
-        const coords = [Number.parseFloat(lat),Number.parseFloat(lon),]
-        return resolve(coords);
-      });
+        .geocode(location)
+        .end((err, response) => {
+          if (err) return reject(err);
+          // console.log(response)
+          // parsedCache.push(response);
+          // fs.writeFileSync(LOCATION_CACHE_PATH,JSON.stringify(parsedCache))
+          const { lat, lon } = response[0];
+          const coords = [Number.parseFloat(lat), Number.parseFloat(lon)];
+          return resolve(coords);
+        });
     }
   });
 
@@ -63,11 +61,12 @@ function Map() {
     setShowTrace(false);
   };
   const mymap = useRef(null);
-  const markerCluster = useRef(L.markerClusterGroup({
-    showCoverageOnHover: false,
-    spiderfyDistanceMultiplier: 2,
-    
-  }));
+  const markerCluster = useRef(
+    L.markerClusterGroup({
+      showCoverageOnHover: false,
+      spiderfyDistanceMultiplier: 2
+    })
+  );
   const caseFeatures = useRef(L.featureGroup());
 
   const [showClusters, setShowClusters] = useState(true);
@@ -80,7 +79,7 @@ function Map() {
     // create map
     mymap.current = L.map('map', {
       center: [-40.9006, 172.586],
-      zoom: 6
+      zoom: 6,
     });
     // mymap.current.zoomControl.setPosition('topright');
 
@@ -103,31 +102,31 @@ function Map() {
     // mymap.current.on('click', () => updateMap())
     // mymap.current.on('click', onMapClick);
 
-  //   var lastZoom;
-  //  mymap.current.on('zoomend', function() {
-  //     var zoom =mymap.current.getZoom();
-  //     let threshold = 15;
-  //     if (zoom < threshold && (!lastZoom || lastZoom >= threshold)) {
-  //      mymap.current.eachLayer(function(l) {
-  //         if (l.getTooltip) {
-  //           var toolTip = l.getTooltip();
-  //           if (toolTip) {
-  //             mymap.current.closeTooltip(toolTip);
-  //           }
-  //         }
-  //       });
-  //     } else if (zoom >= threshold && (!lastZoom || lastZoom < threshold)) {
-  //      mymap.current.eachLayer(function(l) {
-  //         if (l.getTooltip) {
-  //           var toolTip = l.getTooltip();
-  //           if (toolTip) {
-  //             mymap.current.addLayer(toolTip);
-  //           }
-  //         }
-  //       });
-  //     }
-  //     lastZoom = zoom;
-  //   });
+    //   var lastZoom;
+    //  mymap.current.on('zoomend', function() {
+    //     var zoom =mymap.current.getZoom();
+    //     let threshold = 15;
+    //     if (zoom < threshold && (!lastZoom || lastZoom >= threshold)) {
+    //      mymap.current.eachLayer(function(l) {
+    //         if (l.getTooltip) {
+    //           var toolTip = l.getTooltip();
+    //           if (toolTip) {
+    //             mymap.current.closeTooltip(toolTip);
+    //           }
+    //         }
+    //       });
+    //     } else if (zoom >= threshold && (!lastZoom || lastZoom < threshold)) {
+    //      mymap.current.eachLayer(function(l) {
+    //         if (l.getTooltip) {
+    //           var toolTip = l.getTooltip();
+    //           if (toolTip) {
+    //             mymap.current.addLayer(toolTip);
+    //           }
+    //         }
+    //       });
+    //     }
+    //     lastZoom = zoom;
+    //   });
   };
   useEffect(initMap, []);
 
@@ -160,8 +159,7 @@ function Map() {
       // console.log(virusCase.location_history[0].location)
       // console.log()
       const location = virusCase.location_history.slice(-1)[0].location;
-      const coords = await getCoordinates(location
-      );
+      const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
         // const marker = L.marker([coords[0].lat, coords[0].lon], {
@@ -183,14 +181,12 @@ function Map() {
         .bindTooltip(
           `${location}
           <br>
-          ${new Date(
-            virusCase.date_confirmed
-          ).toLocaleDateString('en-NZ')}`,
+          ${new Date(virusCase.date_confirmed).toLocaleDateString('en-NZ')}`,
           {
             // permanent : true
           }
-          )
-          // .openTooltip()
+        )
+        // .openTooltip()
         .on('click', () => {
           setShowClusters(false);
           traceCase(virusCase);
@@ -245,12 +241,14 @@ function Map() {
         // console.log(lat, lon)
         const locDate = getFormattedDateString(loc.date);
         // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
-        const locMarker = L.marker(coords, { icon: getMarkerIcon_old(virusCase.case_number) })
+        const locMarker = L.marker(coords, {
+          icon: getMarkerIcon_old(virusCase.case_number)
+        })
           .bindTooltip(`${loc.location}<br>${locDate}`, {
             permanent: hasConnections
           })
-          .bindPopup(`${loc.location}<br>${locDate}`)
-          // .openTooltip();
+          .bindPopup(`${loc.location}<br>${locDate}`);
+        // .openTooltip();
         return locMarker;
       })
     );
@@ -261,15 +259,15 @@ function Map() {
         // console.log(marker)
         featureGroup.push(marker);
         if (arr[i + 1]) {
-          const line = new L.Geodesic([marker.getLatLng(), arr[i + 1].getLatLng()]
-          , {wrap: false},
-          {steps: 2}
+          const line = new L.Geodesic(
+            [marker.getLatLng(), arr[i + 1].getLatLng()],
+            { wrap: false, steps: 2 }
           );
           // const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
           featureGroup.push(line);
         }
         return featureGroup;
-      }, 
+      },
       []
     );
     caseFeatures.current = L.featureGroup(caseConnections);
@@ -278,15 +276,14 @@ function Map() {
     setShowTrace(true);
     console.log(caseFeatures.current.getBounds());
 
-    const maxZoom = 
-      hasConnections 
-      ? Math.min(12,mymap.current.getZoom())
-      : Math.max(8,mymap.current.getZoom())
+    const maxZoom = hasConnections
+      ? Math.min(12, mymap.current.getZoom())
+      : Math.max(8, mymap.current.getZoom());
 
     mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
       padding: [30, 30],
       duration: 1,
-      maxZoom  
+      maxZoom
     });
   };
 
@@ -300,6 +297,7 @@ function Map() {
 }
 
 const getFormattedDateString = date => {
+  if (!date) return 'Date Unkown'
   const newDate = new Date(date);
   const options = {
     day: '2-digit',
@@ -309,24 +307,24 @@ const getFormattedDateString = date => {
     options.hour = '2-digit';
     options.minute = '2-digit';
     options.hourCycle = 'h12';
-  }
+  } 
   return newDate.toLocaleString('en-NZ', options);
 };
 
-const getMarkerIcon = (number) => {
+const getMarkerIcon = number => {
   const options = {
     isAlphaNumericIcon: true,
     text: `Case
     ${number}`,
     iconShape: 'circle',
-    iconSize: [36,36],
-    iconAnchor: [18,18],
-    tooltipAnchor: [20,0],
+    iconSize: [36, 36],
+    iconAnchor: [18, 18],
+    tooltipAnchor: [20, 0],
     borderColor: '#333',
     textColor: '#333'
   };
-  return L.BeautifyIcon.icon(options)
-}
+  return L.BeautifyIcon.icon(options);
+};
 
 const getMarkerIcon_old = () => {
   const defaultMarker =
