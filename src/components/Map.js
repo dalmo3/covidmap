@@ -59,14 +59,20 @@ function Map() {
     if (e.keyCode === 27) initState();
   });
   const initState = () => {
+    resetMarkers();
+    // setMapView(initialMapView);
+    resetZoom();
+  };
+  const resetMarkers = () => {
     setShowClusters(true);
     setShowTrace(false);
-    // setMapView(initialMapView);
+  }
+  const resetZoom = () => {
     mymap.current.flyTo(
       initialMapView.center,
       initialMapView.zoom
     )
-  };
+  }
   const mymap = useRef(null);
   const markerCluster = useRef(
     L.markerClusterGroup({
@@ -337,7 +343,11 @@ function Map() {
 
     const CloseButton = ({closeToast}) => (
 <button className="Toastify__close-button Toastify__close-button--default" type="button" aria-label="close"
-onClick={() => (initState(),closeToast())}
+onClick={() => {
+  closeToast()
+  resetMarkers()
+  if (mymap.current.getZoom() < 6) resetZoom()
+}}
 >✖︎</button>
     )
 
@@ -348,7 +358,12 @@ onClick={() => (initState(),closeToast())}
         closeOnClick: false,
         draggable: true,
         closeButton: <CloseButton/>,
-        onClose: initState,
+        onClose: () => {
+
+          resetMarkers()
+          if (mymap.current.getZoom() < 6) resetZoom()
+
+        },
         });
 
   };
