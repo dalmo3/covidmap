@@ -56,7 +56,7 @@ const getCoordinates = async location =>
 
 function Map() {
   document.addEventListener('keyup', e => {
-    if (e.keyCode === 27) initState();
+    if (e.keyCode === 27)   initState();
   });
   const initState = () => {
     resetMarkers();
@@ -348,7 +348,7 @@ onClick={() => {
   resetMarkers()
   if (mymap.current.getZoom() < 6) resetZoom()
 }}
->✖︎</button>
+><span>✖︎</span></button>
     )
 
       toast.update(t,{
@@ -357,6 +357,7 @@ onClick={() => {
         hideProgressBar: true,
         closeOnClick: false,
         draggable: true,
+        draggablePercent: 60,
         closeButton: <CloseButton/>,
         onClose: () => {
 
