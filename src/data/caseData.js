@@ -2112,7 +2112,7 @@ const data = {
       status: '',
       date_confirmed: '',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Hamilton', description: '' }],
+      location_history: [{ date: '', location: 'Hamilton NZ', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2257,7 +2257,7 @@ const data = {
       status: '',
       date_confirmed: '',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Canterbury', description: '' }],
+      location_history: [{ date: '', location: 'Canterbury NZ', description: '' }],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
