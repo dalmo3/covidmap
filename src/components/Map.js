@@ -86,7 +86,7 @@ function Map() {
   const [showTrace, setShowTrace] = useState(false);
   const initialMapView = {
     center: [-40.9006, 172.586],
-    zoom: 6,
+    zoom: 5 + (window.innerHeight>800),
   }
   // const [mapView, setMapView] = useState(initialMapView);
 
@@ -288,7 +288,7 @@ function Map() {
           .bindTooltip(`${loc.location}<br>${locDate}`, {
             permanent: hasConnections
           })
-          .bindPopup(`${loc.location}<br>${locDate}`);
+          // .bindPopup(`${loc.location}<br>${locDate}`);
         // .openTooltip();
         return locMarker;
       })
@@ -348,7 +348,7 @@ onClick={() => {
   resetMarkers()
   if (mymap.current.getZoom() < 6) resetZoom()
 }}
-><span>✖︎</span></button>
+>✖︎</button>
     )
 
       toast.update(t,{
