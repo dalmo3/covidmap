@@ -63,7 +63,8 @@ const data = {
         {
           info:
             'Iran to Bali to Auckland (Emirates EK450 on Wednesday 26 February). ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -113,7 +114,8 @@ const data = {
       additional_info: [
         {
           info: '',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -157,7 +159,8 @@ const data = {
         {
           info:
             'Associated with travel - Doha to Auckland (Qatar Airways QR0920 on Sunday 23 February).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -200,7 +203,8 @@ const data = {
         {
           info:
             'Singapore to Auckland (Air New Zealand 283 on Tuesday 25 February).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -233,7 +237,8 @@ const data = {
         {
           info:
             'Associated with travel - Doha to Auckland (Qatar Airways QR0920 on Sunday 23 February).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -276,7 +281,8 @@ const data = {
         {
           info:
             'Houston to Auckland (Air New Zealand 029 on Friday 6 March).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         },
         {
           info: 'Patient six shared communion chalice at south Auckland church',
@@ -337,7 +343,8 @@ const data = {
         {
           info:
             'Denmark to Doha (Qatar Airways QR160) to Auckland (Qatar Airways QR920) to Christcurch (Jetstar JQ225 on Tuesday 10 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -378,7 +385,8 @@ const data = {
         {
           info:
             'France to Singapore to Brisbane to Wellington (Air New Zealand 828 on Saturday 14 March).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -419,7 +427,8 @@ const data = {
         {
           info:
             'Los Angeles to Auckland (American Airlines AA83) to Wellington (Air New Zealand 828 on Saturday 14 March).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -466,7 +475,8 @@ const data = {
         {
           info:
             'Los Angeles to Auckland (American Airlines AA83) to Wellington (Air New Zealand 828 on Saturday 14 March).  ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -523,7 +533,8 @@ const data = {
         {
           info:
             'Frankfurt to Singapore (Singapore Airlines SQ325 on Friday 6 March) to Auckland (Air New Zealand NZ283 on Saturday 7 March) to Dunedin (Air New Zealand  NZ675 on Sunday 8 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -555,7 +566,8 @@ const data = {
       additional_info: [
         {
           info: 'Associated with travel of case 11.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         },
         {
           info: 'Test results negative for all Logan Park High School contacts',
@@ -596,7 +608,8 @@ const data = {
       additional_info: [
         {
           info: 'Dubai to Auckland on 14 March – flight EK448.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -627,7 +640,8 @@ const data = {
         {
           info:
             'Europe to Auckland (on Monday 9 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -658,7 +672,8 @@ const data = {
         {
           info:
             'San Francisco to Auckland (Air New Zealand NZ007 on Friday 13 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -689,7 +704,8 @@ const data = {
         {
           info:
             'Travelling from Canada (on Thursday 12 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -720,7 +736,8 @@ const data = {
         {
           info:
             'Travelling from the Gold Coast (on Thursday 5 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -756,7 +773,8 @@ const data = {
         {
           info:
             'Travelling from London (on Monday 16 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -792,7 +810,8 @@ const data = {
         {
           info:
             'Travelling from Sydney (on Sunday 8 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -823,7 +842,8 @@ const data = {
         {
           info:
             'Travelling from Europe (on Sunday 15 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -864,7 +884,8 @@ const data = {
         {
           info:
             'Cairo to Dubai (Emirates EK926) to Auckland (Emirates EK448) to New Plymouth (Air New Zealand NZ8041 on Monday 9 March). ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -920,7 +941,8 @@ const data = {
         {
           info:
             'Cairo to Frankfurt (Lufthansa LH581 on Saturday 7 March) to Vancouver (Air New Zealand NZ23) to Auckland (Air New Zealand NZ8035) to New Plymouth (on Sunday 15 March). ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -976,7 +998,8 @@ const data = {
         {
           info:
             'Paris to Abu Dhabi (Etihad EY38 on Saturday 14 March) to Sydney (Etihad EY450) to Auckland (Virgin Australia VA0141 on Monday 16 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1012,7 +1035,8 @@ const data = {
         {
           info:
             'Travelling from France (on Friday 13 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1043,7 +1067,8 @@ const data = {
         {
           info:
             'Los Angeles to Auckland (Air New Zealand NZ05 on Friday 13 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1074,7 +1099,8 @@ const data = {
         {
           info:
             'London to Singapore (Qantas QF2 on Friday 13 March) to Melbourne (Qantas QF36 on Saturday 14 March) to Auckland (Qantas QF153 on Sunday 15 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1134,7 +1160,8 @@ const data = {
       additional_info: [
         {
           info: 'Details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1169,7 +1196,8 @@ const data = {
       additional_info: [
         {
           info: 'Details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1199,7 +1227,8 @@ const data = {
       additional_info: [
         {
           info: 'Details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1245,7 +1274,8 @@ const data = {
         {
           info:
             'Los Angeles to Auckland (American Airlines AA83 on Saturday 14 March) to Christchurch (Air New Zealand NZ535 on Sunday 15 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1276,7 +1306,8 @@ const data = {
         {
           info:
             'London to Singapore (Singapore Airlines SQ321 Thursday 12 March) to Melbourne to Wellington (Singapore Airlines SQ247 on Saturday 14 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1322,7 +1353,8 @@ const data = {
         {
           info:
             'Munich to Qatar (Qatar Airways QR58 on Sunday 15 March) to Auckland (Qatar Airways QR920 Monday 16 March) to Napier (Air New Zealand NZ5021 on Tuesday 17 March).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1357,7 +1389,8 @@ const data = {
       additional_info: [
         {
           info: 'Paris to Dubai (Emirates EK74) to Auckland (Emirates EK450).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -1398,7 +1431,8 @@ const data = {
       additional_info: [
         {
           info: 'Paris to Dubai (Emirates EK74) to Auckland (Emirates EK450).',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [
@@ -1434,7 +1468,8 @@ const data = {
       additional_info: [
         {
           info: 'Los Angeles to Auckland - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1464,7 +1499,8 @@ const data = {
       additional_info: [
         {
           info: 'Los Angeles to Auckland - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1500,7 +1536,8 @@ const data = {
         {
           info:
             'London to Doha to Auckland (on Sunday 15 March) - flight details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1525,7 +1562,8 @@ const data = {
       additional_info: [
         {
           info: 'Under investigation.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1570,7 +1608,8 @@ const data = {
       additional_info: [
         {
           info: 'Details to come.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1596,7 +1635,8 @@ const data = {
         {
           info:
             'Travel related, however flights outside of infectious period. ',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1627,7 +1667,8 @@ const data = {
         {
           info:
             'Cruise ship travel. Domestic flights – Dunedin to Auckland on 15 March – flight NZ670.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1662,7 +1703,8 @@ const data = {
       additional_info: [
         {
           info: 'Singapore to Auckland on 13 March – flight SQ0285.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1692,7 +1734,8 @@ const data = {
       additional_info: [
         {
           info: 'Sydney to Wellington on 14 March – flight QF161.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1743,7 +1786,8 @@ const data = {
         {
           info:
             'Travel related, however international flights outside of infectious period.  Domestic flights: Auckland to Wellington on 8 March – flight NZ449 Wellington to Hamilton on 12 March – flight NZ5810 Hamilton to Wellington on 13 March – flight NZ5823.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1784,7 +1828,8 @@ const data = {
         {
           info:
             'Dubai to Auckland on 12 March – flight EK44 Auckland to Wellington on 12 March – flight NZ433',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1815,7 +1860,8 @@ const data = {
         {
           info:
             'Under investigation. Took internal flight when symptomatic. Dunedin to Auckland on 16 March – flight NZ674',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1850,7 +1896,8 @@ const data = {
       additional_info: [
         {
           info: 'Dubai to Auckland on 10 March – flight EK0448',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1896,7 +1943,8 @@ const data = {
         {
           info:
             'Travel related. Queenstown to Christchurch on 13 March – flight NZ642 Christchurch to Palmerston North on 13 March – flight details unclear',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1942,7 +1990,8 @@ const data = {
         {
           info:
             'Doha to Auckland on 14 March – flight QR0920 uckland to Palmerston North on 16 March – flight NZ5107',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1967,7 +2016,8 @@ const data = {
       additional_info: [
         {
           info: 'Contact with traveller. Further investigations continue.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -1998,7 +2048,8 @@ const data = {
         {
           info:
             'Travel related, however international flights outside of infectious period. Domestic flights: Auckland to Nelson on 16 March – flight 5065',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -2023,7 +2074,8 @@ const data = {
       additional_info: [
         {
           info: 'Contact with probable case.',
-          source_url: 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
         }
       ],
       related_cases: [],
@@ -2590,7 +2642,9 @@ const data = {
       status: '',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Canterbury NZ', description: '' }],
+      location_history: [
+        { date: '', location: 'Canterbury NZ', description: '' }
+      ],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2710,7 +2764,9 @@ const data = {
       status: '',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
-      location_history: [{ date: '', location: 'Manawatu District', description: '' }],
+      location_history: [
+        { date: '', location: 'Manawatu District', description: '' }
+      ],
       media_release_url: '',
       media_release_description: '',
       additional_info: [
@@ -2866,6 +2922,350 @@ const data = {
       related_cases: [],
       gender: 'Male',
       age_bracket: 'Child'
+    },
+    {
+      id: '86',
+      case_number: '86',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '87',
+      case_number: '87',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        { date: '', location: 'Canterbury NZ', description: '' }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '88',
+      case_number: '88',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Nelson', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '70s'
+    },
+    {
+      id: '89',
+      case_number: '89',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Nelson', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Related to case 88, details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '70s'
+    },
+    {
+      id: '90',
+      case_number: '90',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'LA to New Zealand on 15 March – flight NZ1',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
+    },
+    {
+      id: '91',
+      case_number: '91',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'LA to New Zealand on 15 March – flight NZ1',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '92',
+      case_number: '92',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Doha to Auckland on 22 March – flight QR920',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '93',
+      case_number: '93',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '94',
+      case_number: '94',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Dubai to Auckland on 19 March – flight EK448',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '20s'
+    },
+    {
+      id: '95',
+      case_number: '95',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '40s'
+    },
+    {
+      id: '96',
+      case_number: '96',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '40s'
+    },
+    {
+      id: '97',
+      case_number: '97',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '20s'
+    },
+    {
+      id: '98',
+      case_number: '98',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [
+        { date: '', location: 'Kapiti Coast', description: '' }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '99',
+      case_number: '99',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Nelson', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Linked to a confirmed case',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '100',
+      case_number: '100',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: 'Teens'
+    },
+    {
+      id: '101',
+      case_number: '101',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Upper Hutt', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '102',
+      case_number: '102',
+      status: '',
+      date_confirmed: '',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
     }
   ]
 };
