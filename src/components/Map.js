@@ -10,7 +10,8 @@ import 'leaflet.beautifymarker/leaflet-beautify-marker-icon';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
+// require('dotenv').config();
 const data = require('../data/caseData').data;
 const locationCache = require('../data/locationCache.json');
 // import fs from 'fs'
@@ -120,9 +121,11 @@ function Map() {
     // create map
     mymap.current = L.map('map', initialMapView);
     // mymap.current.zoomControl.setPosition('topright');
-
+    const accessToken = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNxODNwbDFmMW4zbG9xYWx2Mjd6MmcifQ.ZW4OOXmUdvwkEvF8AVGoOg'
+    console.log(process.env)
+    // alert(accessToken)
     L.tileLayer(
-      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrN3ljNDcwZDA2MHozbXFncWxoZnV0MDcifQ.MhhGCM9OGXnzn1TWu6d9gg',
+      `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
       {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -130,7 +133,6 @@ function Map() {
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: 'your.mapbox.access.token'
       }
     ).addTo(mymap.current);
     function onMapClick(e) {
