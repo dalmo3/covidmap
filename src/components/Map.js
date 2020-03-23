@@ -367,7 +367,7 @@ onClick={() => {
         hideProgressBar: true,
         closeOnClick: false,
         draggable: true,
-        draggablePercent: 60,
+        draggablePercent: 40,
         closeButton: <CloseButton/>,
         onClose: () => {
 
