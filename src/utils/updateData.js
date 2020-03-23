@@ -11,11 +11,11 @@ const updateCache = () => {
   const LOCATION_CACHE_PATH = path.resolve(__dirname,'../data/locationCache.json')
   const rawCache = fs.readFileSync(LOCATION_CACHE_PATH)
   const parsedCache = JSON.parse(rawCache) || new Array();
-  console.log(parsedCache)
+  // console.log(parsedCache)
   allLocs.forEach(caseLoc => {
     //check if already contains
-    console.log(caseLoc)
     const cachedLocation = parsedCache.filter(cachedLoc => cachedLoc.location === caseLoc.location);
+    // console.log(caseLoc, cachedLocation[0].geocode.address)
     
     // if not, fetch it and save
     if (!cachedLocation.length) {
@@ -27,10 +27,12 @@ const updateCache = () => {
         // console.log(response)
         if (!(response && response[0])) return; 
         delete response[0].geojson;
+        
         const newEntry = {
           location: caseLoc.location,
           geocode: response[0]
         }
+        console.log('new location :', newEntry)
         parsedCache.push(newEntry);
         fs.writeFileSync(LOCATION_CACHE_PATH,JSON.stringify(parsedCache))
       })
