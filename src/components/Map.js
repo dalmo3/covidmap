@@ -340,7 +340,15 @@ function Map() {
     });
 
     let t = toast(
+      <div style={{fontSize:'0.8em'}}>
+
     <h2 >Case {virusCase.case_number}</h2>
+    <p>{getFormattedDateString(virusCase.date_confirmed)}</p>
+    <p>{virusCase.location}</p>
+    <p>{virusCase.gender} {virusCase.age_bracket}</p>
+    <p>{virusCase.additional_info[0].info}</p>
+    <a href={`${virusCase.additional_info[0].source_url}`} target='_blank'>Source</a>
+      </div>
     )
 
     const CloseButton = ({closeToast}) => (
