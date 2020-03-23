@@ -121,7 +121,7 @@ function Map() {
     // create map
     mymap.current = L.map('map', initialMapView);
     // mymap.current.zoomControl.setPosition('topright');
-    const accessToken = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNxODNwbDFmMW4zbG9xYWx2Mjd6MmcifQ.ZW4OOXmUdvwkEvF8AVGoOg'
+    const accessToken = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A'
     console.log(process.env)
     // alert(accessToken)
     L.tileLayer(
