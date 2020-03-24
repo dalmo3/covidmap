@@ -2927,7 +2927,7 @@ const data = {
       id: '86',
       case_number: '86',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -2947,7 +2947,7 @@ const data = {
       id: '87',
       case_number: '87',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Canterbury NZ', description: '' }
@@ -2969,7 +2969,7 @@ const data = {
       id: '88',
       case_number: '88',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -2989,7 +2989,7 @@ const data = {
       id: '89',
       case_number: '89',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -3009,7 +3009,7 @@ const data = {
       id: '90',
       case_number: '90',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3029,7 +3029,7 @@ const data = {
       id: '91',
       case_number: '91',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3049,7 +3049,7 @@ const data = {
       id: '92',
       case_number: '92',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3069,7 +3069,7 @@ const data = {
       id: '93',
       case_number: '93',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3089,7 +3089,7 @@ const data = {
       id: '94',
       case_number: '94',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3109,7 +3109,7 @@ const data = {
       id: '95',
       case_number: '95',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3129,7 +3129,7 @@ const data = {
       id: '96',
       case_number: '96',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3149,7 +3149,7 @@ const data = {
       id: '97',
       case_number: '97',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3169,7 +3169,7 @@ const data = {
       id: '98',
       case_number: '98',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Kapiti Coast', description: '' }
@@ -3191,7 +3191,7 @@ const data = {
       id: '99',
       case_number: '99',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -3211,7 +3211,7 @@ const data = {
       id: '100',
       case_number: '100',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3231,7 +3231,7 @@ const data = {
       id: '101',
       case_number: '101',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Upper Hutt', description: '' }],
       media_release_url: '',
@@ -3251,7 +3251,7 @@ const data = {
       id: '102',
       case_number: '102',
       status: '',
-      date_confirmed: '',
+      date_confirmed: '23 Mar',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3266,6 +3266,819 @@ const data = {
       related_cases: [],
       gender: 'M',
       age_bracket: '50s'
+    },,
+    {
+      id: '103',
+      case_number: '103',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'USA to Auckland, arrived 18 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '40s'
+    },
+    {
+      id: '104',
+      case_number: '104',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '105',
+      case_number: '105',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [
+        { date: '', location: 'South Canterbury NZ', description: '' }
+      ],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Departed Switzerland 16 March, flew via Abu Dhabi to New Zealand – flight EY0052',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '106',
+      case_number: '106',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Otago', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'No international travel history – exposed at World Herefords Conference in Queenstown.',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '107',
+      case_number: '107',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Dunedin', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'No international travel history – exposed at World Herefords Conference in Queenstown',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
+    },
+    {
+      id: '108',
+      case_number: '108',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Queenstown', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Dubai to Auckland on 18 March – flight EK448, Auckland to Queenstown on 19 March – flight EK7563',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: 'Teens'
+    },
+    {
+      id: '109',
+      case_number: '109',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Christchurch', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Relative of a confirmed case',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '110',
+      case_number: '110',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Christchurch', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Relative of a confirmed case',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '111',
+      case_number: '111',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Waikato', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Departed on 16 March – flight EK0448',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '112',
+      case_number: '112',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
+    },
+    {
+      id: '113',
+      case_number: '113',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Arrived in Auckland 18 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '40s'
+    },
+    {
+      id: '114',
+      case_number: '114',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: 'Teens'
+    },
+    {
+      id: '115',
+      case_number: '115',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
+    },
+    {
+      id: '116',
+      case_number: '116',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Arrived in Auckland on 20 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '20s'
+    },
+    {
+      id: '117',
+      case_number: '117',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Arrived in Auckland on 18 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
+    },
+    {
+      id: '118',
+      case_number: '118',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: 'Teens'
+    },
+    {
+      id: '119',
+      case_number: '119',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Waikato', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'No international travel history – exposed at World Herefords Conference in Queenstown',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
+    },
+    {
+      id: '120',
+      case_number: '120',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Dunedin', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'London to LA on 14 March, then LA to Auckland on flight NZ5, Auckland to Dunedin on 16 March – flight NZ671',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '121',
+      case_number: '121',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Dunedin', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Dubai to Auckland, arrived on 19 March – flight EK447, Auckland to Dunedin on 19 March – flight JQ285',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '30s'
+    },
+    {
+      id: '122',
+      case_number: '122',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '20s'
+    },
+    {
+      id: '123',
+      case_number: '123',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Nelson', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '80s'
+    },
+    {
+      id: '124',
+      case_number: '124',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
+    },
+    {
+      id: '125',
+      case_number: '125',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Travelled from USA to New Zealand, arrived on 19 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '126',
+      case_number: '126',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Travelled from USA to New Zealand, arrived on 19 March, flight details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '127',
+      case_number: '127',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '128',
+      case_number: '128',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '30s'
+    },
+    {
+      id: '129',
+      case_number: '129',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
+    },
+    {
+      id: '130',
+      case_number: '130',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '50s'
+    },
+    {
+      id: '131',
+      case_number: '131',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Hawke’s Bay', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '70s'
+    },
+    {
+      id: '132',
+      case_number: '132',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Hawke’s Bay', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info:
+            'Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '70s'
+    },
+    {
+      id: '133',
+      case_number: '133',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '50s'
+    },
+    {
+      id: '134',
+      case_number: '134',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '70s'
+    },
+    {
+      id: '135',
+      case_number: '135',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '70s'
+    },
+    {
+      id: '136',
+      case_number: '136',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Auckland', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '137',
+      case_number: '137',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Marlborough NZ', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '30s'
+    },
+    {
+      id: '138',
+      case_number: '138',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Marlborough NZ', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '60s'
+    },
+    {
+      id: '139',
+      case_number: '139',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wellington', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'M',
+      age_bracket: '64'
+    },
+    {
+      id: '140',
+      case_number: '140',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Wairarapa', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '20s'
+    },
+    {
+      id: '141',
+      case_number: '141',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'New Plymouth', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '60s'
+    },
+    {
+      id: '142',
+      case_number: '142',
+      status: '',
+      date_confirmed: '24 Mar',
+      date_suspected: '',
+      location_history: [{ date: '', location: 'Waitemata', description: '' }],
+      media_release_url: '',
+      media_release_description: '',
+      additional_info: [
+        {
+          info: 'Details to come',
+          source_url:
+            'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        }
+      ],
+      related_cases: [],
+      gender: 'F',
+      age_bracket: '30s'
     }
   ]
 };
