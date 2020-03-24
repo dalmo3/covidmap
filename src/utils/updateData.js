@@ -64,18 +64,18 @@ const fetchFlightData = async (flightNumber, flightDate) => {
   });
 };
 
-fetchFlightData()
+// fetchFlightData()
 
 const genCaseFile = () => {
   const json = JSON.stringify(data);
-  fs.writeFileSync(path.resolve(__dirname, '../data/govtData.json'), json);
+  fs.writeFileSync(path.resolve(__dirname, '../data/caseData.json'), json);
   const fileData = fs.readFileSync(
-    path.resolve(__dirname, '../data/govtData.json')
+    path.resolve(__dirname, '../data/caseData.json')
   );
   console.log(JSON.parse(fileData));
 };
 
-// genCaseFile();
+genCaseFile();
 
 const updateCache = () => {
   // read locs from case data
