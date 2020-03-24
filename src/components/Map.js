@@ -198,29 +198,15 @@ function Map() {
 
   const generateClusters = () => {
     // markerCluster = ;
-    data.cases.forEach(async virusCase => {
-      // console.log(virusCase.location_history[0].location)
-      // console.log()
+    data.cases
+    .concat(data.probable_cases)
+    .forEach(async virusCase => {
       const location = virusCase.location_history.slice(-1)[0].location;
       const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
-        // const marker = L.marker([coords[0].lat, coords[0].lon], {
-        icon: getMarkerIcon(virusCase.case_number)
+        icon: getMarkerIcon(virusCase)
       })
-        // .on('click',()=>L.popup())
-        // .bindPopup(`Case ${virusCase.case_number}`)
-        // .bindPopup(
-        //   `Case ${virusCase.case_number}
-        //   ${location}
-        //   ${new Date(
-        //     virusCase.date_confirmed
-        //   ).toLocaleDateString('en-NZ')}`,
-        //   // .openTooltip()
-        //   {
-        //     interactive: true
-        //   }
-        // )
         .bindTooltip(
           `${location}
           <br>
@@ -229,34 +215,14 @@ function Map() {
             // permanent : true
           }
         )
-        // .openTooltip()
         .on('click', () => {
           setShowClusters(false);
           traceCase(virusCase);
         });
 
-      // const popup = L.popup()
-      //   .setContent(`Case ${virusCase.case_number}<br>${new Date(virusCase.date_confirmed).toLocaleDateString("en-NZ")}`,
-      //   // .bindPopup(`Case ${virusCase.case_number}<br>${new Date(virusCase.date_confirmed).toLocaleDateString("en-NZ")}`,
-      //   // .bindPopup(`Case ${virusCase.case_number}<br>${new Date(virusCase.date_confirmed).toLocaleDateString("en-NZ")}`,
-      //   // .bindPopup(`Case ${virusCase.case_number}<br>${new Date(virusCase.date_confirmed).toLocaleDateString("en-NZ")}`,
-      //   {
-      //     interactive: true,
-      //   })
-      //   .openOn(mymap);
-
       markerCluster.current.addLayer(marker);
     });
 
-    // markerCluster.current.on('clusterclick', function(a) {
-    //   a.layer.zoomToBounds(
-    //     // { maxZoom: 18 }
-    //     );
-    // });
-
-    // setShowClusters(markerCluster)
-    // console.log('cl', showClusters);
-    // updateMap();
   };
   // add datapoints to map
   useEffect(generateClusters, []);
@@ -339,10 +305,12 @@ function Map() {
       maxZoom
     });
 
+    const isProbable = virusCase.status === 'probable';
+    console.log(virusCase.status)
     let t = toast(
       <div style={{fontSize:'0.8em'}}>
 
-    <h2 >Case {virusCase.case_number}</h2>
+    <h2 >Case {virusCase.case_number}{isProbable? ` (Probable)` : ''}</h2>
     <p>{getFormattedDateString(virusCase.date_confirmed)}</p>
     <p>{virusCase.location}</p>
     <p>{virusCase.gender} {virusCase.age_bracket}</p>
@@ -403,18 +371,20 @@ const getFormattedDateString = date => {
   return newDate.toLocaleString('en-NZ', options);
 };
 
-const getMarkerIcon = number => {
+const getMarkerIcon = virusCase => {
+  const isProbable = virusCase.status === 'probable';
   const options = {
     isAlphaNumericIcon: true,
     text: `Case
-    ${number}`,
+    ${virusCase.case_number}${isProbable? '*' : ''}`,
     iconShape: 'circle',
     iconSize: [36, 36],
     iconAnchor: [18, 18],
     tooltipAnchor: [20, 0],
     borderColor: '#333',
-    textColor: '#333'
+    textColor: '#333',
   };
+  if (isProbable) options.backgroundColor = 'lightgray';
   return L.BeautifyIcon.icon(options);
 };
 

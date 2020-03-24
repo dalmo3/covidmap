@@ -5,8 +5,12 @@ const openGeocoder = require('node-open-geocoder')
 
 const updateCache = () => {
   // read locs from case data
-  const allLocs = data.cases.flatMap(c => c.location_history);
-  
+  const allLocs = 
+  data
+  .cases.flatMap(c => c.location_history)
+  .concat(
+      data.probable_cases.flatMap(c => c.location_history));
+
   // read locs from loc cache
   const LOCATION_CACHE_PATH = path.resolve(__dirname,'../data/locationCache.json')
   const rawCache = fs.readFileSync(LOCATION_CACHE_PATH)
