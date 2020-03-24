@@ -5,25 +5,43 @@ const data = require('../data/caseData').data;
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const fetch = require('node-fetch')
+const moment = require('moment')
+
 
 // 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
 const fetchFlightData = async (flightNumber, flightDate) => {
   // const parser = new DOMParser();
 
-  const date = new Date('23 Feb')
+  // const date = flightDate ? moment(flightDate) : moment('23 Feb 2020')
+  const date = flightDate ? new Date(flightDate) : new Date('23 Feb 2020')
+  // console.log(date, new Date(date))
   flightNumber = 'EK450';
-  flightDate = '2020-02-23';
+  // flightDate = '2020-02-23';
+  const queryDate = date.getFullYear() +'-'+ date.getMonth()+1 +'-' + date.getDate()
+  // const queryDate = moment(date).format('YYYY-MM-DD')
+  console.log(queryDate)
 
-  const html = await fetch(`https://www.airportia.com/flights/${flightNumber}/?date=${flightDate}`).then(res => res.text());
+  const html = await fetch(`https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`).then(res => res.text());
   // console.log(html)
   // const dom = parser.parseFromString(html, 'text/html');
   const dom = new JSDOM(html).window.document;
   // console.log(dom.window.document)
+  console.log(html)
+  console.log(dom.innerHTML)
   dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
-    const flightEvent = schedule.querySelector('.flightInfo-date');
-    /Arrival: /.test(flightEvent.textContent)
-    console.log(flightEvent.textContent)
-
+    console.log(schedule.innerHTML)
+    const flightEvent = schedule.querySelector('.flightInfo-date').textContent;
+    // flightEvent.textContent
+  console.log('2')
+    console.log(flightEvent)
+    const displayDate = date.format('D MMM, YYYY')
+    if (flightEvent.startsWith(`Arrival: ${displayDate}`)) {
+    } else {
+      const nextDay = new Date(date)
+      nextDay.setDate(nextDay.getDate()+1)
+      const nextFlightDate = nextDay.getFullYear() +'-'+ (nextDay.getMonth() + 1) +'-' + nextDay.getDate()
+      fetchFlightData(flightNumber, nextFlightDate)
+    }
   })
   
   dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
@@ -33,10 +51,11 @@ const fetchFlightData = async (flightNumber, flightDate) => {
     .querySelector('.flightInfo-airport')
       .textContent.replace(/ \(...\)/, '');
     schedule.querySelectorAll('.flightInfo-dateItem').forEach(dateItem => {
+      console.log(dateItem.innerHTML)
       const dateLabel = dateItem.querySelector('.flightInfo-dateLabel');
       if (dateLabel && dateLabel.textContent === 'Actual:') {
         const dateTime = dateItem.querySelector('.flightInfo-dateTime');
-        
+        console.log(dateTime)  
 
 
         console.log(airport, flightEvent.textContent, dateTime.textContent);
