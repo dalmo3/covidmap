@@ -10,7 +10,7 @@ import 'leaflet.beautifymarker/leaflet-beautify-marker-icon';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 // require('dotenv').config();
 const data = require('../data/caseData').data;
 const locationCache = require('../data/locationCache.json');
@@ -57,7 +57,7 @@ const getCoordinates = async location =>
 
 function Map() {
   document.addEventListener('keyup', e => {
-    if (e.keyCode === 27)   initState();
+    if (e.keyCode === 27) initState();
   });
   const initState = () => {
     resetMarkers();
@@ -67,28 +67,47 @@ function Map() {
   const resetMarkers = () => {
     setShowClusters(true);
     setShowTrace(false);
-  }
+  };
   const resetZoom = () => {
-    mymap.current.flyTo(
-      initialMapView.center,
-      initialMapView.zoom
-    )
-  }
+    mymap.current.flyTo(initialMapView.center, initialMapView.zoom);
+  };
   const mymap = useRef(null);
   const markerCluster = useRef(
     L.markerClusterGroup({
       showCoverageOnHover: false,
       spiderfyDistanceMultiplier: 2
+    }).on('clusterclick', e => {
+
+      if (showTutorial.current) {
+        console.log(showTutorial)
+        toast('Click on a case for details!', {
+          position: 'bottom-right',
+          pauseOnHover: false,
+          pauseOnFocusLoss: false,
+          // progressStyle: {backgroundColor: 'C9171a'},
+          progressClassName: 'toast_progress',
+        }) 
+        showTutorial.current = false;
+      }
+    
+      
     })
   );
+
+
   const caseFeatures = useRef(L.featureGroup());
 
   const [showClusters, setShowClusters] = useState(true);
   const [showTrace, setShowTrace] = useState(false);
+  const showTutorial = useRef(true);
   const initialMapView = {
     center: [-40.9006, 172.586],
-    zoom: 5 + (window.innerHeight>800),
-  }
+    zoom: 5 + (window.innerHeight > 800)
+  };
+
+  
+  useEffect(() => {  
+  },[showTutorial])
   // const [mapView, setMapView] = useState(initialMapView);
 
   // useEffect(()=>{
@@ -102,13 +121,13 @@ function Map() {
   //     console.log('port',isPortrait)
   //     setPortraitMode(isPortrait)
   //   }
-  
+
   //   // document.addEventListener('load', updateOrientation)
   //   window.addEventListener('orientationchange', updateOrientation)
   //   window.addEventListener('resize', updateOrientation)
   // },[])
 
-  const isPortraitMode = () => window.innerHeight*1.3 > window.innerWidth;
+  const isPortraitMode = () => window.innerHeight * 1.3 > window.innerWidth;
 
   // make changes after orientation change
   // useEffect(()=>{
@@ -121,8 +140,10 @@ function Map() {
     // create map
     mymap.current = L.map('map', initialMapView);
     // mymap.current.zoomControl.setPosition('topright');
-    const accessToken = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A'
-    console.log(process.env)
+    const accessToken =
+      process.env.REACT_APP_MAPBOX_TOKEN ||
+      'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A';
+    console.log(process.env);
     // alert(accessToken)
     L.tileLayer(
       `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
@@ -132,12 +153,11 @@ function Map() {
         maxZoom: 14,
         id: 'mapbox/streets-v11',
         tileSize: 512,
-        zoomOffset: -1,
+        zoomOffset: -1
       }
     ).addTo(mymap.current);
     function onMapClick(e) {
       // alert('You clicked the map at ' + e.latlng);
-    
     }
     // mymap.current.on('click', onMapClick);
 
@@ -198,9 +218,7 @@ function Map() {
 
   const generateClusters = () => {
     // markerCluster = ;
-    data.cases
-    .concat(data.probable_cases)
-    .forEach(async virusCase => {
+    data.cases.concat(data.probable_cases).forEach(async virusCase => {
       const location = virusCase.location_history.slice(-1)[0].location;
       const coords = await getCoordinates(location);
 
@@ -222,7 +240,6 @@ function Map() {
 
       markerCluster.current.addLayer(marker);
     });
-
   };
   // add datapoints to map
   useEffect(generateClusters, []);
@@ -252,11 +269,10 @@ function Map() {
         // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
         const locMarker = L.marker(coords, {
           icon: getMarkerIcon_old(virusCase.case_number)
-        })
-          .bindTooltip(`${loc.location}<br>${locDate}`, {
-            permanent: hasConnections
-          })
-          // .bindPopup(`${loc.location}<br>${locDate}`);
+        }).bindTooltip(`${loc.location}<br>${locDate}`, {
+          permanent: hasConnections
+        });
+        // .bindPopup(`${loc.location}<br>${locDate}`);
         // .openTooltip();
         return locMarker;
       })
@@ -270,8 +286,8 @@ function Map() {
         if (arr[i + 1]) {
           // const line = new L.Geodesic(
           const line = new L.polyline(
-            [marker.getLatLng(), arr[i + 1].getLatLng()]
-            ,{ wrap: false, steps: 10 }
+            [marker.getLatLng(), arr[i + 1].getLatLng()],
+            { wrap: false, steps: 10 }
           );
           // const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
           featureGroup.push(line);
@@ -291,12 +307,12 @@ function Map() {
       : Math.max(8, mymap.current.getZoom());
 
     // setPortraitMode(false)
-    console.log('mode', isPortraitMode())
-    
+    console.log('mode', isPortraitMode());
+
     let brPadding = [
-      isPortraitMode() ? 20 : window.innerWidth/3,
-      isPortraitMode() ? window.innerHeight/2 : 20
-    ]
+      isPortraitMode() ? 20 : window.innerWidth / 3,
+      isPortraitMode() ? window.innerHeight / 2 : 20
+    ];
 
     mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
       paddingBottomRight: brPadding,
@@ -306,45 +322,53 @@ function Map() {
     });
 
     const isProbable = virusCase.status === 'probable';
-    console.log(virusCase.status)
+    console.log(virusCase.status);
     let t = toast(
-      <div style={{fontSize:'0.8em'}}>
-
-    <h2 >Case {virusCase.case_number}{isProbable? ` (Probable)` : ''}</h2>
-    <p>{getFormattedDateString(virusCase.date_confirmed)}</p>
-    <p>{virusCase.location}</p>
-    <p>{virusCase.gender} {virusCase.age_bracket}</p>
-    <p>{virusCase.additional_info[0].info}</p>
-    <a href={`${virusCase.additional_info[0].source_url}`} target='_blank'>Source</a>
+      <div style={{ fontSize: '0.8em' }}>
+        <h2>
+          Case {virusCase.case_number}
+          {isProbable ? ` (Probable)` : ''}
+        </h2>
+        <p>{getFormattedDateString(virusCase.date_confirmed)}</p>
+        <p>{virusCase.location}</p>
+        <p>
+          {virusCase.gender} {virusCase.age_bracket}
+        </p>
+        <p>{virusCase.additional_info[0].info}</p>
+        <a href={`${virusCase.additional_info[0].source_url}`} target="_blank">
+          Source
+        </a>
       </div>
-    )
+    );
 
-    const CloseButton = ({closeToast}) => (
-<button className="Toastify__close-button Toastify__close-button--default" type="button" aria-label="close"
-onClick={() => {
-  closeToast()
-  resetMarkers()
-  if (mymap.current.getZoom() < 6) resetZoom()
-}}
->✖︎</button>
-    )
+    const CloseButton = ({ closeToast }) => (
+      <button
+        className="Toastify__close-button Toastify__close-button--default"
+        type="button"
+        aria-label="close"
+        onClick={() => {
+          closeToast();
+          resetMarkers();
+          if (mymap.current.getZoom() < 6) resetZoom();
+        }}
+      >
+        ✖︎
+      </button>
+    );
 
-      toast.update(t,{
-        position: "bottom-right",
-        autoClose: false,
-        hideProgressBar: true,
-        closeOnClick: false,
-        draggable: true,
-        draggablePercent: 40,
-        closeButton: <CloseButton/>,
-        onClose: () => {
-
-          resetMarkers()
-          if (mymap.current.getZoom() < 6) resetZoom()
-
-        },
-        });
-
+    toast.update(t, {
+      position: 'bottom-right',
+      autoClose: false,
+      hideProgressBar: true,
+      closeOnClick: false,
+      draggable: true,
+      draggablePercent: 40,
+      closeButton: <CloseButton />,
+      onClose: () => {
+        resetMarkers();
+        if (mymap.current.getZoom() < 6) resetZoom();
+      }
+    });
   };
 
   const displayTrace = () => {
@@ -357,7 +381,7 @@ onClick={() => {
 }
 
 const getFormattedDateString = date => {
-  if (!date) return 'Date not available'
+  if (!date) return 'Date not available';
   const newDate = new Date(date);
   const options = {
     day: '2-digit',
@@ -367,7 +391,7 @@ const getFormattedDateString = date => {
     options.hour = '2-digit';
     options.minute = '2-digit';
     options.hourCycle = 'h12';
-  } 
+  }
   return newDate.toLocaleString('en-NZ', options);
 };
 
@@ -376,13 +400,13 @@ const getMarkerIcon = virusCase => {
   const options = {
     isAlphaNumericIcon: true,
     text: `Case
-    ${virusCase.case_number}${isProbable? '*' : ''}`,
+    ${virusCase.case_number}${isProbable ? '*' : ''}`,
     iconShape: 'circle',
     iconSize: [36, 36],
     iconAnchor: [18, 18],
     tooltipAnchor: [20, 0],
     borderColor: '#333',
-    textColor: '#333',
+    textColor: '#333'
   };
   if (isProbable) options.backgroundColor = 'lightgray';
   return L.BeautifyIcon.icon(options);
