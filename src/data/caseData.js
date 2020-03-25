@@ -2083,8 +2083,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '53',
-      case_number: '53',
+      id: 53,
+      case_number: 53,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2130,8 +2130,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '54',
-      case_number: '54',
+      id: 54,
+      case_number: 54,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2150,8 +2150,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '55',
-      case_number: '55',
+      id: 55,
+      case_number: 55,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2183,8 +2183,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '56',
-      case_number: '56',
+      id: 56,
+      case_number: 56,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2211,8 +2211,8 @@ const data = {
       age_bracket: '30s'
     },
     {
-      id: '57',
-      case_number: '57',
+      id: 57,
+      case_number: 57,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2237,8 +2237,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '58',
-      case_number: '58',
+      id: 58,
+      case_number: 58,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2269,8 +2269,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '59',
-      case_number: '59',
+      id: 59,
+      case_number: 59,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2290,8 +2290,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '60',
-      case_number: '60',
+      id: 60,
+      case_number: 60,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2321,8 +2321,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '61',
-      case_number: '61',
+      id: 61,
+      case_number: 61,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2344,8 +2344,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '62',
-      case_number: '62',
+      id: 62,
+      case_number: 62,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2387,8 +2387,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '63',
-      case_number: '63',
+      id: 63,
+      case_number: 63,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2430,8 +2430,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '64',
-      case_number: '64',
+      id: 64,
+      case_number: 64,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2473,8 +2473,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '65',
-      case_number: '65',
+      id: 65,
+      case_number: 65,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2505,8 +2505,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '66',
-      case_number: '66',
+      id: 66,
+      case_number: 66,
       status: 'active',
       date_confirmed: '22 Mar 2020',
       date_suspected: '',
@@ -2536,8 +2536,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '67',
-      case_number: '67',
+      id: 67,
+      case_number: 67,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2556,8 +2556,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '68',
-      case_number: '68',
+      id: 68,
+      case_number: 68,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2577,8 +2577,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '69',
-      case_number: '69',
+      id: 69,
+      case_number: 69,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2597,8 +2597,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '70',
-      case_number: '70',
+      id: 70,
+      case_number: 70,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2617,8 +2617,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '71',
-      case_number: '71',
+      id: 71,
+      case_number: 71,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2637,8 +2637,8 @@ const data = {
       age_bracket: '30s'
     },
     {
-      id: '72',
-      case_number: '72',
+      id: 72,
+      case_number: 72,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2659,8 +2659,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '73',
-      case_number: '73',
+      id: 73,
+      case_number: 73,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2679,8 +2679,8 @@ const data = {
       age_bracket: 'Teens'
     },
     {
-      id: '74',
-      case_number: '74',
+      id: 74,
+      case_number: 74,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2699,8 +2699,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '75',
-      case_number: '75',
+      id: 75,
+      case_number: 75,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2719,8 +2719,8 @@ const data = {
       age_bracket: '70s'
     },
     {
-      id: '76',
-      case_number: '76',
+      id: 76,
+      case_number: 76,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2739,8 +2739,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '77',
-      case_number: '77',
+      id: 77,
+      case_number: 77,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2759,8 +2759,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '78',
-      case_number: '78',
+      id: 78,
+      case_number: 78,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2781,8 +2781,8 @@ const data = {
       age_bracket: '40s'
     },
     {
-      id: '79',
-      case_number: '79',
+      id: 79,
+      case_number: 79,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2801,8 +2801,8 @@ const data = {
       age_bracket: '20s'
     },
     {
-      id: '80',
-      case_number: '80',
+      id: 80,
+      case_number: 80,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2824,8 +2824,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '81',
-      case_number: '81',
+      id: 81,
+      case_number: 81,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2844,8 +2844,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '82',
-      case_number: '82',
+      id: 82,
+      case_number: 82,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2864,8 +2864,8 @@ const data = {
       age_bracket: '60s'
     },
     {
-      id: '83',
-      case_number: '83',
+      id: 83,
+      case_number: 83,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2884,8 +2884,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '84',
-      case_number: '84',
+      id: 84,
+      case_number: 84,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2904,8 +2904,8 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '85',
-      case_number: '85',
+      id: 85,
+      case_number: 85,
       status: 'active',
       date_confirmed: '23 Mar 2020',
       date_suspected: '',
@@ -2924,10 +2924,10 @@ const data = {
       age_bracket: 'Child'
     },
     {
-      id: '86',
-      case_number: '86',
+      id: 86,
+      case_number: 86,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -2940,14 +2940,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '87',
-      case_number: '87',
+      id: 87,
+      case_number: 87,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Canterbury NZ', description: '' }
@@ -2962,14 +2962,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '20s'
     },
     {
-      id: '88',
-      case_number: '88',
+      id: 88,
+      case_number: 88,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -2982,14 +2982,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '70s'
     },
     {
-      id: '89',
-      case_number: '89',
+      id: 89,
+      case_number: 89,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -3002,14 +3002,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '70s'
     },
     {
-      id: '90',
-      case_number: '90',
+      id: 90,
+      case_number: 90,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3022,14 +3022,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
     },
     {
-      id: '91',
-      case_number: '91',
+      id: 91,
+      case_number: 91,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3042,14 +3042,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '40s'
     },
     {
-      id: '92',
-      case_number: '92',
+      id: 92,
+      case_number: 92,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3062,14 +3062,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '20s'
     },
     {
-      id: '93',
-      case_number: '93',
+      id: 93,
+      case_number: 93,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3082,14 +3082,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '40s'
     },
     {
-      id: '94',
-      case_number: '94',
+      id: 94,
+      case_number: 94,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3102,14 +3102,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '20s'
     },
     {
-      id: '95',
-      case_number: '95',
+      id: 95,
+      case_number: 95,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3122,14 +3122,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '40s'
     },
     {
-      id: '96',
-      case_number: '96',
+      id: 96,
+      case_number: 96,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3142,14 +3142,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '40s'
     },
     {
-      id: '97',
-      case_number: '97',
+      id: 97,
+      case_number: 97,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3162,14 +3162,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '20s'
     },
     {
-      id: '98',
-      case_number: '98',
+      id: 98,
+      case_number: 98,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Kapiti Coast', description: '' }
@@ -3184,14 +3184,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '99',
-      case_number: '99',
+      id: 99,
+      case_number: 99,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -3204,14 +3204,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '100',
-      case_number: '100',
+      id: 100,
+      case_number: 100,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3224,14 +3224,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: 'Teens'
     },
     {
-      id: '101',
-      case_number: '101',
+      id: 101,
+      case_number: 101,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Upper Hutt', description: '' }],
       media_release_url: '',
@@ -3244,14 +3244,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '102',
-      case_number: '102',
+      id: 102,
+      case_number: 102,
       status: 'active',
-      date_confirmed: '23 Mar',
+      date_confirmed: '23 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3264,14 +3264,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
-    },,
+    },
     {
-      id: '103',
-      case_number: '103',
+      id: 103,
+      case_number: 103,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3284,14 +3284,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '40s'
     },
     {
-      id: '104',
-      case_number: '104',
+      id: 104,
+      case_number: 104,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3304,14 +3304,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '20s'
     },
     {
-      id: '105',
-      case_number: '105',
+      id: 105,
+      case_number: 105,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [
         { date: '', location: 'South Canterbury NZ', description: '' }
@@ -3327,14 +3327,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '20s'
     },
     {
-      id: '106',
-      case_number: '106',
+      id: 106,
+      case_number: 106,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Otago', description: '' }],
       media_release_url: '',
@@ -3348,14 +3348,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '107',
-      case_number: '107',
+      id: 107,
+      case_number: 107,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Dunedin', description: '' }],
       media_release_url: '',
@@ -3369,14 +3369,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     },
     {
-      id: '108',
-      case_number: '108',
+      id: 108,
+      case_number: 108,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Queenstown', description: '' }],
       media_release_url: '',
@@ -3390,14 +3390,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: 'Teens'
     },
     {
-      id: '109',
-      case_number: '109',
+      id: 109,
+      case_number: 109,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Christchurch', description: '' }],
       media_release_url: '',
@@ -3410,14 +3410,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '110',
-      case_number: '110',
+      id: 110,
+      case_number: 110,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Christchurch', description: '' }],
       media_release_url: '',
@@ -3430,14 +3430,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '111',
-      case_number: '111',
+      id: 111,
+      case_number: 111,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Waikato', description: '' }],
       media_release_url: '',
@@ -3450,14 +3450,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '112',
-      case_number: '112',
+      id: 112,
+      case_number: 112,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3470,14 +3470,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     },
     {
-      id: '113',
-      case_number: '113',
+      id: 113,
+      case_number: 113,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3490,14 +3490,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '40s'
     },
     {
-      id: '114',
-      case_number: '114',
+      id: 114,
+      case_number: 114,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3510,14 +3510,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: 'Teens'
     },
     {
-      id: '115',
-      case_number: '115',
+      id: 115,
+      case_number: 115,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3530,14 +3530,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     },
     {
-      id: '116',
-      case_number: '116',
+      id: 116,
+      case_number: 116,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3550,14 +3550,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '20s'
     },
     {
-      id: '117',
-      case_number: '117',
+      id: 117,
+      case_number: 117,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3570,14 +3570,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     },
     {
-      id: '118',
-      case_number: '118',
+      id: 118,
+      case_number: 118,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3590,14 +3590,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: 'Teens'
     },
     {
-      id: '119',
-      case_number: '119',
+      id: 119,
+      case_number: 119,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Waikato', description: '' }],
       media_release_url: '',
@@ -3611,14 +3611,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
     },
     {
-      id: '120',
-      case_number: '120',
+      id: 120,
+      case_number: 120,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Dunedin', description: '' }],
       media_release_url: '',
@@ -3632,14 +3632,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '121',
-      case_number: '121',
+      id: 121,
+      case_number: 121,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Dunedin', description: '' }],
       media_release_url: '',
@@ -3653,14 +3653,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '30s'
     },
     {
-      id: '122',
-      case_number: '122',
+      id: 122,
+      case_number: 122,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3673,14 +3673,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '20s'
     },
     {
-      id: '123',
-      case_number: '123',
+      id: 123,
+      case_number: 123,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Nelson', description: '' }],
       media_release_url: '',
@@ -3693,14 +3693,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '80s'
     },
     {
-      id: '124',
-      case_number: '124',
+      id: 124,
+      case_number: 124,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3713,14 +3713,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
     },
     {
-      id: '125',
-      case_number: '125',
+      id: 125,
+      case_number: 125,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3734,14 +3734,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '126',
-      case_number: '126',
+      id: 126,
+      case_number: 126,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3755,14 +3755,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '127',
-      case_number: '127',
+      id: 127,
+      case_number: 127,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3775,14 +3775,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '128',
-      case_number: '128',
+      id: 128,
+      case_number: 128,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3795,14 +3795,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '30s'
     },
     {
-      id: '129',
-      case_number: '129',
+      id: 129,
+      case_number: 129,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3815,14 +3815,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     },
     {
-      id: '130',
-      case_number: '130',
+      id: 130,
+      case_number: 130,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3835,14 +3835,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '131',
-      case_number: '131',
+      id: 131,
+      case_number: 131,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Hawke’s Bay', description: '' }],
       media_release_url: '',
@@ -3856,14 +3856,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '70s'
     },
     {
-      id: '132',
-      case_number: '132',
+      id: 132,
+      case_number: 132,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Hawke’s Bay', description: '' }],
       media_release_url: '',
@@ -3877,14 +3877,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '70s'
     },
     {
-      id: '133',
-      case_number: '133',
+      id: 133,
+      case_number: 133,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3897,14 +3897,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
     },
     {
-      id: '134',
-      case_number: '134',
+      id: 134,
+      case_number: 134,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3917,14 +3917,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '70s'
     },
     {
-      id: '135',
-      case_number: '135',
+      id: 135,
+      case_number: 135,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -3937,14 +3937,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '70s'
     },
     {
-      id: '136',
-      case_number: '136',
+      id: 136,
+      case_number: 136,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -3957,14 +3957,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '137',
-      case_number: '137',
+      id: 137,
+      case_number: 137,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Marlborough NZ', description: '' }],
       media_release_url: '',
@@ -3977,14 +3977,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '30s'
     },
     {
-      id: '138',
-      case_number: '138',
+      id: 138,
+      case_number: 138,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Marlborough NZ', description: '' }],
       media_release_url: '',
@@ -3997,14 +3997,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '139',
-      case_number: '139',
+      id: 139,
+      case_number: 139,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -4017,14 +4017,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '64'
     },
     {
-      id: '140',
-      case_number: '140',
+      id: 140,
+      case_number: 140,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wairarapa', description: '' }],
       media_release_url: '',
@@ -4037,14 +4037,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '20s'
     },
     {
-      id: '141',
-      case_number: '141',
+      id: 141,
+      case_number: 141,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'New Plymouth', description: '' }],
       media_release_url: '',
@@ -4057,14 +4057,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '142',
-      case_number: '142',
+      id: 142,
+      case_number: 142,
       status: 'active',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Waitemata', description: '' }],
       media_release_url: '',
@@ -4077,16 +4077,16 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '30s'
     }
   ],
   probable_cases: [
     {
-      id: '1',
-      case_number: '1',
+      id: 1,
+      case_number: 1,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -4103,10 +4103,10 @@ const data = {
       age_bracket: '50s'
     },
     {
-      id: '2',
-      case_number: '2',
+      id: 2,
+      case_number: 2,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -4119,14 +4119,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: 'Teens'
     },
     {
-      id: '3',
-      case_number: '3',
+      id: 3,
+      case_number: 3,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Dunedin', description: '' }],
       media_release_url: '',
@@ -4139,14 +4139,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '4',
-      case_number: '4',
+      id: 4,
+      case_number: 4,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Hamilton NZ', description: '' }],
       media_release_url: '',
@@ -4159,14 +4159,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '40s'
     },
     {
-      id: '5',
-      case_number: '5',
+      id: 5,
+      case_number: 5,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -4179,14 +4179,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '70s'
     },
     {
-      id: '6',
-      case_number: '6',
+      id: 6,
+      case_number: 6,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -4199,14 +4199,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '70s'
     },
     {
-      id: '7',
-      case_number: '7',
+      id: 7,
+      case_number: 7,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Canterbury NZ', description: '' }],
       media_release_url: '',
@@ -4219,14 +4219,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: 'Teens'
     },
     {
-      id: '8',
-      case_number: '8',
+      id: 8,
+      case_number: 8,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Waikato', description: '' }],
       media_release_url: '',
@@ -4239,14 +4239,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '50s'
     },
     {
-      id: '9',
-      case_number: '9',
+      id: 9,
+      case_number: 9,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Auckland', description: '' }],
       media_release_url: '',
@@ -4259,14 +4259,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '50s'
     },
     {
-      id: '10',
-      case_number: '10',
+      id: 10,
+      case_number: 10,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -4279,14 +4279,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '80s'
     },
     {
-      id: '11',
-      case_number: '11',
+      id: 11,
+      case_number: 11,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Wellington', description: '' }
@@ -4301,14 +4301,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: '60s'
     },
     {
-      id: '12',
-      case_number: '12',
+      id: 12,
+      case_number: 12,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [{ date: '', location: 'Wellington', description: '' }],
       media_release_url: '',
@@ -4321,14 +4321,14 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'F',
+      gender: 'Female',
       age_bracket: '60s'
     },
     {
-      id: '13',
-      case_number: '13',
+      id: 13,
+      case_number: 13,
       status: 'probable',
-      date_confirmed: '24 Mar',
+      date_confirmed: '24 Mar 2020',
       date_suspected: '',
       location_history: [
         { date: '', location: 'Wellington', description: '' }
@@ -4343,7 +4343,7 @@ const data = {
         }
       ],
       related_cases: [],
-      gender: 'M',
+      gender: 'Male',
       age_bracket: 'Teens'
     },
   ],

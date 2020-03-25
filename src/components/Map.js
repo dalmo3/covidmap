@@ -12,7 +12,8 @@ import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // require('dotenv').config();
-const data = require('../data/caseData').data;
+// const data = require('../data/caseData').data;
+const data = require('../data/caseData.json');
 const locationCache = require('../data/locationCache.json');
 // import fs from 'fs'
 
@@ -219,6 +220,7 @@ function Map() {
 
   const generateClusters = () => {
     // markerCluster = ;
+    console.log('case_number', data.cases.concat(data.probable_cases))
     data.cases.concat(data.probable_cases).forEach(async virusCase => {
       const location = virusCase.location_history.slice(-1)[0].location;
       const coords = await getCoordinates(location);
@@ -237,7 +239,7 @@ function Map() {
         .on('click', () => {
           setShowClusters(false);
           traceCase(virusCase);
-        });
+        }); 
 
       markerCluster.current.addLayer(marker);
     });
