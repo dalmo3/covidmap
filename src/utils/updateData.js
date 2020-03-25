@@ -9,7 +9,7 @@ const data = require('../data/caseData').data;
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 // const fetch = require('node-fetch');
-const fetch = require('simple-fetch-cache');
+const {fetch} = require('simple-fetch-cache');
 const moment = require('moment');
 
 // 'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
@@ -28,7 +28,11 @@ const fetchFlightData = async (flightNumber, flightDate) => {
 
   const html = await fetch(
     `https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`
-  ).then(res => res.text());
+  ).then(res => {
+    console.log(res)
+    res.reply.text()
+  
+  });
   // console.log(html)
   // const dom = parser.parseFromString(html, 'text/html');
   const dom = new JSDOM(html).window.document;
