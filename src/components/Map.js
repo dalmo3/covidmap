@@ -147,15 +147,17 @@ function Map() {
     console.log(process.env);
     // alert(accessToken)
     L.tileLayer(
-      `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
+      // `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        // attribution:
+          // 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
         maxZoom: 14,
         minZoom: 2,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1
+        // id: 'mapbox/streets-v11',
+        // tileSize: 512,
+        // zoomOffset: -1
       }
     ).addTo(mymap.current);
     function onMapClick(e) {
