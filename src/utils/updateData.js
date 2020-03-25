@@ -123,10 +123,10 @@ const updateCache = () => {
   });
 };
 
+updateCache();
 const compareNewData = () => {
   const newobj = Object.assign(caseData, newData);
   console.log(newobj)
 }
 
-compareNewData()
-// updateCache();
+// compareNewData()
