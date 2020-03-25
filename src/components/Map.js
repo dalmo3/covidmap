@@ -13,7 +13,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // require('dotenv').config();
 // const data = require('../data/caseData').data;
-const data = require('../data/caseData.json');
+// const data = require('../data/caseData.json');
+const data = require('../data/newData3.json');
 const locationCache = require('../data/locationCache.json');
 // import fs from 'fs'
 
@@ -55,10 +56,16 @@ const getCoordinates = async location =>
         });
     }
   });
+const dis = () => toast.dismiss()
 
 function Map() {
+  
   document.addEventListener('keyup', e => {
-    if (e.keyCode === 27) initState();
+    if (e.keyCode === 27) {
+      resetMarkers();
+      if (mymap.current.getZoom() < 6) resetZoom();
+      dis()
+    };
   });
   const initState = () => {
     resetMarkers();
@@ -224,7 +231,7 @@ function Map() {
     // markerCluster = ;
     console.log('case_number', data.cases.concat(data.probable_cases))
     data.cases.concat(data.probable_cases).forEach(async virusCase => {
-      const location = virusCase.location_history.slice(-1)[0].location;
+      const location = virusCase.location_history.slice(-1)[0] && virusCase.location_history.slice(-1)[0].location || virusCase.location;
       const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
@@ -262,9 +269,12 @@ function Map() {
   // display case paths
   const traceCase = async virusCase => {
     // find all markers
-    const hasConnections = virusCase.location_history.length > 1;
+    const locations = virusCase.location_history
+    const hasConnections = !!virusCase.location_history.length;
+    if (!hasConnections) locations.push(
+    {location: virusCase.location})
     const caseMarkers = await Promise.all(
-      virusCase.location_history.map(async loc => {
+      locations.map(async loc => {
         // console.log(loc)
         // console.log(loc.location);
         const coords = await getCoordinates(loc.location);
@@ -339,8 +349,8 @@ function Map() {
         <p>
           {virusCase.gender} {virusCase.age_bracket}
         </p>
-        <p>{virusCase.additional_info[0].info}</p>
-        <a href={`${virusCase.additional_info[0].source_url}`} target="_blank">
+        <p>{virusCase.travel_details}</p>
+        <a href={`${virusCase.additional_info[0] && virusCase.additional_info[0].source_url}`} target="_blank">
           Source
         </a>
       </div>

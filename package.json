@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "jsdom": "^16.2.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "simple-fetch-cache": "^1.4.1"
   }
 }
