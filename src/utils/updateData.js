@@ -126,11 +126,23 @@ const updateCache = () => {
 
 // updateCache();
 const compareNewData = () => {
-  const newobj = Object.assign(caseData, newCaseFormat);
+  
+  
+  const newobj = Object.assign({}, newCaseFormat);
+  newobj.cases.forEach((c,i) => {
+    // console.log(c)
+    Object.assign(c,caseData.cases[i])
+    // console.log(c)
+  })
+  newobj.probable_cases.forEach((c,i) => {
+    Object.assign(c,caseData.probable_cases[i])
+  })
+  console.log(newobj.probable_cases)
+  console.log(newobj)
   // console.log(newobj)
   const NEWDATA_PATH = path.resolve(
     __dirname,
-    '../data/newData.json'
+    '../data/newData2.json'
   );
   fs.writeFileSync(NEWDATA_PATH, JSON.stringify(newobj))
 }
