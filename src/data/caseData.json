@@ -4,7 +4,7 @@
     {
       "id": 1,
       "case_number": 1,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "28 Feb 2020",
       "date_suspected": "",
       "location_history": [
@@ -49,7 +49,7 @@
     {
       "id": 2,
       "case_number": 2,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "4 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -105,7 +105,7 @@
     {
       "id": 3,
       "case_number": 3,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "5 Mar, 2020",
       "date_suspected": "",
       "location_history": [
@@ -145,7 +145,7 @@
     {
       "id": 4,
       "case_number": 4,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "6 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -186,7 +186,7 @@
     {
       "id": 5,
       "case_number": 5,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "7 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -217,7 +217,7 @@
     {
       "id": 6,
       "case_number": 6,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "14 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -256,7 +256,7 @@
     {
       "id": 7,
       "case_number": 7,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "15 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -311,7 +311,7 @@
     {
       "id": 8,
       "case_number": 8,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "15 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -351,7 +351,7 @@
     {
       "id": 9,
       "case_number": 9,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "17 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -397,7 +397,7 @@
     {
       "id": 10,
       "case_number": 10,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "17 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -443,7 +443,7 @@
     {
       "id": 11,
       "case_number": 11,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "17 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -499,7 +499,7 @@
     {
       "id": 12,
       "case_number": 12,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "17 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -534,7 +534,7 @@
     {
       "id": 13,
       "case_number": 13,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -564,7 +564,7 @@
     {
       "id": 14,
       "case_number": 14,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -594,7 +594,7 @@
     {
       "id": 15,
       "case_number": 15,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -624,7 +624,7 @@
     {
       "id": 16,
       "case_number": 16,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -654,7 +654,7 @@
     {
       "id": 17,
       "case_number": 17,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -684,7 +684,7 @@
     {
       "id": 18,
       "case_number": 18,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -719,7 +719,7 @@
     {
       "id": 19,
       "case_number": 19,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -754,7 +754,7 @@
     {
       "id": 20,
       "case_number": 20,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "18 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -784,7 +784,7 @@
     {
       "id": 21,
       "case_number": 21,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -824,7 +824,7 @@
     {
       "id": 22,
       "case_number": 22,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -879,7 +879,7 @@
     {
       "id": 23,
       "case_number": 23,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -934,7 +934,7 @@
     {
       "id": 24,
       "case_number": 24,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -969,7 +969,7 @@
     {
       "id": 25,
       "case_number": 25,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -999,7 +999,7 @@
     {
       "id": 26,
       "case_number": 26,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1029,7 +1029,7 @@
     {
       "id": 27,
       "case_number": 27,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1089,7 +1089,7 @@
     {
       "id": 28,
       "case_number": 28,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "19 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1124,7 +1124,7 @@
     {
       "id": 29,
       "case_number": 29,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1154,7 +1154,7 @@
     {
       "id": 30,
       "case_number": 30,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1199,7 +1199,7 @@
     {
       "id": 31,
       "case_number": 31,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1229,7 +1229,7 @@
     {
       "id": 32,
       "case_number": 32,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1274,7 +1274,7 @@
     {
       "id": 33,
       "case_number": 33,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1315,7 +1315,7 @@
     {
       "id": 34,
       "case_number": 34,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1356,7 +1356,7 @@
     {
       "id": 35,
       "case_number": 35,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1386,7 +1386,7 @@
     {
       "id": 36,
       "case_number": 36,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1416,7 +1416,7 @@
     {
       "id": 37,
       "case_number": 37,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1451,7 +1451,7 @@
     {
       "id": 38,
       "case_number": 38,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1476,7 +1476,7 @@
     {
       "id": 39,
       "case_number": 39,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "20 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1521,7 +1521,7 @@
     {
       "id": 40,
       "case_number": 40,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1546,7 +1546,7 @@
     {
       "id": 41,
       "case_number": 41,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1576,7 +1576,7 @@
     {
       "id": 42,
       "case_number": 42,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1611,7 +1611,7 @@
     {
       "id": 43,
       "case_number": 43,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1641,7 +1641,7 @@
     {
       "id": 44,
       "case_number": 44,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1691,7 +1691,7 @@
     {
       "id": 45,
       "case_number": 45,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1731,7 +1731,7 @@
     {
       "id": 46,
       "case_number": 46,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1761,7 +1761,7 @@
     {
       "id": 47,
       "case_number": 47,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1796,7 +1796,7 @@
     {
       "id": 48,
       "case_number": 48,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1841,7 +1841,7 @@
     {
       "id": 49,
       "case_number": 49,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1886,7 +1886,7 @@
     {
       "id": 50,
       "case_number": 50,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1911,7 +1911,7 @@
     {
       "id": 51,
       "case_number": 51,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1941,7 +1941,7 @@
     {
       "id": 52,
       "case_number": 52,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "21 mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -1966,7 +1966,7 @@
     {
       "id": 53,
       "case_number": 53,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2011,7 +2011,7 @@
     {
       "id": 54,
       "case_number": 54,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2036,7 +2036,7 @@
     {
       "id": 55,
       "case_number": 55,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2071,7 +2071,7 @@
     {
       "id": 56,
       "case_number": 56,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2101,7 +2101,7 @@
     {
       "id": 57,
       "case_number": 57,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2141,7 +2141,7 @@
     {
       "id": 58,
       "case_number": 58,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2171,7 +2171,7 @@
     {
       "id": 59,
       "case_number": 59,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2196,7 +2196,7 @@
     {
       "id": 60,
       "case_number": 60,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2226,7 +2226,7 @@
     {
       "id": 61,
       "case_number": 61,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2256,7 +2256,7 @@
     {
       "id": 62,
       "case_number": 62,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2301,7 +2301,7 @@
     {
       "id": 63,
       "case_number": 63,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2346,7 +2346,7 @@
     {
       "id": 64,
       "case_number": 64,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2391,7 +2391,7 @@
     {
       "id": 65,
       "case_number": 65,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2426,7 +2426,7 @@
     {
       "id": 66,
       "case_number": 66,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "22 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2456,7 +2456,7 @@
     {
       "id": 67,
       "case_number": 67,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2481,7 +2481,7 @@
     {
       "id": 68,
       "case_number": 68,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2506,7 +2506,7 @@
     {
       "id": 69,
       "case_number": 69,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2531,7 +2531,7 @@
     {
       "id": 70,
       "case_number": 70,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2556,7 +2556,7 @@
     {
       "id": 71,
       "case_number": 71,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2581,7 +2581,7 @@
     {
       "id": 72,
       "case_number": 72,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2606,7 +2606,7 @@
     {
       "id": 73,
       "case_number": 73,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2631,7 +2631,7 @@
     {
       "id": 74,
       "case_number": 74,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2656,7 +2656,7 @@
     {
       "id": 75,
       "case_number": 75,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2681,7 +2681,7 @@
     {
       "id": 76,
       "case_number": 76,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2706,7 +2706,7 @@
     {
       "id": 77,
       "case_number": 77,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2731,7 +2731,7 @@
     {
       "id": 78,
       "case_number": 78,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2756,7 +2756,7 @@
     {
       "id": 79,
       "case_number": 79,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2781,7 +2781,7 @@
     {
       "id": 80,
       "case_number": 80,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2806,7 +2806,7 @@
     {
       "id": 81,
       "case_number": 81,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2831,7 +2831,7 @@
     {
       "id": 82,
       "case_number": 82,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2856,7 +2856,7 @@
     {
       "id": 83,
       "case_number": 83,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2881,7 +2881,7 @@
     {
       "id": 84,
       "case_number": 84,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2906,7 +2906,7 @@
     {
       "id": 85,
       "case_number": 85,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2931,7 +2931,7 @@
     {
       "id": 86,
       "case_number": 86,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2956,7 +2956,7 @@
     {
       "id": 87,
       "case_number": 87,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -2981,7 +2981,7 @@
     {
       "id": 88,
       "case_number": 88,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3006,7 +3006,7 @@
     {
       "id": 89,
       "case_number": 89,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3031,7 +3031,7 @@
     {
       "id": 90,
       "case_number": 90,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3056,7 +3056,7 @@
     {
       "id": 91,
       "case_number": 91,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3081,7 +3081,7 @@
     {
       "id": 92,
       "case_number": 92,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3106,7 +3106,7 @@
     {
       "id": 93,
       "case_number": 93,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3131,7 +3131,7 @@
     {
       "id": 94,
       "case_number": 94,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3156,7 +3156,7 @@
     {
       "id": 95,
       "case_number": 95,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3181,7 +3181,7 @@
     {
       "id": 96,
       "case_number": 96,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3206,7 +3206,7 @@
     {
       "id": 97,
       "case_number": 97,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3231,7 +3231,7 @@
     {
       "id": 98,
       "case_number": 98,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3256,7 +3256,7 @@
     {
       "id": 99,
       "case_number": 99,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3281,7 +3281,7 @@
     {
       "id": 100,
       "case_number": 100,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3306,7 +3306,7 @@
     {
       "id": 101,
       "case_number": 101,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3331,7 +3331,7 @@
     {
       "id": 102,
       "case_number": 102,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "23 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3356,7 +3356,7 @@
     {
       "id": 103,
       "case_number": 103,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3381,7 +3381,7 @@
     {
       "id": 104,
       "case_number": 104,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3406,7 +3406,7 @@
     {
       "id": 105,
       "case_number": 105,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3431,7 +3431,7 @@
     {
       "id": 106,
       "case_number": 106,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3456,7 +3456,7 @@
     {
       "id": 107,
       "case_number": 107,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3481,7 +3481,7 @@
     {
       "id": 108,
       "case_number": 108,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3506,7 +3506,7 @@
     {
       "id": 109,
       "case_number": 109,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3531,7 +3531,7 @@
     {
       "id": 110,
       "case_number": 110,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3556,7 +3556,7 @@
     {
       "id": 111,
       "case_number": 111,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3581,7 +3581,7 @@
     {
       "id": 112,
       "case_number": 112,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3606,7 +3606,7 @@
     {
       "id": 113,
       "case_number": 113,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3631,7 +3631,7 @@
     {
       "id": 114,
       "case_number": 114,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3656,7 +3656,7 @@
     {
       "id": 115,
       "case_number": 115,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3681,7 +3681,7 @@
     {
       "id": 116,
       "case_number": 116,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3706,7 +3706,7 @@
     {
       "id": 117,
       "case_number": 117,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3731,7 +3731,7 @@
     {
       "id": 118,
       "case_number": 118,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3756,7 +3756,7 @@
     {
       "id": 119,
       "case_number": 119,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3781,7 +3781,7 @@
     {
       "id": 120,
       "case_number": 120,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3806,7 +3806,7 @@
     {
       "id": 121,
       "case_number": 121,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3831,7 +3831,7 @@
     {
       "id": 122,
       "case_number": 122,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3856,7 +3856,7 @@
     {
       "id": 123,
       "case_number": 123,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3881,7 +3881,7 @@
     {
       "id": 124,
       "case_number": 124,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3906,7 +3906,7 @@
     {
       "id": 125,
       "case_number": 125,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3931,7 +3931,7 @@
     {
       "id": 126,
       "case_number": 126,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3956,7 +3956,7 @@
     {
       "id": 127,
       "case_number": 127,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -3981,7 +3981,7 @@
     {
       "id": 128,
       "case_number": 128,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4006,7 +4006,7 @@
     {
       "id": 129,
       "case_number": 129,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4031,7 +4031,7 @@
     {
       "id": 130,
       "case_number": 130,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4056,7 +4056,7 @@
     {
       "id": 131,
       "case_number": 131,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4081,7 +4081,7 @@
     {
       "id": 132,
       "case_number": 132,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4106,7 +4106,7 @@
     {
       "id": 133,
       "case_number": 133,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4131,7 +4131,7 @@
     {
       "id": 134,
       "case_number": 134,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4156,7 +4156,7 @@
     {
       "id": 135,
       "case_number": 135,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4181,7 +4181,7 @@
     {
       "id": 136,
       "case_number": 136,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4206,7 +4206,7 @@
     {
       "id": 137,
       "case_number": 137,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4231,7 +4231,7 @@
     {
       "id": 138,
       "case_number": 138,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4256,7 +4256,7 @@
     {
       "id": 139,
       "case_number": 139,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4281,7 +4281,7 @@
     {
       "id": 140,
       "case_number": 140,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4306,7 +4306,7 @@
     {
       "id": 141,
       "case_number": 141,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4331,7 +4331,7 @@
     {
       "id": 142,
       "case_number": 142,
-      "status": "active",
+      "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location_history": [
@@ -4356,7 +4356,7 @@
     {
       "id": "143",
       "case_number": "143",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4381,7 +4381,7 @@
     {
       "id": "144",
       "case_number": "144",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4406,7 +4406,7 @@
     {
       "id": "145",
       "case_number": "145",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4431,7 +4431,7 @@
     {
       "id": "146",
       "case_number": "146",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4456,7 +4456,7 @@
     {
       "id": "147",
       "case_number": "147",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4481,7 +4481,7 @@
     {
       "id": "148",
       "case_number": "148",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4506,7 +4506,7 @@
     {
       "id": "149",
       "case_number": "149",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4531,7 +4531,7 @@
     {
       "id": "150",
       "case_number": "150",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4556,7 +4556,7 @@
     {
       "id": "151",
       "case_number": "151",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4581,7 +4581,7 @@
     {
       "id": "152",
       "case_number": "152",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4606,7 +4606,7 @@
     {
       "id": "153",
       "case_number": "153",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4631,7 +4631,7 @@
     {
       "id": "154",
       "case_number": "154",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4656,7 +4656,7 @@
     {
       "id": "155",
       "case_number": "155",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4681,7 +4681,7 @@
     {
       "id": "156",
       "case_number": "156",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4706,7 +4706,7 @@
     {
       "id": "157",
       "case_number": "157",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4731,7 +4731,7 @@
     {
       "id": "158",
       "case_number": "158",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4756,7 +4756,7 @@
     {
       "id": "159",
       "case_number": "159",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4781,7 +4781,7 @@
     {
       "id": "160",
       "case_number": "160",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4806,7 +4806,7 @@
     {
       "id": "161",
       "case_number": "161",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4831,7 +4831,7 @@
     {
       "id": "162",
       "case_number": "162",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4856,7 +4856,7 @@
     {
       "id": "163",
       "case_number": "163",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4881,7 +4881,7 @@
     {
       "id": "164",
       "case_number": "164",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4906,7 +4906,7 @@
     {
       "id": "165",
       "case_number": "165",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4931,7 +4931,7 @@
     {
       "id": "166",
       "case_number": "166",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4956,7 +4956,7 @@
     {
       "id": "167",
       "case_number": "167",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -4981,7 +4981,7 @@
     {
       "id": "168",
       "case_number": "168",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5006,7 +5006,7 @@
     {
       "id": "169",
       "case_number": "169",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5031,7 +5031,7 @@
     {
       "id": "170",
       "case_number": "170",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5056,7 +5056,7 @@
     {
       "id": "171",
       "case_number": "171",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5081,7 +5081,7 @@
     {
       "id": "172",
       "case_number": "172",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5106,7 +5106,7 @@
     {
       "id": "173",
       "case_number": "173",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5131,7 +5131,7 @@
     {
       "id": "174",
       "case_number": "174",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5156,7 +5156,7 @@
     {
       "id": "175",
       "case_number": "175",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5181,7 +5181,7 @@
     {
       "id": "176",
       "case_number": "176",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5206,7 +5206,7 @@
     {
       "id": "177",
       "case_number": "177",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5231,7 +5231,7 @@
     {
       "id": "178",
       "case_number": "178",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5256,7 +5256,7 @@
     {
       "id": "179",
       "case_number": "179",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5281,7 +5281,7 @@
     {
       "id": "180",
       "case_number": "180",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5306,7 +5306,7 @@
     {
       "id": "181",
       "case_number": "181",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5331,7 +5331,7 @@
     {
       "id": "182",
       "case_number": "182",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5356,7 +5356,7 @@
     {
       "id": "183",
       "case_number": "183",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5381,7 +5381,7 @@
     {
       "id": "184",
       "case_number": "184",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5406,7 +5406,7 @@
     {
       "id": "185",
       "case_number": "185",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5431,7 +5431,7 @@
     {
       "id": "186",
       "case_number": "186",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5456,7 +5456,7 @@
     {
       "id": "187",
       "case_number": "187",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5481,7 +5481,7 @@
     {
       "id": "188",
       "case_number": "188",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5506,7 +5506,7 @@
     {
       "id": "189",
       "case_number": "189",
-      "status": "",
+      "status": "confirmed",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5533,7 +5533,7 @@
     {
       "id": "1",
       "case_number": "1",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5558,7 +5558,7 @@
     {
       "id": "2",
       "case_number": "2",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5583,7 +5583,7 @@
     {
       "id": "3",
       "case_number": "3",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5608,7 +5608,7 @@
     {
       "id": "4",
       "case_number": "4",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5633,7 +5633,7 @@
     {
       "id": "5",
       "case_number": "5",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5658,7 +5658,7 @@
     {
       "id": "6",
       "case_number": "6",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5683,7 +5683,7 @@
     {
       "id": "7",
       "case_number": "7",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5708,7 +5708,7 @@
     {
       "id": "8",
       "case_number": "8",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5733,7 +5733,7 @@
     {
       "id": "9",
       "case_number": "9",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5758,7 +5758,7 @@
     {
       "id": "10",
       "case_number": "10",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5783,7 +5783,7 @@
     {
       "id": "11",
       "case_number": "11",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5808,7 +5808,7 @@
     {
       "id": "12",
       "case_number": "12",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5833,7 +5833,7 @@
     {
       "id": "13",
       "case_number": "13",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5858,7 +5858,7 @@
     {
       "id": "14",
       "case_number": "14",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5883,7 +5883,7 @@
     {
       "id": "15",
       "case_number": "15",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
@@ -5908,7 +5908,7 @@
     {
       "id": "16",
       "case_number": "16",
-      "status": "",
+      "status": "probable",
       "date_confirmed": "",
       "date_suspected": "",
       "location_history": [
