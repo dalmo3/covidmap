@@ -3,6 +3,7 @@ const { JSDOM } = jsdom;
 const fs = require('fs');
 const caseData = require('../data/caseData.json');
 const newData = require('../data/caseData.json');
+const newCaseFormat = require('../data/newCaseFormat.json');
 const data = require('../data/caseData').data;
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
@@ -123,10 +124,16 @@ const updateCache = () => {
   });
 };
 
-updateCache();
+// updateCache();
 const compareNewData = () => {
-  const newobj = Object.assign(caseData, newData);
-  console.log(newobj)
+  const newobj = Object.assign(caseData, newCaseFormat);
+  // console.log(newobj)
+  const NEWDATA_PATH = path.resolve(
+    __dirname,
+    '../data/newData.json'
+  );
+  fs.writeFileSync(NEWDATA_PATH, JSON.stringify(newobj))
 }
 
-// compareNewData()
+
+compareNewData()
