@@ -1,6 +1,8 @@
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const fs = require('fs');
+const caseData = require('../data/caseData.json');
+const newData = require('../data/caseData.json');
 const data = require('../data/caseData').data;
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
@@ -66,6 +68,7 @@ const fetchFlightData = async (flightNumber, flightDate) => {
 
 // fetchFlightData()
 
+//old - used to convert .js into .json
 const genCaseFile = () => {
   const json = JSON.stringify(data);
   fs.writeFileSync(path.resolve(__dirname, '../data/caseData.json'), json);
@@ -74,14 +77,13 @@ const genCaseFile = () => {
   );
   console.log(JSON.parse(fileData));
 };
-
-genCaseFile();
+// genCaseFile();
 
 const updateCache = () => {
   // read locs from case data
-  const allLocs = data.cases
+  const allLocs = caseData.cases
     .flatMap(c => c.location_history)
-    .concat(data.probable_cases.flatMap(c => c.location_history));
+    .concat(caseData.probable_cases.flatMap(c => c.location_history));
 
   // read locs from loc cache
   const LOCATION_CACHE_PATH = path.resolve(
@@ -121,4 +123,10 @@ const updateCache = () => {
   });
 };
 
+const compareNewData = () => {
+  const newobj = Object.assign(caseData, newData);
+  console.log(newobj)
+}
+
+compareNewData()
 // updateCache();
