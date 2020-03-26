@@ -1,8 +1,9 @@
-export default new Map([
+const locMapper = new Map([
   ['Auckland', 'auckland hospital'],
   ['Bay of Plenty', 'Tauranga Hospital'],
   ['Canterbury', 'Christchurch Hospital'],
   ['Capital and Coast', 'Wellington Regional Hospital'],
+  ['Capital & Coast', 'Wellington Regional Hospital'],
   ['Counties Manukau', 'Manukau, new zealand'],
   ['Hawke\'s Bay', '100 McLeod Street Hastings '],
   ['Hawkes\'s Bay', '100 McLeod Street Hastings '],
@@ -22,3 +23,6 @@ export default new Map([
   ['West Coast', 'greymouth hospital'],
   ['Whanganui', 'whanganui hospital']
 ]);
+
+exports.get = (location) => locMapper.get(location) || location;
+

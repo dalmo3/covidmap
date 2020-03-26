@@ -12,7 +12,7 @@
       "gender": "",
       "age_bracket": "60s",
       "media_release_url": "https://www.health.govt.nz/news-media/media-releases/single-case-covid-19-confirmed-new-zealand",
-      "media_release_description": "The first case of COVID-19 is now confirmed in New Zealand in a person in their 60s recently returned from Iran.        The results of the test were formally reported to the Ministry at around 4.15pm this afternoon.              Although we have our first case of COVID-19, the chances of community outbreak remain low.              The Ministry of Health is confident the public risk from this new infection is being well managed because of the public messaging, awareness of COVID-19 disease and our public health response to managing cases and contacts.              The patient confirmed with COVID-19 is being treated in Auckland City Hospital. They are in an improving condition in isolation, in a negative pressure room to prevent any spread of the disease.              Household contacts are in isolation as a precautionary measure. Public health officials have begun tracing the patient’s other close contacts to ensure appropriate protection measures are in place, including on the flight involved which originated in Tehran and came via Bali.              Anyone who was on the final leg of the flight, Emirates EK450 arriving Auckland on Wednesday 26 February, and is concerned should contact the COVID-19 Healthline number 0800 358 5453.              The person arrived in Auckland on 26 February and travelled home in a private car. Their family became concerned about their condition and called Healthline.              They were advised to seek medical attention and attended Auckland City Hospital emergency department that same day. All were wearing masks on arrival. As a result of the individual's symptoms and travel history they were admitted and tested.              Two earlier tests were negative for COVID-19. A further test today using a more specific sample proved positive.              Contact tracing has started and close contacts are in isolation. Other close family contacts will also now be tested for COVID-19.              Hospital staff involved in the patient's care are using with appropriate personal protection. District health boards have been preparing for managing cases of COVID-19.",
+      "media_release_description": "The first case of COVID-19 is now confirmed in New Zealand in a person in their 60s recently returned from Iran.        The results of the test were formally reported to the Ministry at around 4.15pm this afternoon.              Although we have our first case of COVID-19, the chances of community outbreak remain low.              The Ministry of Health is confident the public risk from this new infection is being well managed because of the public messaging, awareness of COVID-19 disease and our public health response to managing cases and contacts.              The patient confirmed with COVID-19 is being treated in Auckland City Hospital. They are in an improving condition in isolation, in a negative pressure room to prevent any spread of the disease.              Household contacts are in isolation as a precautionary measure. Public health officials have begun tracing the patient's other close contacts to ensure appropriate protection measures are in place, including on the flight involved which originated in Tehran and came via Bali.              Anyone who was on the final leg of the flight, Emirates EK450 arriving Auckland on Wednesday 26 February, and is concerned should contact the COVID-19 Healthline number 0800 358 5453.              The person arrived in Auckland on 26 February and travelled home in a private car. Their family became concerned about their condition and called Healthline.              They were advised to seek medical attention and attended Auckland City Hospital emergency department that same day. All were wearing masks on arrival. As a result of the individual's symptoms and travel history they were admitted and tested.              Two earlier tests were negative for COVID-19. A further test today using a more specific sample proved positive.              Contact tracing has started and close contacts are in isolation. Other close family contacts will also now be tested for COVID-19.              Hospital staff involved in the patient's care are using with appropriate personal protection. District health boards have been preparing for managing cases of COVID-19.",
       "additional_info": [
         {
           "info": "Iran to Bali to Auckland (Emirates EK450 on Wednesday 26 February). ",
@@ -3178,7 +3178,7 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Wellington",
-      "travel_details": "Linked to a group’s trip to New York. Travelled from USA to New Zealand, arrived on 19 March, flight details to come",
+      "travel_details": "Linked to a group's trip to New York. Travelled from USA to New Zealand, arrived on 19 March, flight details to come",
       "gender": "Male",
       "age_bracket": "50s",
       "media_release_url": "",
@@ -3319,7 +3319,7 @@
       "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
-      "location": "Hawke’s Bay",
+      "location": "Hawke's Bay",
       "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021",
       "gender": "Male",
       "age_bracket": "70s",
@@ -3335,7 +3335,7 @@
       "status": "confirmed",
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
-      "location": "Hawke’s Bay",
+      "location": "Hawke's Bay",
       "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021",
       "gender": "Female",
       "age_bracket": "70s",
@@ -4285,6 +4285,1977 @@
       "media_release_description": "",
       "additional_info": [],
       "location_history": [],
+      "related_cases": []
+    },
+    {
+      "id": "190",
+      "case_number": "190",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hutt Valley",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hutt Valley",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "191",
+      "case_number": "191",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Capital & Coast",
+      "travel_details": "LA to Auckland on 17 March, then Auckland to Wellington – flight details to come",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "LA to Auckland on 17 March, then Auckland to Wellington – flight details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Capital & Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "192",
+      "case_number": "192",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Bangkok to Auckland, arriving 22 March, on Thai Airways",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Bangkok to Auckland, arriving 22 March, on Thai Airways",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "193",
+      "case_number": "193",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "MidCentral",
+      "travel_details": "Barcelona to Dubai on 15 March – flight EK188, Dubai to Auckland on 16 March – flight EK448, Auckland to Palmerston North on 17 March – flight NZ5115",
+      "gender": "M",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Barcelona to Dubai on 15 March – flight EK188, Dubai to Auckland on 16 March – flight EK448, Auckland to Palmerston North on 17 March – flight NZ5115",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "MidCentral",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "194",
+      "case_number": "194",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Northland",
+      "travel_details": "UK to Dubai on 19 March – flight EK38, Dubai to Auckland, arriving 21 March – flight EK448",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "UK to Dubai on 19 March – flight EK38, Dubai to Auckland, arriving 21 March – flight EK448",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Northland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "195",
+      "case_number": "195",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "196",
+      "case_number": "196",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "197",
+      "case_number": "197",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Household exposure to confirmed case from World Hereford Conference in Queenstown",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Household exposure to confirmed case from World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "198",
+      "case_number": "198",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Household exposure to confirmed case from World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Household exposure to confirmed case from World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "199",
+      "case_number": "199",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "200",
+      "case_number": "200",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "201",
+      "case_number": "201",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hawke's Bay",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hawke's Bay",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "202",
+      "case_number": "202",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hawkes's Bay",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hawkes's Bay",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "203",
+      "case_number": "203",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hawke's Bay",
+      "travel_details": "Cruise ship travel (Ruby Princess)",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Cruise ship travel (Ruby Princess)",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hawke's Bay",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "204",
+      "case_number": "204",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Linked to confirmed cases",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to confirmed cases",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "205",
+      "case_number": "205",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Frankfurt to Abu Dhabi on 19 March – flight EY008, Abu Dhabi to Melbourne on 20 March – flight EY462, Melbourne to Auckland on 21 March – flight EY6328, Auckland to Queenstown on 21 March – flight NZ625",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Frankfurt to Abu Dhabi on 19 March – flight EY008, Abu Dhabi to Melbourne on 20 March – flight EY462, Melbourne to Auckland on 21 March – flight EY6328, Auckland to Queenstown on 21 March – flight NZ625",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "206",
+      "case_number": "206",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Canterbury",
+      "travel_details": "Manchester to Singapore on 18 March – flight SQ051, then Singapore to Christchurch on 20 March – flight SQ297",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Manchester to Singapore on 18 March – flight SQ051, then Singapore to Christchurch on 20 March – flight SQ297",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Canterbury",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "207",
+      "case_number": "207",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Canterbury",
+      "travel_details": "London to Dubai on 19 March – flight EK10, Dubai to Sydney to Christchurch arriving on 20 March – flight EK412",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "London to Dubai on 19 March – flight EK10, Dubai to Sydney to Christchurch arriving on 20 March – flight EK412",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Canterbury",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "208",
+      "case_number": "208",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Dubai to Auckland on 18 March – flight EK448, Auckland to Dunedin on 19 March – flight NZ677",
+      "gender": "F",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland on 18 March – flight EK448, Auckland to Dunedin on 19 March – flight NZ677",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "209",
+      "case_number": "209",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "No international travel history – exposed at World Hereford Conference in Queenstown",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "210",
+      "case_number": "210",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Canterbury",
+      "travel_details": "Dubai to Auckland on 19 March – flight EK448, Auckland to Christchurch arriving on 20 March – flight details to come",
+      "gender": "F",
+      "age_bracket": "Unknown",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland on 19 March – flight EK448, Auckland to Christchurch arriving on 20 March – flight details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Canterbury",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "211",
+      "case_number": "211",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Canterbury",
+      "travel_details": "Relative of a confirmed case",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Relative of a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Canterbury",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "212",
+      "case_number": "212",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hutt Valley",
+      "travel_details": "Doha to Sydney on 12 March – flight QR906, Sydney to Wellington on 13 March – flight VA171",
+      "gender": "M",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Doha to Sydney on 12 March – flight QR906, Sydney to Wellington on 13 March – flight VA171",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hutt Valley",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "213",
+      "case_number": "213",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Canterbury",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "F",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Canterbury",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "214",
+      "case_number": "214",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "West Coast",
+      "travel_details": "Contact with a confirmed case. Wellington to Christchurch on 17 March – flight JQ287",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Contact with a confirmed case. Wellington to Christchurch on 17 March – flight JQ287",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "West Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "215",
+      "case_number": "215",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "West Coast",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "West Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "216",
+      "case_number": "216",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Bay of Plenty",
+      "travel_details": "Dubai to Auckland – flight EK0448, Auckland to Rotorua – flight NZ8155, dates to be confirmed",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland – flight EK0448, Auckland to Rotorua – flight NZ8155, dates to be confirmed",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Bay of Plenty",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "217",
+      "case_number": "217",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Nadi to Auckland – flight NZ53, dates to be confirmed",
+      "gender": " M",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Nadi to Auckland – flight NZ53, dates to be confirmed",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "218",
+      "case_number": "218",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Southern",
+      "travel_details": "Dubai to Auckland on 18 March – flight EK448, Auckland to Dunedin on 19 March – flight NZ677",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland on 18 March – flight EK448, Auckland to Dunedin on 19 March – flight NZ677",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Southern",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "219",
+      "case_number": "219",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "MidCentral",
+      "travel_details": "Los Angeles to Auckland, arrived on 18 March – flight NZ5, Auckland to Palmerston North – flight NZ5107, date to come",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Los Angeles to Auckland, arrived on 18 March – flight NZ5, Auckland to Palmerston North – flight NZ5107, date to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "MidCentral",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "220",
+      "case_number": "220",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "F",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "221",
+      "case_number": "221",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "M",
+      "age_bracket": "Teen",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "222",
+      "case_number": "222",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "223",
+      "case_number": "223",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "F",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "224",
+      "case_number": "224",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "F",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "225",
+      "case_number": "225",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "226",
+      "case_number": "226",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Cruise ship travel (Ruby Princess)",
+      "gender": "F",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Cruise ship travel (Ruby Princess)",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "227",
+      "case_number": "227",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Linked to cruise ship travel (Ruby Princess)",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to cruise ship travel (Ruby Princess)",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "228",
+      "case_number": "228",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Lakes",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Lakes",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "229",
+      "case_number": "229",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waitemata",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waitemata",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "230",
+      "case_number": "230",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "231",
+      "case_number": "231",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "232",
+      "case_number": "232",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "233",
+      "case_number": "233",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "234",
+      "case_number": "234",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "235",
+      "case_number": "235",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "236",
+      "case_number": "236",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Counties Manukau",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "Teen",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Counties Manukau",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "237",
+      "case_number": "237",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Counties Manukau",
+      "travel_details": "Travel from Spain on 15 March, flight details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Travel from Spain on 15 March, flight details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Counties Manukau",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "238",
+      "case_number": "238",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Counties Manukau",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Counties Manukau",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "239",
+      "case_number": "239",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Auckland",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "240",
+      "case_number": "240",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "241",
+      "case_number": "241",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "242",
+      "case_number": "242",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Doha to Auckland, arrived on 20 March – flight QR920",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Doha to Auckland, arrived on 20 March – flight QR920",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "243",
+      "case_number": "243",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Dubai to Auckland, arrived on 19 March – flight EK450",
+      "gender": "M",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland, arrived on 19 March – flight EK450",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "244",
+      "case_number": "244",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Bay of Plenty",
+      "travel_details": "San Francisco to Auckland on 20 March – flight NZ7, Auckland to Tauranga, details to come",
+      "gender": "M",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "San Francisco to Auckland on 20 March – flight NZ7, Auckland to Tauranga, details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Bay of Plenty",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "245",
+      "case_number": "245",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Lakes",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Lakes",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "246",
+      "case_number": "246",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Nelson Marlborough",
+      "travel_details": "Los Angeles to Auckland, arrived 16 March – flight NZ1, Auckland to Nelson on 16 March – flight NZ5065",
+      "gender": "M",
+      "age_bracket": "60s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Los Angeles to Auckland, arrived 16 March – flight NZ1, Auckland to Nelson on 16 March – flight NZ5065",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Nelson Marlborough",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "247",
+      "case_number": "247",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Nelson Marlborough",
+      "travel_details": "US to New Zealand, arrived 18 March, flight details to come",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "US to New Zealand, arrived 18 March, flight details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Nelson Marlborough",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "248",
+      "case_number": "248",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Capital and Coast",
+      "travel_details": "International travel, flight details to come",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "International travel, flight details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Capital and Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "249",
+      "case_number": "249",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Capital and Coast",
+      "travel_details": "Dubai to Auckland on 20 March – flight EK448, Auckland to Wellington on 21 March – flight NZ433",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Dubai to Auckland on 20 March – flight EK448, Auckland to Wellington on 21 March – flight NZ433",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Capital and Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "250",
+      "case_number": "250",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Capital and Coast",
+      "travel_details": "Linked to international travel",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to international travel",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Capital and Coast",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "251",
+      "case_number": "251",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Hutt Valley",
+      "travel_details": "Linked to a confirmed case",
+      "gender": "M",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Linked to a confirmed case",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Hutt Valley",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "252",
+      "case_number": "252",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waitemata",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "70s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waitemata",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "253",
+      "case_number": "253",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waitemata",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "50s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waitemata",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "254",
+      "case_number": "254",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Counties Manukau",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "Child",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Counties Manukau",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "255",
+      "case_number": "255",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "256",
+      "case_number": "256",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Taranaki",
+      "travel_details": "Doha to Auckland on 18 March – flight QR920, Auckland to New Plymouth on 19 March – flight NZ5035",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Doha to Auckland on 18 March – flight QR920, Auckland to New Plymouth on 19 March – flight NZ5035",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Taranaki",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "257",
+      "case_number": "257",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Lakes",
+      "travel_details": "Doha to Auckland on 25 March – flight QR920",
+      "gender": "F",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Doha to Auckland on 25 March – flight QR920",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Lakes",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "258",
+      "case_number": "258",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waitemata",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "Child",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waitemata",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "259",
+      "case_number": "259",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "260",
+      "case_number": "260",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waitemata",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "30s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waitemata",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "261",
+      "case_number": "261",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "M",
+      "age_bracket": "20s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
+      "related_cases": []
+    },
+    {
+      "id": "262",
+      "case_number": "262",
+      "status": "confirmed",
+      "date_confirmed": "",
+      "date_suspected": "",
+      "location": "Waikato",
+      "travel_details": "Details to come",
+      "gender": "F",
+      "age_bracket": "40s",
+      "media_release_url": "",
+      "media_release_description": "",
+      "additional_info": [
+        {
+          "travel_details": "Details to come",
+          "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+        }
+      ],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Waikato",
+          "description": ""
+        }
+      ],
       "related_cases": []
     }
   ],
