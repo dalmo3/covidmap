@@ -387,7 +387,21 @@ const data = {
             'France to Singapore to Brisbane to Wellington (Air New Zealand 828 on Saturday 14 March).  ',
           source_url:
             'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
-        }
+        },
+        additional_info: [
+          {
+            info:
+              'The Australian man with coronavirus stayed QT Wellington Hotel and visited the Milk Crate cafe.',
+            source_url:
+              'https://www.stuff.co.nz/national/health/coronavirus/120308271/wellington-cafe-milk-crate-confirms-australian-man-with-coronavirus-visited-over-the-weekend'
+          },
+          additional_info: [
+            {
+              info:
+                'Australian man says he visited Wellington with the best of intentions',
+              source_url:
+                'https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12317101'
+            }
       ],
       related_cases: [],
       gender: 'Male',
@@ -738,6 +752,13 @@ const data = {
             'Travelling from the Gold Coast (on Thursday 5 March) - flight details to come.',
           source_url:
             'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        },
+        {
+          date: "19 mar 2020",
+          info:
+            'The man behind Invercargills first coronavirus case has been identified.', 
+          source_url:
+            'https://www.stuff.co.nz/national/health/coronavirus/120411265/the-man-behind-invercargills-first-covid19-case-has-been-identified'
         }
       ],
       related_cases: [],
@@ -1538,6 +1559,12 @@ const data = {
             'London to Doha to Auckland (on Sunday 15 March) - flight details to come.',
           source_url:
             'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases'
+        },
+        {
+          info:
+          'Jenene Crossan is one of the 155 people diagnosed with Covid-19',
+          source_url:
+          'https://www.magic.co.nz/home/news/2020/03/coronavirus--patient-on-ryan-bridge-drive.html'
         }
       ],
       related_cases: [],
