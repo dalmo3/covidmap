@@ -5,6 +5,11 @@ const { JSDOM } = jsdom;
 const fs = require('fs');
 const path = require('path');
 const data = require('../data/newData3.json');
+const tr = require('tor-request');
+tr.TorControlPort.password = process.env.tor_pwd;
+const util = require('util');
+const torReq = util.promisify(tr.request);
+const dotenv = require('dotenv')
 
 const fetchFlightData = async (
   flightNumber,
@@ -25,6 +30,12 @@ const fetchFlightData = async (
     `https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`
   ).then(res => res.text());
 
+  // const data = await torReq(`https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`).then(async data => {
+  //   console.log(data.statusCode)
+  //   if (data.statusCode === 200) return data.body
+  //   tr.newTorSession(console.log);
+  //   return await torReq(`https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`).then(data => data.body)
+  // });
   // TEST HTML
   // const html = fs.readFileSync(
   //   path.resolve(__dirname + '/ek450test.html'),
@@ -32,6 +43,8 @@ const fetchFlightData = async (
   // );
 
   const dom = new JSDOM(html).window.document;
+  console.log(dom.title)
+
   // get the 'Arrival' and 'Departure' elements
   dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
     // get scheduled and actual times
@@ -93,7 +106,7 @@ const parseTravelDetails = patient => {
   const details = patient.travel_details;
   const number = patient.case_number;
   const sentences = details.split(/[,.]/);
-  console.log(number, patient.location_history.length, details);
+  // console.log(number, patient.location_history.length, details);
 
   const resArr = sentences.flatMap(sentence => {
     // console.log(s.match(/(flight ([A-Z][A-Z][0-9]{1,4}))/ig))
@@ -103,7 +116,7 @@ const parseTravelDetails = patient => {
       sentence.match(/.{1,3}march.*?flight ([A-Z][A-Z][0-9]{1,4})/gi) || [];
     return matches.map(match => {
       return {
-        flight: match.replace(/.*flight /i, ''),
+        flight: match.replace(/.*flight /i, '').replace(/[..]+?([0]+)[.+]?/,''),
         date: match.replace(/march.*/i, 'march 2020')
       };
     });
@@ -114,16 +127,8 @@ const parseTravelDetails = patient => {
   return resArr;
 };
 
-const excludeCase = c => {
-  const details = c.travel_details;
-  const criteria =
-    details === 'Details to come' || details === 'Linked to a confirmed case';
-  return criteria;
-};
-
 const findFlights = async patient => {
   // console.log(c.case_number);
-  if (excludeCase(patient)) return;
   const flightList = parseTravelDetails(patient);
   // console.log(c.case_number, flightList);
   const flightData = await Promise.all(
@@ -140,16 +145,11 @@ const findFlights = async patient => {
         description: flightNumber
       };
     });
-  console.log(patient.case_number, 'returned', locationData);
+  // console.log(patient.case_number, 'returned', locationData);
   return locationData;
 };
 
-// const samples = data.cases.slice(-20, -2);
-// samples.forEach((c, i) => {
-//   setTimeout(() => {
-//     findFlights(c);
-//   }, i * 2000);
-// });
+
 
 module.exports = {
   findFlights

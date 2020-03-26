@@ -7,7 +7,7 @@ const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
 const dhbMap = require('../utils/locationMapper').get;
-
+const { findFlights } = require('./flight');
 
 const compareNewData = () => {
   const newobj = Object.assign({}, newCaseFormat);
@@ -27,6 +27,77 @@ const compareNewData = () => {
 };
 
 // compareNewData()
+
+//
+// this is not likely to be needed again
+//
+const cleanLocHist = () => {
+  const NEWDATA3_PATH = path.resolve(__dirname, '../data/newData3.json');
+  const fileData = JSON.parse(fs.readFileSync(NEWDATA3_PATH));
+
+  const filterCase = c => {
+    const filteredHistory = c.location_history.filter(l => l.date);
+    c.location_history = filteredHistory;
+
+    const filteredInfo = c.additional_info.filter(
+      i => i.info !== c.travel_details
+    );
+    // console.log(c.additional_info)
+    // console.log(filteredInfo)
+    c.additional_info = filteredInfo;
+  };
+  fileData.cases.forEach(filterCase);
+  fileData.probable_cases.forEach(filterCase);
+
+  fs.writeFileSync(NEWDATA3_PATH, JSON.stringify(fileData));
+};
+// cleanLocHist();
+
+const excludeCase = patient => {
+  const details = patient.travel_details;
+  const criteria =
+    details === 'Details to come' ||
+    details === 'Linked to a confirmed case' ||
+    patient.location_history.length;
+  return criteria;
+};
+
+const updateFlights = () => {
+
+  // const samples = caseData.cases.slice(-20);
+  // const samples = caseData.cases;
+  // Promise.all(
+    //   samples.map(async (patient, i) => {
+      //     // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+      //     if (excludeCase(patient)) return Promise.resolve(patient);
+      //     return new Promise(
+        //       (res, rej) =>
+        //       setTimeout(async () => {
+          //         const { case_number, location_history, travel_details } = patient;
+          //         console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+          //         const flights = await findFlights(patient);
+          //           patient.location_history = flights;
+          //           // console.log(flights)
+          //           return res(patient);
+          //         },
+          //       (i+1) * 1000)
+          //     );
+          //   })
+          // ).then(cases => {
+            //   caseData.cases = cases;
+            //   console.log(JSON.stringify(caseData))
+            //   saveData(caseData)
+            updateCache()
+            // });
+          }
+          // updateFlights()
+            
+const saveData = data => {
+  const NEW_DATA_PATH = path.resolve(__dirname, '../data/newData3.json');
+  fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
+};
+
+
 
 const updateCache = () => {
   // read locs from case data
@@ -49,28 +120,30 @@ const updateCache = () => {
   allLocs.forEach(caseLoc => {
     // console.log(caseLoc.location)
     //check if already contains
-    const location = dhbMap(caseLoc.location)
-      
+    const location = dhbMap(caseLoc.location);
+
     const cachedLocation = parsedCache.filter(
       cachedLoc => cachedLoc.location === location
     );
     // console.log(caseLoc, cachedLocation[0].geocode.address)
-    
 
-      // if not, fetch it and save
+    // if not, fetch it and save
     if (!cachedLocation.length) {
-      console.log(caseLoc);
+      // console.log(caseLoc);
       console.log(location);
       openGeocoder()
         .geocode(location)
         .end((err, response) => {
-          console.log(response)
+          console.log(response);
           if (err) {
             console.error(err);
             return;
           }
           // console.log(response)
-          if (!(response && response[0])) return;
+          if (!(response && response[0])) {
+            console.log('>>>> NOT FOUND >>>>>>>', location)
+            return
+            ;}
           delete response[0].geojson;
 
           const newEntry = {
@@ -83,35 +156,8 @@ const updateCache = () => {
         });
     }
   });
-  console.log('end')
+  console.log('end');
   return;
 };
 
-// updateCache()
-
-//
-// this is not likely to be needed again
-//
-
-const cleanLocHist = () => {
-  const NEWDATA2_PATH = path.resolve(__dirname, '../data/newData2.json');
-  const NEWDATA3_PATH = path.resolve(__dirname, '../data/newData3.json');
-  const fileData = JSON.parse(fs.readFileSync(NEWDATA2_PATH));
-
-  const filterCase = c => {
-    const filteredHistory = c.location_history.filter(l => l.date);
-    c.location_history = filteredHistory;
-
-    const filteredInfo = c.additional_info.filter(
-      i => i.info !== c.travel_details
-    );
-    // console.log(c.additional_info)
-    // console.log(filteredInfo)
-    c.additional_info = filteredInfo;
-  };
-  fileData.cases.forEach(filterCase);
-  fileData.probable_cases.forEach(filterCase);
-
-  fs.writeFileSync(NEWDATA3_PATH, JSON.stringify(fileData));
-};
-// cleanLocHist();
+updateCache()
