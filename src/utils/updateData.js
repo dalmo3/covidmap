@@ -160,7 +160,7 @@ const updateCache = () => {
   return;
 };
 
-updateCache()
+// updateCache()
 
 //
 // this is not likely to be needed again

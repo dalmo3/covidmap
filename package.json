@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "fetch-filecache-for-crawling": "^4.0.2",
     "jsdom": "^16.2.1",
     "moment": "^2.24.0",
     "simple-fetch-cache": "^1.4.1"
