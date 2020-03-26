@@ -60,6 +60,13 @@ const dis = () => toast.dismiss()
 
 function Map() {
   
+  toast.info('78 new cases announced today, 26 Mar, will be added as soon as details are released.', {
+    position: 'bottom-right',
+    pauseOnHover: false,
+    pauseOnFocusLoss: false,
+    // progressStyle: {backgroundColor: 'C9171a'},
+    progressClassName: 'toast_progress',
+  }) 
   document.addEventListener('keyup', e => {
     if (e.keyCode === 27) {
       resetMarkers();
