@@ -240,24 +240,24 @@ function Map() {
   const generateClusters = () => {
     // markerCluster = ;
     console.log('case_number', data.cases.concat(data.probable_cases))
-    data.cases.concat(data.probable_cases).forEach(async virusCase => {
-      const location = virusCase.location_history.slice(-1)[0] && virusCase.location_history.slice(-1)[0].location || virusCase.location;
+    data.cases.concat(data.probable_cases).forEach(async patient => {
+      const location = patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location;
       const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
-        icon: getMarkerIcon(virusCase)
+        icon: getMarkerIcon(patient)
       })
         .bindTooltip(
           `${location}
           <br>
-          ${new Date(virusCase.date_confirmed).toLocaleDateString('en-NZ')}`,
+          ${new Date(patient.date_confirmed).toLocaleDateString('en-NZ')}`,
           {
             // permanent : true
           }
         )
         .on('click', () => {
           setShowClusters(false);
-          traceCase(virusCase);
+          traceCase(patient);
         }); 
 
       markerCluster.current.addLayer(marker);
@@ -277,12 +277,12 @@ function Map() {
   // };
 
   // display case paths
-  const traceCase = async virusCase => {
+  const traceCase = async patient => {
     // find all markers
-    const locations = virusCase.location_history
-    const hasConnections = !!virusCase.location_history.length;
+    const locations = patient.location_history
+    const hasConnections = !!patient.location_history.length;
     if (!hasConnections) locations.push(
-    {location: virusCase.location})
+    {location: patient.location})
     const caseMarkers = await Promise.all(
       locations.map(async loc => {
         // console.log(loc)
@@ -293,7 +293,7 @@ function Map() {
         const locDate = getFormattedDateString(loc.date);
         // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
         const locMarker = L.marker(coords, {
-          icon: getMarkerIcon_old(virusCase.case_number)
+          icon: getMarkerIcon_old(patient.case_number)
         }).bindTooltip(`${loc.location}<br>${locDate}`, {
           permanent: hasConnections
         });
@@ -346,21 +346,21 @@ function Map() {
       maxZoom
     });
 
-    const isProbable = virusCase.status === 'probable';
-    console.log(virusCase.status);
+    const isProbable = patient.status === 'probable';
+    console.log(patient.status);
     let t = toast(
       <div style={{ fontSize: '0.8em' }}>
         <h2>
-          Case {virusCase.case_number}
+          Case {patient.case_number}
           {isProbable ? ` (Probable)` : ''}
         </h2>
-        <p>{getFormattedDateString(virusCase.date_confirmed)}</p>
-        <p>{virusCase.location}</p>
+        <p>{getFormattedDateString(patient.date_confirmed)}</p>
+        <p>{patient.location}</p>
         <p>
-          {virusCase.gender} {virusCase.age_bracket}
+          {patient.gender} {patient.age_bracket}
         </p>
-        <p>{virusCase.travel_details}</p>
-        <a href={`${virusCase.additional_info[0] && virusCase.additional_info[0].source_url}`} target="_blank">
+        <p>{patient.travel_details}</p>
+        <a href={`${patient.additional_info[0] && patient.additional_info[0].source_url}`} target="_blank">
           Source
         </a>
       </div>
@@ -420,12 +420,12 @@ const getFormattedDateString = date => {
   return newDate.toLocaleString('en-NZ', options);
 };
 
-const getMarkerIcon = virusCase => {
-  const isProbable = virusCase.status === 'probable';
+const getMarkerIcon = patient => {
+  const isProbable = patient.status === 'probable';
   const options = {
     isAlphaNumericIcon: true,
     text: `Case
-    ${virusCase.case_number}${isProbable ? '*' : ''}`,
+    ${patient.case_number}${isProbable ? '*' : ''}`,
     iconShape: 'circle',
     iconSize: [36, 36],
     iconAnchor: [18, 18],

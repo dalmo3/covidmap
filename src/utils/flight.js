@@ -14,7 +14,8 @@ const fetchFlightData = async (
   const date = flightDate ? moment(flightDate) : moment();
   const target = targetDate ? moment(targetDate) : moment();
   const queryDate = moment(date).format('YYYY-MM-DD');
-  // console.log(queryDate);
+
+  let flightData = {}; // the returned object
 
   //actual stuff
   console.log(
@@ -31,28 +32,18 @@ const fetchFlightData = async (
   // );
 
   const dom = new JSDOM(html).window.document;
-  // console.log(dom.window.document)
-  // console.log(html);
-  let flightData = {};
   // get the 'Arrival' and 'Departure' elements
   dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
-    // console.log(schedule.innerHTML);
-
     // get scheduled and actual times
     const flightEvent = schedule.querySelector('.flightInfo-date').textContent;
     const displayDate = target.format('D MMM, YYYY');
-    // console.log(flightEvent);
-    // console.log('display ', displayDate);
 
     // match arrival with target date (since our info usually has arrival date)
     if (flightEvent.startsWith(`Arrival: `)) {
       if (flightEvent.startsWith(`Arrival: ${displayDate}`)) {
-        // console.log('____ found ______');
-
         // go up to schedule again, to get both Dep. and Arr. data
         dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
           const flightEvent = schedule.querySelector('.flightInfo-date');
-          // console.log(flightEvent.textContent);
 
           // get airport name without initials, helps withgeocoding
           const airport = schedule
@@ -63,11 +54,10 @@ const fetchFlightData = async (
           schedule
             .querySelectorAll('.flightInfo-dateItem')
             .forEach(dateItem => {
-              // console.log(dateItem.innerHTML);
               const dateLabel = dateItem.querySelector('.flightInfo-dateLabel');
               if (dateLabel && dateLabel.textContent === 'Actual:') {
                 const dateTime = dateItem.querySelector('.flightInfo-dateTime');
-                // console.log(dateTime);
+
                 // Arr/Dep and date
                 const [eventType, eventDate] = flightEvent.textContent.split(
                   ': '
@@ -78,7 +68,7 @@ const fetchFlightData = async (
                   time: dateTime.textContent,
                   flightNumber
                 };
-                // console.log(legData);
+
                 flightData[eventType] = legData;
               }
             });
@@ -86,17 +76,13 @@ const fetchFlightData = async (
       } else {
         // flight arrived a day later than departed, search for previous day
         const previousDate = moment(date).subtract(1, 'days');
-
         const previousFlightDate = moment(previousDate).format('YYYY-MM-DD');
         console.log(' >>>>>>>>>> PREVIOUS DAY >>>>>>>>> ', previousFlightDate);
-        // setTimeout(() => {
-        //rate-limiting
+
         flightData = fetchFlightData(flightNumber, previousFlightDate, target);
-        // }, 1000);
       }
     }
   });
-  // console.log(flightData);
   return flightData;
 };
 
@@ -135,9 +121,7 @@ const excludeCase = c => {
   return criteria;
 };
 
-const samples = data.cases.slice(-20, -2);
-
-const findFlights = async (patient) => {
+const findFlights = async patient => {
   // console.log(c.case_number);
   if (excludeCase(patient)) return;
   const flightList = parseTravelDetails(patient);
@@ -149,19 +133,24 @@ const findFlights = async (patient) => {
   // console.log(c.case_number, 'returned', flightData);
   const locationData = flightData
     .flatMap(Object.values)
-  .map(({ airport, eventDate, time, flightNumber }) => {
-    return {
-      date: `${eventDate} ${time}`,
-      location: airport,
-      description: flightNumber
-    };
-  });
+    .map(({ airport, eventDate, time, flightNumber }) => {
+      return {
+        date: `${eventDate} ${time}`,
+        location: airport,
+        description: flightNumber
+      };
+    });
   console.log(patient.case_number, 'returned', locationData);
+  return locationData;
+};
+
+// const samples = data.cases.slice(-20, -2);
+// samples.forEach((c, i) => {
+//   setTimeout(() => {
+//     findFlights(c);
+//   }, i * 2000);
+// });
+
+module.exports = {
+  findFlights
 }
-
-
-samples.forEach((c,i) => {
-  setTimeout(() => {
-    findFlights(c)
-  }, i * 2000);
-});
