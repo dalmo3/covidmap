@@ -161,7 +161,7 @@ function Map() {
     const accessToken =
       process.env.REACT_APP_MAPBOX_TOKEN ||
       'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A';
-    console.log(process.env);
+    // console.log(process.env);
     // alert(accessToken)
     L.tileLayer(
       // `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
@@ -239,7 +239,7 @@ function Map() {
 
   const generateClusters = () => {
     // markerCluster = ;
-    console.log('case_number', data.cases.concat(data.probable_cases))
+    // console.log('case_number', data.cases.concat(data.probable_cases))
     data.cases.concat(data.probable_cases).forEach(async patient => {
       const location = patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location;
       const coords = await getCoordinates(location);
