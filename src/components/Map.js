@@ -22,7 +22,7 @@ const locationCache = require('../data/locationCache.json');
 
 // import cache from LOCATION_CACHE_PATH
   
-toast.info('78 new cases announced today, 26 Mar, will be added as soon as details are released.', {
+toast.error('78 new cases announced today, 26 Mar, will be added as soon as details are released.', {
   position: 'bottom-right',
   pauseOnHover: false,
   pauseOnFocusLoss: false,
