@@ -116,7 +116,7 @@ const parseTravelDetails = patient => {
       sentence.match(/.{1,3}march.*?flight ([A-Z][A-Z][0-9]{1,4})/gi) || [];
     return matches.map(match => {
       return {
-        flight: match.replace(/.*flight /i, '').replace(/[..]+?([0]+)[.+]?/,''),
+        flight: match.replace(/.*flight /i, '').replace(/(..)([ 0]+)?([1-9].*)/,'$1$3'),
         date: match.replace(/march.*/i, 'march 2020')
       };
     });
