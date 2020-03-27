@@ -1338,7 +1338,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Los Angeles",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -1354,7 +1365,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Los Angeles",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -1373,7 +1395,17 @@
       "location_history": [
         {
           "date": "15 Mar 2020",
-          "location": "Auckland",
+          "location": "London",
+          "description": "flight details to come"
+        },
+        {
+          "date": "15 Mar 2020",
+          "location": "Doha",
+          "description": "flight details to come"
+        },
+        {
+          "date": "15 Mar 2020",
+          "location": "Auckland Airport",
           "description": "flight details to come"
         }
       ],
@@ -1420,6 +1452,11 @@
         }
       ],
       "location_history": [
+        {
+          "date": "18 Mar 2020",
+          "location": "Los Angeles",
+          "description": "flight unknown"
+        },
         {
           "date": "18 Mar 2020",
           "location": "Auckland Airport",
@@ -1940,7 +1977,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "United States",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Bay of Plenty",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -1956,7 +2004,28 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Ireland",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Dubai",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Australia",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Hamilton NZ",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -1973,6 +2042,11 @@
       "media_release_description": "",
       "additional_info": [],
       "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        },
         {
           "date": "15 Mar, 2020 15:03",
           "location": "Dunedin International Airport",
@@ -2004,7 +2078,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -2047,7 +2127,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Africa",
+          "description": ""
+        },
+        {
+          "date": "",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -2630,7 +2721,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "17 Mar, 2020 02:20",
+          "location": "Doha Hamad International Airport",
+          "description": "QR920"
+        },
+        {
+          "date": "18 Mar, 2020 04:58",
+          "location": "Auckland Airport",
+          "description": "QR920"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -2646,7 +2748,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "17 Mar, 2020 02:20",
+          "location": "Doha Hamad International Airport",
+          "description": "QR920"
+        },
+        {
+          "date": "18 Mar, 2020 04:58",
+          "location": "Auckland Airport",
+          "description": "QR920"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -2737,7 +2850,12 @@
       "media_release_description": "",
       "additional_info": [],
       "location_history": [],
-      "related_cases": []
+      "related_cases": [
+        {
+          "case_number": 89,
+          "relation": ""
+        }
+      ]
     },
     {
       "id": 89,
@@ -2758,7 +2876,12 @@
         }
       ],
       "location_history": [],
-      "related_cases": []
+      "related_cases": [
+        {
+          "case_number": 88,
+          "relation": ""
+        }
+      ]
     },
     {
       "id": 90,
@@ -2827,7 +2950,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "21 Mar, 2020 02:20",
+          "location": "Doha Hamad International Airport",
+          "description": "QR920"
+        },
+        {
+          "date": "22 Mar, 2020 04:30",
+          "location": "Auckland Airport",
+          "description": "QR920"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3008,7 +3142,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "United States",
+          "description": ""
+        },
+        {
+          "date": "18 Mar 2020",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3024,7 +3169,18 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "United States",
+          "description": ""
+        },
+        {
+          "date": "18 Mar 2020",
+          "location": "Auckland",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3050,13 +3206,29 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Waitaki",
-      "travel_details": "Departed Switzerland 16 March, flew via Abu Dhabi to New Zealand – flight EY0052",
+      "travel_details": "Departed Switzerland 16 March flew via Abu Dhabi to New Zealand – flight EY0052",
       "gender": "Male",
       "age_bracket": "20s",
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "16 Mar, 2020 09:17",
+          "location": "Geneva International Airport",
+          "description": "EY52"
+        },
+        {
+          "date": "16 Mar, 2020 18:19",
+          "location": "Abu Dhabi International Airport",
+          "description": "EY52"
+        },
+        {
+          "date": "16 Mar, 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3077,7 +3249,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3093,7 +3271,13 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3183,7 +3367,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "15 Mar, 2020 10:26",
+          "location": "Dubai International Airport",
+          "description": "EK448"
+        },
+        {
+          "date": "16 Mar, 2020 10:38",
+          "location": "Auckland Airport",
+          "description": "EK448"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3212,10 +3407,16 @@
       "travel_details": "Arrived in Auckland 18 March, flight details to come",
       "gender": "Male",
       "age_bracket": "40s",
-      "media_release_url": "",
+      "medi a_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "18 Mar 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3263,7 +3464,13 @@
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "20 Mar 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3316,7 +3523,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3326,7 +3539,7 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Dunedin",
-      "travel_details": "London to LA on 14 March, then LA to Auckland - flight NZ5, Auckland to Dunedin on 16 March – flight NZ671",
+      "travel_details": "London to LA on 14 March, then LA to Auckland - 16 March flight NZ5, Auckland to Dunedin on 16 March – flight NZ671",
       "gender": "Male",
       "age_bracket": "60s",
       "media_release_url": "",
@@ -3338,6 +3551,21 @@
         }
       ],
       "location_history": [
+        {
+          "date": "14 Mar",
+          "location": "London",
+          "description": ""
+        },
+        {
+          "date": "14 Mar, 2020 20:58",
+          "location": "Los Angeles International Airport",
+          "description": "NZ5"
+        },
+        {
+          "date": "16 Mar, 2020 05:50",
+          "location": "Auckland Airport",
+          "description": "NZ5"
+        },
         {
           "date": "16 Mar, 2020 07:27",
           "location": "Auckland Airport",
@@ -3358,13 +3586,23 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Dunedin",
-      "travel_details": "Dubai to Auckland, arrived on 19 March – flight EK447, Auckland to Dunedin on 19 March – flight JQ285",
+      "travel_details": "Dubai to Auckland, arrived on 19 March – flight EK448, Auckland to Dunedin on 19 March – flight JQ285",
       "gender": "Male",
       "age_bracket": "30s",
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
       "location_history": [
+        {
+          "date": "18 Mar, 2020 10:25",
+          "location": "Dubai International Airport",
+          "description": "EK448"
+        },
+        {
+          "date": "19 Mar, 2020 10:27",
+          "location": "Auckland Airport",
+          "description": "EK448"
+        },
         {
           "date": "19 Mar, 2020 14:15",
           "location": "Auckland Airport",
@@ -3449,7 +3687,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "United States",
+          "description": ""
+        },
+        {
+          "date": "19 Mar 2020",
+          "location": "Wellington",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3552,8 +3801,18 @@
         },
         {
           "date": "18 Mar, 2020 05:08",
-          "location": "Auckland Airport ",
+          "location": "Auckland Airport",
           "description": "EK450"
+        },
+        {
+          "date": "19 Mar, 2020 7:59",
+          "location": "Auckland Airport ",
+          "description": "NZ409"
+        },
+        {
+          "date": "19 Mar, 2020 09:06",
+          "location": "Wellington International Airport ",
+          "description": "NZ409"
         }
       ],
       "related_cases": []
@@ -3613,13 +3872,28 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Hawke's Bay",
-      "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021",
+      "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March flight EK448, Auckland to Napier on 19 March – flight NZ5021",
       "gender": "Male",
       "age_bracket": "70s",
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
       "location_history": [
+        {
+          "date": "",
+          "location": "Barcelona",
+          "description": ""
+        },
+        {
+          "date": "17 Mar, 2020 10:25",
+          "location": "Dubai International Airport",
+          "description": "EK448"
+        },
+        {
+          "date": "18 Mar, 2020 10:58",
+          "location": "Auckland Airport",
+          "description": "EK448"
+        },
         {
           "date": "19 Mar, 2020 13:45",
           "location": "Auckland Airport",
@@ -3640,13 +3914,28 @@
       "date_confirmed": "24 Mar 2020",
       "date_suspected": "",
       "location": "Hawke's Bay",
-      "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March, flight EK448, Auckland to Napier on 19 March – flight NZ5021",
+      "travel_details": "Barcelona via Dubai to Auckland, arrived on 18 March flight EK448, Auckland to Napier on 19 March – flight NZ5021",
       "gender": "Female",
       "age_bracket": "70s",
       "media_release_url": "",
       "media_release_description": "",
       "additional_info": [],
       "location_history": [
+        {
+          "date": "",
+          "location": "Barcelona",
+          "description": ""
+        },
+        {
+          "date": "17 Mar, 2020 10:25",
+          "location": "Dubai International Airport",
+          "description": "EK448"
+        },
+        {
+          "date": "18 Mar, 2020 10:58",
+          "location": "Auckland Airport",
+          "description": "EK448"
+        },
         {
           "date": "19 Mar, 2020 13:45",
           "location": "Auckland Airport",
@@ -3678,7 +3967,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3699,7 +3994,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "18 Mar 2020",
+          "location": "Sydney Airport",
+          "description": ""
+        },
+        {
+          "date": "18 Mar 2020",
+          "location": "Wellington International Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3720,7 +4026,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "18 Mar 2020",
+          "location": "Sydney Airport",
+          "description": ""
+        },
+        {
+          "date": "18 Mar 2020",
+          "location": "Wellington International Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -3868,7 +4185,7 @@
       "date_confirmed": "25 Mar 2020",
       "date_suspected": "",
       "location": "Christchurch",
-      "travel_details": "San Francisco to Auckland, arrived 21 March – flight NZ7, Auckland to Christchurch on 21 March – NZ527",
+      "travel_details": "San Francisco to Auckland, arrived 21 March – flight NZ7, Auckland to Christchurch on 21 March – flight NZ527",
       "gender": "F",
       "age_bracket": "20s",
       "media_release_url": "",
@@ -3884,6 +4201,16 @@
           "date": "21 Mar, 2020 05:35",
           "location": "Auckland Airport",
           "description": "NZ7"
+        },
+        {
+          "date": "21 Mar, 2020 09:02",
+          "location": "Auckland Airport",
+          "description": "NZ527"
+        },
+        {
+          "date": "21 Mar, 2020 10:23",
+          "location": "Christchurch International Airport",
+          "description": "NZ527"
         }
       ],
       "related_cases": []
@@ -3945,9 +4272,14 @@
           "description": "EK6"
         },
         {
-          "date": "13 Mar, 2020 08:20",
+          "date": "13 Mar 2020",
+          "location": "Sydney Airport",
+          "description": ""
+        },
+        {
+          "date": "13 Mar 2020",
           "location": "Christchurch International Airport",
-          "description": "EK6"
+          "description": ""
         }
       ],
       "related_cases": []
@@ -4753,7 +5085,23 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "17 Mar 2020",
+          "location": "Los Angeles Airport",
+          "description": ""
+        },
+        {
+          "date": "17 Mar 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        },
+        {
+          "date": "17 Mar 2020",
+          "location": "Wellington International Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4774,7 +5122,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Bangkok Airport",
+          "description": ""
+        },
+        {
+          "date": "22 Mar 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4889,7 +5248,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4910,7 +5275,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4931,7 +5302,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4952,7 +5329,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4973,7 +5356,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -4994,7 +5383,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -5015,7 +5410,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -5151,6 +5552,16 @@
           "date": "20 Mar, 2020 10:06",
           "location": "Christchurch International Airport",
           "description": "SQ297"
+        },
+        {
+          "date": "19 Mar, 2020 19:45",
+          "location": "Singapore Changi Airport",
+          "description": "SQ297"
+        },
+        {
+          "date": "20 Mar, 2020 10:06",
+          "location": "Christchurch International Airport",
+          "description": "SQ297"
         }
       ],
       "related_cases": []
@@ -5257,7 +5668,13 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "13 Mar 2020",
+          "location": "Pembroke Park Wanaka",
+          "description": "World Hereford Conference"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -5288,6 +5705,16 @@
           "date": "19 Mar, 2020 10:27",
           "location": "Auckland Airport",
           "description": "EK448"
+        },
+        {
+          "date": "20 Mar, 2020",
+          "location": "Auckland Airport",
+          "description": ""
+        },
+        {
+          "date": "20 Mar, 2020",
+          "location": "Christchurch International Airport",
+          "description": ""
         }
       ],
       "related_cases": []
@@ -5333,8 +5760,18 @@
       ],
       "location_history": [
         {
+          "date": "12 Mar, 2020 08:03",
+          "location": "Sydney Kingsford Smith Airport",
+          "description": "QR906"
+        },
+        {
+          "date": "12 Mar, 2020 08:37",
+          "location": "Canberra International Airport",
+          "description": "QR906"
+        },
+        {
           "date": "13 Mar, 2020 10:07",
-          "location": "Sydney Airport",
+          "location": "Sydney Kingsford Smith Airport",
           "description": "VA171"
         },
         {
@@ -5437,7 +5874,28 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "Dubai Airport",
+          "description": "EK0448"
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": "EK0448"
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": "NZ8155"
+        },
+        {
+          "date": "",
+          "location": "Rotorua Airport",
+          "description": "NZ8155"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -5458,7 +5916,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "nadi international airport",
+          "description": "NZ53"
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": "NZ53"
+        }
+      ],
       "related_cases": []
     },
     {
@@ -5531,6 +6000,16 @@
           "date": "18 Mar, 2020 06:43",
           "location": "Auckland Airport",
           "description": "NZ5"
+        },
+        {
+          "date": "",
+          "location": "Auckland Airport",
+          "description": "NZ5107"
+        },
+        {
+          "date": "",
+          "location": "Palmerston North Airport",
+          "description": "NZ5107"
         }
       ],
       "related_cases": []
@@ -5910,7 +6389,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "15 Mar 2020",
+          "location": "Spain",
+          "description": ""
+        },
+        {
+          "date": "15 Mar 2020",
+          "location": "Counties Manukau",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -6089,6 +6579,11 @@
           "date": "20 Mar, 2020 05:25",
           "location": "Auckland Airport",
           "description": "NZ7"
+        },
+        {
+          "date": "",
+          "location": "Tauranga",
+          "description": ""
         }
       ],
       "related_cases": []
@@ -6142,6 +6637,16 @@
           "date": "16 Mar, 2020 06:55",
           "location": "Auckland Airport",
           "description": "NZ1"
+        },
+        {
+          "date": "16 Mar, 2020 08:35",
+          "location": "Auckland Airport",
+          "description": "NZ5065"
+        },
+        {
+          "date": "16 Mar, 2020 10:00",
+          "location": "Nelson Airport",
+          "description": "NZ5065"
         }
       ],
       "related_cases": []
@@ -6164,7 +6669,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "",
+          "location": "United States",
+          "description": ""
+        },
+        {
+          "date": "18 mar 2020",
+          "location": "Nelson Marlborough",
+          "description": ""
+        }
+      ],
       "related_cases": []
     },
     {
@@ -6416,7 +6932,18 @@
           "source_url": "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
         }
       ],
-      "location_history": [],
+      "location_history": [
+        {
+          "date": "25 Mar, 2020 02:19",
+          "location": "Doha Hamad International Airport",
+          "description": "QR920"
+        },
+        {
+          "date": "26 Mar, 2020 04:45",
+          "location": "Auckland Airport",
+          "description": "QR920"
+        }
+      ],
       "related_cases": []
     },
     {

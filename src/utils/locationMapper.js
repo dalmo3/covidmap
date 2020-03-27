@@ -4,7 +4,7 @@ const locMapper = new Map([
   ['Canterbury', 'Christchurch Hospital'],
   ['Capital and Coast', 'Wellington Regional Hospital'],
   ['Capital & Coast', 'Wellington Regional Hospital'],
-  ['Counties Manukau', 'Manukau, new zealand'],
+  ['Counties Manukau', 'Manukau, Otara-Papatoetoe,'],
   ['Hawke\'s Bay', '100 McLeod Street Hastings '],
   ['Hawkes\'s Bay', '100 McLeod Street Hastings '],
   ['Hawkes Bay', '100 McLeod Street Hastings '],
@@ -21,7 +21,8 @@ const locMapper = new Map([
   ['Wairarapa', '96 Blair Street, Masterton'],
   ['Waitemata', 'waitemata auckland'],
   ['West Coast', 'greymouth hospital'],
-  ['Whanganui', 'whanganui hospital']
+  ['Whanganui', 'whanganui hospital'],
+  ["Sydney Kingsford Smith Airport","Sydney Airport"]
 ]);
 
 exports.get = (location) => locMapper.get(location) || location;
