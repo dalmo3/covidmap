@@ -97,7 +97,7 @@ function Map() {
     }).on('clusterclick', e => {
 
       if (showTutorial.current) {
-        console.log(showTutorial)
+        // console.log(showTutorial)
         toast('Click on a case for details!', {
           position: 'bottom-right',
           pauseOnHover: false,
@@ -325,14 +325,14 @@ function Map() {
     // caseFeatures.addTo(mymap.current);
     // console.log(caseFeatures);
     setShowTrace(true);
-    console.log(caseFeatures.current.getBounds());
+    // console.log(caseFeatures.current.getBounds());
 
     const maxZoom = hasConnections
       ? Math.min(12, mymap.current.getZoom())
       : Math.max(8, mymap.current.getZoom());
 
     // setPortraitMode(false)
-    console.log('mode', isPortraitMode());
+    // console.log('mode', isPortraitMode());
 
     let brPadding = [
       isPortraitMode() ? 20 : window.innerWidth / 3,
@@ -347,7 +347,7 @@ function Map() {
     });
 
     const isProbable = patient.status === 'probable';
-    console.log(patient.status);
+    // console.log(patient.status);
     let t = toast(
       <div style={{ fontSize: '0.8em' }}>
         <h2>

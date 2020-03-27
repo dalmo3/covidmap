@@ -58,37 +58,39 @@ const excludeCase = patient => {
   const criteria =
     details === 'Details to come' ||
     details === 'Linked to a confirmed case' ||
-    patient.location_history.length;
+    patient.location_history.length 
+    // ||  patient.case_number != 257
+    ;
   return criteria;
 };
 
 const updateFlights = () => {
 
   // const samples = caseData.cases.slice(-20);
-  // const samples = caseData.cases;
-  // Promise.all(
-    //   samples.map(async (patient, i) => {
-      //     // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
-      //     if (excludeCase(patient)) return Promise.resolve(patient);
-      //     return new Promise(
-        //       (res, rej) =>
-        //       setTimeout(async () => {
-          //         const { case_number, location_history, travel_details } = patient;
-          //         console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
-          //         const flights = await findFlights(patient);
-          //           patient.location_history = flights;
-          //           // console.log(flights)
-          //           return res(patient);
-          //         },
-          //       (i+1) * 1000)
-          //     );
-          //   })
-          // ).then(cases => {
-            //   caseData.cases = cases;
-            //   console.log(JSON.stringify(caseData))
-            //   saveData(caseData)
-            updateCache()
-            // });
+  const samples = caseData.cases;
+  Promise.all(
+      samples.map(async (patient, i) => {
+          // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+          if (excludeCase(patient)) return Promise.resolve(patient);
+          return new Promise(
+              (res, rej) =>
+              setTimeout(async () => {
+                  const { case_number, location_history, travel_details } = patient;
+                  console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+                  const flights = await findFlights(patient);
+                    patient.location_history.push(...flights);
+                    // console.log(flights)
+                    return res(patient);
+                  },
+                (i+1) * 0001)
+              );
+            })
+          ).then(cases => {
+              caseData.cases = cases;
+              // console.log(JSON.stringify(caseData))
+              saveData(caseData)
+            // updateCache()
+            });
           }
           // updateFlights()
             
@@ -104,8 +106,8 @@ const updateCache = () => {
   const allLocs = caseData.cases
     .flatMap(c => c.location_history.concat([{ location: c.location }]))
     .concat(
-      caseData.probable_cases.flatMap(c =>
-        c.location_history.concat([{ location: c.location }])
+      caseData.probable_cases.flatMap(patient =>
+        patient.location_history.concat([{ location: patient.location }])
       )
     );
 
@@ -130,6 +132,7 @@ const updateCache = () => {
     // if not, fetch it and save
     if (!cachedLocation.length) {
       // console.log(caseLoc);
+      console.log(caseLoc);
       console.log(location);
       openGeocoder()
         .geocode(location)
