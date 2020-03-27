@@ -23,13 +23,13 @@ const dhbMap = require('../utils/locationMapper').get;
 
 // import cache from LOCATION_CACHE_PATH
   
-// toast.error('78 new cases announced today, 26 Mar, will be added as soon as details are released.', {
-//   position: 'bottom-right',
-//   pauseOnHover: false,
-//   pauseOnFocusLoss: false,
-//   // progressStyle: {backgroundColor: 'C9171a'},
-//   progressClassName: 'toast_progress',
-// }) 
+toast.error('85 new cases announced today, will be added as soon as details are released.', {
+  position: 'bottom-right',
+  pauseOnHover: false,
+  pauseOnFocusLoss: false,
+  // progressStyle: {backgroundColor: 'C9171a'},
+  progressClassName: 'toast_progress',
+}) 
 const getCoordinates = async location =>
   new Promise((resolve, reject) => {
     // console.log(locationCache)
