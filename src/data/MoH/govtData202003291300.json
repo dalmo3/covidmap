@@ -6190,8 +6190,7 @@
       "arrival_date": ""
     }
   ],
-  "probable": [],
-  "probable_cases": [
+  "probable": [
     {
       "case_number": 1,
       "report_date": "05/03/2020",

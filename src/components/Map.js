@@ -11,10 +11,12 @@ import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import moment from 'moment';
 // require('dotenv').config();
 // const data = require('../data/caseData').data;
 // const data = require('../data/caseData.json');
-const data = require('../data/newData3.json');
+// const data = require('../data/newData3.json');
+const data = require('../data/MoH/govtData202003291300.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
 // import fs from 'fs'
@@ -240,24 +242,27 @@ function Map() {
   const generateClusters = () => {
     // markerCluster = ;
     // console.log('case_number', data.cases.concat(data.probable_cases))
-    data.cases.concat(data.probable_cases).forEach(async patient => {
-      const location = patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location;
+    data.confirmed.concat(data.probable).forEach(async patient => {
+      const location = 
+      // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location || 
+      patient.dhb;
       const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
         icon: getMarkerIcon(patient)
       })
         .bindTooltip(
-          `${location}
+          `${location + ' DHB'}
           <br>
-          ${new Date(patient.date_confirmed).toLocaleDateString('en-NZ')}`,
+          ${getFormattedDateString(patient.report_date)}`,
           {
             // permanent : true
           }
         )
         .on('click', () => {
-          setShowClusters(false);
-          traceCase(patient);
+          // setShowClusters(false);
+          // traceCase(patient);
+          showToast(patient)
         }); 
 
       markerCluster.current.addLayer(marker);
@@ -345,7 +350,11 @@ function Map() {
       duration: 1,
       maxZoom
     });
+    showToast(patient)
+  };
 
+  const showToast = (patient) => {
+    
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
     let t = toast(
@@ -354,13 +363,13 @@ function Map() {
           Case {patient.case_number}
           {isProbable ? ` (Probable)` : ''}
         </h2>
-        <p>{getFormattedDateString(patient.date_confirmed)}</p>
-        <p>{patient.location}</p>
+        <p>{getFormattedDateString(patient.report_date)}</p>
+        <p>{patient.dhb + ' DHB'}</p>
         <p>
           {patient.gender} {patient.age_bracket}
         </p>
-        <p>{patient.travel_details}</p>
-        <a href={`${patient.additional_info[0] && patient.additional_info[0].source_url}`} target="_blank">
+        <p>{patient.overseas_cities}</p>
+        <a href='https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details' target="_blank" rel='nofollow nopoener noreferrer'>
           Source
         </a>
       </div>
@@ -394,8 +403,7 @@ function Map() {
         if (mymap.current.getZoom() < 6) resetZoom();
       }
     });
-  };
-
+  }
   const displayTrace = () => {
     if (showTrace) caseFeatures.current.addTo(mymap.current);
     else caseFeatures.current.remove();
@@ -406,6 +414,10 @@ function Map() {
 }
 
 const getFormattedDateString = date => {
+  if (!date) return 'Date not available';
+  return moment(date,'DD/MM/YYYY').format('DD MMM')
+}
+const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
   const newDate = new Date(date);
   const options = {
