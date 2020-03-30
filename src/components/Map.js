@@ -26,6 +26,13 @@ const dhbMap = require('../utils/locationMapper').get;
 
 // import cache from LOCATION_CACHE_PATH
   
+toast.info('Disclaimer: The markers are placed where the case was reported, not where the patients live or stay.', {
+  position: 'bottom-right',
+  pauseOnHover: false,
+  pauseOnFocusLoss: false,
+  // progressStyle: {backgroundColor: 'C9171a'},
+  progressClassName: 'toast_progress',
+}) 
 // toast.error('76 new cases announced today, will be added as soon as details are released.', {
 //   position: 'bottom-right',
 //   pauseOnHover: false,
