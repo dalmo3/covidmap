@@ -16,7 +16,8 @@ import moment from 'moment';
 // const data = require('../data/caseData').data;
 // const data = require('../data/caseData.json');
 // const data = require('../data/newData3.json');
-const data = require('../data/MoH/govtData202003291300.json');
+// const data = require('../data/MoH/govtData202003291300.json');
+const data = require('../data/MoH/govtData202003301300.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
 // import fs from 'fs'
@@ -25,13 +26,13 @@ const dhbMap = require('../utils/locationMapper').get;
 
 // import cache from LOCATION_CACHE_PATH
   
-toast.error('76 new cases announced today, will be added as soon as details are released.', {
-  position: 'bottom-right',
-  pauseOnHover: false,
-  pauseOnFocusLoss: false,
-  // progressStyle: {backgroundColor: 'C9171a'},
-  progressClassName: 'toast_progress',
-}) 
+// toast.error('76 new cases announced today, will be added as soon as details are released.', {
+//   position: 'bottom-right',
+//   pauseOnHover: false,
+//   pauseOnFocusLoss: false,
+//   // progressStyle: {backgroundColor: 'C9171a'},
+//   progressClassName: 'toast_progress',
+// }) 
 const getCoordinates = async location =>
   new Promise((resolve, reject) => {
     // console.log(locationCache)
