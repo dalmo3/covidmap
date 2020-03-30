@@ -25,7 +25,7 @@ const dhbMap = require('../utils/locationMapper').get;
 
 // import cache from LOCATION_CACHE_PATH
   
-toast.error('85 new cases announced today, will be added as soon as details are released.', {
+toast.error('76 new cases announced today, will be added as soon as details are released.', {
   position: 'bottom-right',
   pauseOnHover: false,
   pauseOnFocusLoss: false,
