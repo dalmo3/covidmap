@@ -7,6 +7,12 @@ const path = require('path');
 const caseData = require('../data/newData3.json');
 const flightCache = require('../data/flightCache.json');
 
+const saveData = (data, fileName) => {
+  const NEW_DATA_PATH = path.resolve(__dirname, fileName);
+  fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
+};
+
+
 const fetchFlightData = async (
   flightNumber,
   flightDate,
@@ -39,7 +45,7 @@ const fetchFlightData = async (
   // );
 
   const dom = new JSDOM(html).window.document;
-  console.log(dom.title)
+  console.log(dom.title);
 
   // get the 'Arrival' and 'Departure' elements
   dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
@@ -112,7 +118,9 @@ const parseTravelDetails = patient => {
       sentence.match(/.{1,3}march.*?flight ([A-Z][A-Z][0-9]{1,4})/gi) || [];
     return matches.map(match => {
       return {
-        flight: match.replace(/.*flight /i, '').replace(/(..)([ 0]+)?([1-9].*)/,'$1$3'),
+        flight: match
+          .replace(/.*flight /i, '')
+          .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3'),
         date: match.replace(/march.*/i, 'march 2020')
       };
     });
@@ -145,8 +153,91 @@ const findFlights = async patient => {
   return locationData;
 };
 
+const migrateFlights = () => {
+  const isSameDate = (oldDate, newDate) =>
+    moment(oldDate).isSame(moment(newDate, 'DD/MM/YYYY'), 'days');
+  const oldData = require('../data/newData3.json');
+  const flightCache = require('../data/flightCache.json');
+  const flightMap = new Map(flightCache);
+  const currentData = require('../data/MoH/govtData202003311300.json');
+  currentData.confirmed.forEach(newCase => {
+    if (!newCase.flight) return;
+    // console.log('flight : ', newCase.case_number, newCase.flight);
+    oldData.cases
+      .map(oldCase => {
+        let a = oldCase.location_history.filter(loc => {
+          const sameFlight =
+            loc.description.toLowerCase() === newCase.flight.toLowerCase();
+          const sameArrival = isSameDate(loc.date, newCase.arrival_date);
+          const sameDeparture = isSameDate(loc.date, newCase.departure_date);
+          // sameFlight && console.log(
+          //   oldCase.case_number,
+          //   newCase.case_number,
+          //   newCase.flight,
+          //   sameFlight,
+          //   sameDeparture,
+          //   sameArrival
+          // );
+          return sameFlight; //&& (sameArrival || sameDeparture);
+        });
+        // a.length && console.log(a);
+        return { ...oldCase, location_history: a };
+      })
+      .filter(
+        oldCase =>
+          oldCase.location_history.length &&
+          (isSameDate(
+            oldCase.location_history.slice(-2)[0].date,
+            newCase.departure_date
+          ) ||
+            isSameDate(
+              oldCase.location_history.slice(-1)[0].date,
+              newCase.arrival_date
+            ))
+      )
+      .forEach(oldCase => {
+        // console.log('flight match: ', oldCase.case_number, newCase.case_number);
+        const [depLoc, arrLoc] = oldCase.location_history.slice(-2);
+        let newFlightObject = [];
+        if (arrLoc) {
+          const flightInstances = flightMap.get(depLoc.description) || [];
+          const flightInstancesSet = new Set(flightInstances.map(JSON.stringify))
+          const flightInstance = {
+            departed: {
+              airport: depLoc.location,
+              date: moment(depLoc.date).format('DD MMM YYYY'),
+              time: moment(depLoc.date).format('h:mm a')
+            },
+            arrived: {
+              airport: arrLoc.location,
+              date: moment(arrLoc.date).format('DD MMM YYYY'),
+              time: moment(arrLoc.date).format('h:mm a')
+            }
+          }
+          flightInstancesSet.add(JSON.stringify(flightInstance));
+          const flightInstancesArr = [...flightInstancesSet].map(JSON.parse)
+          
+          flightMap.set(depLoc.description, flightInstancesArr);
+          // console.log(newFlightObject);
+        } else
+          console.log(
+            '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',
+            oldCase.location_history
+          );
+      });
+  });
 
+  // console.log(flightMap);
+  saveData([...flightMap], '../data/flightCache.json')
+  // oldData.cases.map(c => {
+  //   const locs = c.location_history;
+  //   locs.map(l => {
+  //     // const date
+  //   })
+  // })
+};
+migrateFlights();
 
 module.exports = {
   findFlights
-}
+};

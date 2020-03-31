@@ -1,4 +1,4 @@
-const moment = require( 'moment')
+const moment = require('moment');
 const fs = require('fs');
 // const caseData = require('../data/caseData.json');
 const oldData = require('../data/newData3.json');
@@ -9,7 +9,6 @@ const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
 const dhbMap = require('../utils/locationMapper').get;
 const { findFlights } = require('./flight');
-
 
 const compareNewData = () => {
   const newobj = Object.assign({}, newCaseFormat);
@@ -59,9 +58,8 @@ const excludeCase = patient => {
   const criteria =
     details === 'Details to come' ||
     details === 'Linked to a confirmed case' ||
-    patient.location_history.length 
-    // ||  patient.case_number != 257
-    ;
+    patient.location_history.length;
+  // ||  patient.case_number != 257
   return criteria;
 };
 
@@ -69,52 +67,42 @@ const updateFlights = () => {
   // const samples = caseData.cases.slice(-20);
   const samples = oldData.cases;
   Promise.all(
-      samples.map(async (patient, i) => {
-          // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
-          if (excludeCase(patient)) return Promise.resolve(patient);
-          return new Promise(
-              (res, rej) =>
-              setTimeout(async () => {
-                  const { case_number, location_history, travel_details } = patient;
-                  console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
-                  const flights = await findFlights(patient);
-                    patient.location_history.push(...flights);
-                    // console.log(flights)
-                    return res(patient);
-                  },
-                (i+1) * 0001)
-              );
-            })
-          ).then(cases => {
-              oldData.cases = cases;
-              // console.log(JSON.stringify(caseData))
-              saveData(oldData)
-            // updateCache()
-            });
-          }
-          // updateFlights()
-            
+    samples.map(async (patient, i) => {
+      // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+      if (excludeCase(patient)) return Promise.resolve(patient);
+      return new Promise((res, rej) =>
+        setTimeout(async () => {
+          const { case_number, location_history, travel_details } = patient;
+          console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
+          const flights = await findFlights(patient);
+          patient.location_history.push(...flights);
+          // console.log(flights)
+          return res(patient);
+        }, (i + 1) * 0001)
+      );
+    })
+  ).then(cases => {
+    oldData.cases = cases;
+    // console.log(JSON.stringify(caseData))
+    saveData(oldData);
+    // updateCache()
+  });
+};
+// updateFlights()
+
 const saveData = data => {
   const NEW_DATA_PATH = path.resolve(__dirname, '../data/newData3.json');
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
-const migrateFlights = () => {
-  const flightCache = require('../data/flightCache.json');
-  const flightMap = new Map(flightCache);
-  oldData.cases.map(c => {
-    const locs = c.location_history;
-    locs.map(l => {
-      // const date
-    })
-  })
-}
-// migrateFlights()
 
 const updateCache = () => {
   // read locs from case data
   const newdata = require('../data/MoH/govtData202003291300.json');
-  const allLocs = newdata.confirmed.concat(newdata.probable).flatMap(patient => [patient.overseas_cities, patient.dhb]).filter(loc => !!loc)
+  const allLocs = newdata.confirmed
+    .concat(newdata.probable)
+    .flatMap(patient => [patient.overseas_cities, patient.dhb])
+    .filter(loc => !!loc);
   // read locs from loc cache
   const LOCATION_CACHE_PATH = path.resolve(
     __dirname,
@@ -126,8 +114,7 @@ const updateCache = () => {
   allLocs.forEach(caseLoc => {
     // console.log(caseLoc.location)
     //check if already contains
-    const location = dhbMap(caseLoc
-      );
+    const location = dhbMap(caseLoc);
 
     const cachedLocation = parsedCache.filter(
       cachedLoc => cachedLoc.location === location
@@ -149,9 +136,9 @@ const updateCache = () => {
           }
           // console.log(response)
           if (!(response && response[0])) {
-            console.log('>>>> NOT FOUND >>>>>>>', location)
-            return
-            ;}
+            console.log('>>>> NOT FOUND >>>>>>>', location);
+            return;
+          }
           delete response[0].geojson;
 
           const newEntry = {
@@ -167,4 +154,4 @@ const updateCache = () => {
   console.log('end');
   return;
 };
-updateCache()
+// updateCache()
