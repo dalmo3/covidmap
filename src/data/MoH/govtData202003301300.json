@@ -1,5 +1,5 @@
 {
-  "date": "2020-03-29T23:00:12.000Z",
+  "date": "2020-03-30T00:24:46.000Z",
   "confirmed": [
     {
       "case_number": 1,
@@ -204,7 +204,7 @@
       "overseas": "Yes",
       "overseas_cities": "United States of America",
       "gender": "Male",
-      "age_bracket": "70s",
+      "age_bracket": "30s",
       "flight": "AA83",
       "departure_date": "14/03/2020",
       "arrival_date": "14/03/2020"
@@ -217,7 +217,7 @@
       "overseas": "Yes",
       "overseas_cities": "United States of America",
       "gender": "Male",
-      "age_bracket": "30s",
+      "age_bracket": "70s",
       "flight": "AA83",
       "departure_date": "14/03/2020",
       "arrival_date": "14/03/2020"
@@ -1333,8 +1333,8 @@
       "status": "confirmed",
       "dhb": "Counties Manukau",
       "overseas": "Yes",
-      "overseas_cities": "Qatar",
-      "gender": "Male",
+      "overseas_cities": "Spain",
+      "gender": "Female",
       "age_bracket": "50s",
       "flight": "QR920",
       "departure_date": "17/03/2020",
@@ -1346,8 +1346,8 @@
       "status": "confirmed",
       "dhb": "Counties Manukau",
       "overseas": "Yes",
-      "overseas_cities": "Spain",
-      "gender": "Female",
+      "overseas_cities": "Qatar",
+      "gender": "Male",
       "age_bracket": "50s",
       "flight": "QR920",
       "departure_date": "17/03/2020",
@@ -1631,13 +1631,13 @@
       "report_date": "23/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
-      "overseas": "",
-      "overseas_cities": "",
+      "overseas": "Yes",
+      "overseas_cities": "Australia",
       "gender": "Female",
       "age_bracket": "60s",
       "flight": "",
       "departure_date": "",
-      "arrival_date": ""
+      "arrival_date": "22/03/2020"
     },
     {
       "case_number": 127,
@@ -2100,7 +2100,7 @@
       "status": "confirmed",
       "dhb": "Auckland",
       "overseas": "Yes",
-      "overseas_cities": "",
+      "overseas_cities": "United States of America",
       "gender": "Male",
       "age_bracket": "40s",
       "flight": "",
@@ -2155,8 +2155,8 @@
       "overseas_cities": "New Zealand",
       "gender": "Female",
       "age_bracket": "30s",
-      "flight": "",
-      "departure_date": "",
+      "flight": "EK448",
+      "departure_date": "21/03/2020",
       "arrival_date": "23/03/2020"
     },
     {
@@ -2700,7 +2700,7 @@
       "overseas": "Yes",
       "overseas_cities": "Indonesia",
       "gender": "Female",
-      "age_bracket": "1 s",
+      "age_bracket": "1s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -2794,7 +2794,7 @@
       "age_bracket": "50s",
       "flight": "AA83",
       "departure_date": "19/03/2020",
-      "arrival_date": "19/03/2020"
+      "arrival_date": "20/03/2020"
     },
     {
       "case_number": 216,
@@ -2844,7 +2844,7 @@
       "overseas_cities": "United States of America",
       "gender": "Female",
       "age_bracket": "20s",
-      "flight": "AirNZ29",
+      "flight": "NZ29",
       "departure_date": "20/03/2020",
       "arrival_date": "22/03/2020"
     },
@@ -2957,10 +2957,10 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
-      "overseas": "Yes",
+      "overseas": "",
       "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "15s",
+      "gender": "Female",
+      "age_bracket": "30s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -2983,10 +2983,10 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
-      "overseas": "",
+      "overseas": "Yes",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "70s",
+      "gender": "Male",
+      "age_bracket": "15s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -2999,7 +2999,7 @@
       "overseas": "",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "30s",
+      "age_bracket": "70s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -3126,13 +3126,13 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
-      "overseas": "",
-      "overseas_cities": "",
+      "overseas": "Yes",
+      "overseas_cities": "Singapore",
       "gender": "Female",
       "age_bracket": "40s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
+      "flight": "SQ281",
+      "departure_date": "15/03/2020",
+      "arrival_date": "16/03/2020"
     },
     {
       "case_number": 242,
@@ -3282,10 +3282,10 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "No",
+      "overseas": "",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "40s",
+      "gender": "Male",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -3295,10 +3295,10 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "20s",
+      "gender": "Female",
+      "age_bracket": "40s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -3364,7 +3364,7 @@
       "overseas_cities": "United Arab Emirates",
       "gender": "Female",
       "age_bracket": "20s",
-      "flight": "EK488",
+      "flight": "EK448",
       "departure_date": "19/03/2020",
       "arrival_date": ""
     },
@@ -3386,7 +3386,7 @@
       "report_date": "25/03/2020",
       "status": "confirmed",
       "dhb": "Nelson Marlborough",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Male",
       "age_bracket": "60s",
@@ -3413,7 +3413,7 @@
       "status": "confirmed",
       "dhb": "MidCentral",
       "overseas": "Yes",
-      "overseas_cities": "United States of America",
+      "overseas_cities": "",
       "gender": " ",
       "age_bracket": "50s",
       "flight": "NZ5107",
@@ -3479,8 +3479,8 @@
       "dhb": "Hawke's Bay",
       "overseas": "Yes",
       "overseas_cities": "Cambodia",
-      "gender": "Male",
-      "age_bracket": "70s",
+      "gender": "Female",
+      "age_bracket": "60s",
       "flight": "NZ5019",
       "departure_date": "16/03/2020",
       "arrival_date": "16/03/2020"
@@ -3492,8 +3492,8 @@
       "dhb": "Hawke's Bay",
       "overseas": "Yes",
       "overseas_cities": "Cambodia",
-      "gender": "Female",
-      "age_bracket": "60s",
+      "gender": "Male",
+      "age_bracket": "70s",
       "flight": "NZ5019",
       "departure_date": "16/03/2020",
       "arrival_date": "16/03/2020"
@@ -4351,9 +4351,9 @@
       "overseas": "Yes",
       "overseas_cities": "United Arab Emirates",
       "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "NZ457",
-      "departure_date": "21/03/2020",
+      "age_bracket": "40s",
+      "flight": "EK448",
+      "departure_date": "20/03/2020",
       "arrival_date": "21/03/2020"
     },
     {
@@ -4364,9 +4364,9 @@
       "overseas": "Yes",
       "overseas_cities": "United Arab Emirates",
       "gender": "Female",
-      "age_bracket": "40s",
-      "flight": "EK448",
-      "departure_date": "20/03/2020",
+      "age_bracket": "20s",
+      "flight": "NZ457",
+      "departure_date": "21/03/2020",
       "arrival_date": "21/03/2020"
     },
     {
@@ -4507,9 +4507,9 @@
       "overseas": "Yes",
       "overseas_cities": "Australia",
       "gender": "Female",
-      "age_bracket": "30s",
-      "flight": "QF139",
-      "departure_date": "14/03/2020",
+      "age_bracket": "1s",
+      "flight": "",
+      "departure_date": "",
       "arrival_date": "15/03/2020"
     },
     {
@@ -4520,9 +4520,9 @@
       "overseas": "Yes",
       "overseas_cities": "Australia",
       "gender": "Female",
-      "age_bracket": "1 s",
-      "flight": "",
-      "departure_date": "",
+      "age_bracket": "30s",
+      "flight": "QF139",
+      "departure_date": "14/03/2020",
       "arrival_date": "15/03/2020"
     },
     {
@@ -4662,8 +4662,8 @@
       "dhb": "Auckland",
       "overseas": "",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "30s",
+      "gender": "Male",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4689,13 +4689,39 @@
       "overseas": "",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "20s",
+      "age_bracket": "30s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
       "case_number": 362,
+      "report_date": "26/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 363,
+      "report_date": "26/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "21/03/2020"
+    },
+    {
+      "case_number": 364,
       "report_date": "26/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -4708,7 +4734,7 @@
       "arrival_date": "16/03/2020"
     },
     {
-      "case_number": 363,
+      "case_number": 365,
       "report_date": "26/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -4721,7 +4747,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 364,
+      "case_number": 366,
       "report_date": "26/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -4732,32 +4758,6 @@
       "flight": "",
       "departure_date": "",
       "arrival_date": "17/03/2020"
-    },
-    {
-      "case_number": 365,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Whanganui",
-      "overseas": "Yes",
-      "overseas_cities": "United States of America",
-      "gender": "Male",
-      "age_bracket": "20s",
-      "flight": "NZ6067",
-      "departure_date": "22/03/2020",
-      "arrival_date": "23/03/2020"
-    },
-    {
-      "case_number": 366,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Whanganui",
-      "overseas": "Yes",
-      "overseas_cities": "United States of America",
-      "gender": "Male",
-      "age_bracket": "20s",
-      "flight": "NZ6067",
-      "departure_date": "22/03/2020",
-      "arrival_date": "23/03/2020"
     },
     {
       "case_number": 367,
@@ -4776,6 +4776,32 @@
       "case_number": 368,
       "report_date": "27/03/2020",
       "status": "confirmed",
+      "dhb": "Whanganui",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "NZ6067",
+      "departure_date": "22/03/2020",
+      "arrival_date": "23/03/2020"
+    },
+    {
+      "case_number": 369,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Whanganui",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "NZ6067",
+      "departure_date": "22/03/2020",
+      "arrival_date": "23/03/2020"
+    },
+    {
+      "case_number": 370,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
       "dhb": "Waitemata",
       "overseas": "Yes",
       "overseas_cities": "",
@@ -4786,7 +4812,7 @@
       "arrival_date": "6/03/2020"
     },
     {
-      "case_number": 369,
+      "case_number": 371,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
@@ -4794,32 +4820,6 @@
       "overseas_cities": "",
       "gender": "Male",
       "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 370,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Waikato",
-      "overseas": "No",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "15s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 371,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Waikato",
-      "overseas": "No",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "15s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4832,7 +4832,7 @@
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Male",
-      "age_bracket": "60s",
+      "age_bracket": "15s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4845,7 +4845,7 @@
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "40s",
+      "age_bracket": "15s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4857,8 +4857,8 @@
       "dhb": "Waikato",
       "overseas": "No",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "30s",
+      "gender": "Male",
+      "age_bracket": "60s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4870,8 +4870,8 @@
       "dhb": "Waikato",
       "overseas": "No",
       "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "50s",
+      "gender": "Female",
+      "age_bracket": "40s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4884,7 +4884,7 @@
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "20s",
+      "age_bracket": "30s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4896,8 +4896,8 @@
       "dhb": "Waikato",
       "overseas": "No",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "30s",
+      "gender": "Male",
+      "age_bracket": "50s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -4907,7 +4907,7 @@
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "20s",
@@ -4920,16 +4920,29 @@
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 380,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
       "overseas": "Yes",
       "overseas_cities": "United Kingdom",
       "gender": "Male",
       "age_bracket": "20s",
-      "flight": "EK010",
+      "flight": "EK10",
       "departure_date": "",
       "arrival_date": "24/03/2020"
     },
     {
-      "case_number": 380,
+      "case_number": 381,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
@@ -4942,7 +4955,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 381,
+      "case_number": 382,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
@@ -4955,7 +4968,7 @@
       "arrival_date": "21/03/2020"
     },
     {
-      "case_number": 382,
+      "case_number": 383,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Taranaki",
@@ -4968,7 +4981,7 @@
       "arrival_date": "18/03/2020"
     },
     {
-      "case_number": 383,
+      "case_number": 384,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Taranaki",
@@ -4981,7 +4994,7 @@
       "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 384,
+      "case_number": 385,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Taranaki",
@@ -4994,7 +5007,7 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 385,
+      "case_number": 386,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Taranaki",
@@ -5007,7 +5020,7 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 386,
+      "case_number": 387,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5020,7 +5033,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 387,
+      "case_number": 388,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5031,19 +5044,6 @@
       "flight": "NZ639",
       "departure_date": "23/03/2020",
       "arrival_date": "22/03/2020"
-    },
-    {
-      "case_number": 388,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Southern",
-      "overseas": "No",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
     },
     {
       "case_number": 389,
@@ -5063,19 +5063,6 @@
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "Yes",
-      "overseas_cities": "United Kingdom",
-      "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "EK5121",
-      "departure_date": "20/03/2020",
-      "arrival_date": "21/03/2020"
-    },
-    {
-      "case_number": 391,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Southern",
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Male",
@@ -5085,14 +5072,27 @@
       "arrival_date": ""
     },
     {
+      "case_number": 391,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "Yes",
+      "overseas_cities": "United Kingdom",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "EK5121",
+      "departure_date": "20/03/2020",
+      "arrival_date": "21/03/2020"
+    },
+    {
       "case_number": 392,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
       "overseas": "No",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "60s",
+      "gender": "Male",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5105,7 +5105,7 @@
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "20s",
+      "age_bracket": "60s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5115,10 +5115,10 @@
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "50s",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5130,8 +5130,8 @@
       "dhb": "Southern",
       "overseas": "",
       "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "20s",
+      "gender": "Female",
+      "age_bracket": "50s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5157,7 +5157,7 @@
       "overseas": "",
       "overseas_cities": "",
       "gender": "Male",
-      "age_bracket": "50s",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5170,13 +5170,26 @@
       "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "50s",
+      "age_bracket": "70s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
       "case_number": 399,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 400,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5189,24 +5202,11 @@
       "arrival_date": ""
     },
     {
-      "case_number": 400,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Southern",
-      "overseas": "Yes",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "50s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
       "case_number": 401,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "50s",
@@ -5219,7 +5219,7 @@
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Male",
       "age_bracket": "50s",
@@ -5233,28 +5233,67 @@
       "status": "confirmed",
       "dhb": "Southern",
       "overseas": "Yes",
-      "overseas_cities": "United States of America",
-      "gender": "Female",
-      "age_bracket": "60s",
-      "flight": "NZ675",
-      "departure_date": "17/03/2020",
-      "arrival_date": "17/03/2020"
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
     },
     {
       "case_number": 404,
       "report_date": "27/03/2020",
       "status": "confirmed",
-      "dhb": "South Canterbury",
-      "overseas": "",
+      "dhb": "Southern",
+      "overseas": "No",
       "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "1 s",
+      "gender": "Male",
+      "age_bracket": "50s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
       "case_number": 405,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 406,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "South Canterbury",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "1s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 407,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "South Canterbury",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 408,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "South Canterbury",
@@ -5267,7 +5306,20 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 406,
+      "case_number": 409,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "South Canterbury",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Female",
+      "age_bracket": "60s",
+      "flight": "NZ675",
+      "departure_date": "17/03/2020",
+      "arrival_date": "17/03/2020"
+    },
+    {
+      "case_number": 410,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "MidCentral",
@@ -5280,7 +5332,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 407,
+      "case_number": 411,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "MidCentral",
@@ -5293,20 +5345,20 @@
       "arrival_date": "12/03/2020"
     },
     {
-      "case_number": 408,
+      "case_number": 412,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Hutt Valley",
-      "overseas": "",
-      "overseas_cities": "",
+      "overseas": "Yes",
+      "overseas_cities": "Singapore",
       "gender": "Female",
       "age_bracket": "60s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
+      "flight": "NZ441",
+      "departure_date": "20/03/2020",
+      "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 409,
+      "case_number": 413,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Hutt Valley",
@@ -5319,7 +5371,7 @@
       "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 410,
+      "case_number": 414,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Hutt Valley",
@@ -5332,7 +5384,7 @@
       "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 411,
+      "case_number": 415,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Hawke's Bay",
@@ -5345,7 +5397,7 @@
       "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 412,
+      "case_number": 416,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
@@ -5358,7 +5410,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 413,
+      "case_number": 417,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
@@ -5371,7 +5423,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 414,
+      "case_number": 418,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
@@ -5384,7 +5436,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 415,
+      "case_number": 419,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
@@ -5397,20 +5449,7 @@
       "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 416,
-      "report_date": "27/03/2020",
-      "status": "confirmed",
-      "dhb": "Capital and Coast",
-      "overseas": "No",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "50s",
-      "flight": "NZ8876",
-      "departure_date": "23/03/2020",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 417,
+      "case_number": 420,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5423,7 +5462,20 @@
       "arrival_date": ""
     },
     {
-      "case_number": 418,
+      "case_number": 421,
+      "report_date": "27/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "NZ8876",
+      "departure_date": "23/03/2020",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 422,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5436,7 +5488,7 @@
       "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 419,
+      "case_number": 423,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Canterbury",
@@ -5449,7 +5501,7 @@
       "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 420,
+      "case_number": 424,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Canterbury",
@@ -5457,12 +5509,12 @@
       "overseas_cities": "Australia",
       "gender": "Male",
       "age_bracket": "60s",
-      "flight": "VA0097",
+      "flight": "VA97",
       "departure_date": "23/03/2020",
       "arrival_date": "23/03/2020"
     },
     {
-      "case_number": 421,
+      "case_number": 425,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Bay of Plenty",
@@ -5475,7 +5527,7 @@
       "arrival_date": "23/03/2020"
     },
     {
-      "case_number": 422,
+      "case_number": 426,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Bay of Plenty",
@@ -5488,7 +5540,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 423,
+      "case_number": 427,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5501,7 +5553,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 424,
+      "case_number": 428,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5514,7 +5566,7 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 425,
+      "case_number": 429,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5527,7 +5579,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 426,
+      "case_number": 430,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5540,7 +5592,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 427,
+      "case_number": 431,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5553,7 +5605,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 428,
+      "case_number": 432,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5566,7 +5618,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 429,
+      "case_number": 433,
       "report_date": "27/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -5579,63 +5631,11 @@
       "arrival_date": "21/03/2020"
     },
     {
-      "case_number": 430,
-      "report_date": "28/03/2020",
-      "status": "confirmed",
-      "dhb": "Waitemata",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "15s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 431,
-      "report_date": "28/03/2020",
-      "status": "confirmed",
-      "dhb": "Waitemata",
-      "overseas": "No",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "10s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 432,
-      "report_date": "28/03/2020",
-      "status": "confirmed",
-      "dhb": "Waitemata",
-      "overseas": "Yes",
-      "overseas_cities": "United States of America",
-      "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": "19/03/2020"
-    },
-    {
-      "case_number": 433,
-      "report_date": "28/03/2020",
-      "status": "confirmed",
-      "dhb": "Waitemata",
-      "overseas": "Yes",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "70s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": "18/03/2020"
-    },
-    {
       "case_number": 434,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "15s",
@@ -5648,10 +5648,10 @@
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "50s",
+      "age_bracket": "10s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5661,10 +5661,10 @@
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "20s",
+      "age_bracket": "10s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
@@ -5675,7 +5675,98 @@
       "status": "confirmed",
       "dhb": "Waitemata",
       "overseas": "Yes",
-      "overseas_cities": "England",
+      "overseas_cities": "United States of America",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "18/03/2020"
+    },
+    {
+      "case_number": 438,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "19/03/2020"
+    },
+    {
+      "case_number": 439,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "70s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "18/03/2020"
+    },
+    {
+      "case_number": 440,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "15s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 441,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 442,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 443,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "United Arab Emirates",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "EK448",
+      "departure_date": "23/03/2020",
+      "arrival_date": "24/03/2020"
+    },
+    {
+      "case_number": 444,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "United Arab Emirates",
       "gender": "Female",
       "age_bracket": "20s",
       "flight": "",
@@ -5683,7 +5774,7 @@
       "arrival_date": "24/03/2020"
     },
     {
-      "case_number": 438,
+      "case_number": 445,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waitemata",
@@ -5696,20 +5787,33 @@
       "arrival_date": ""
     },
     {
-      "case_number": 439,
+      "case_number": 446,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 447,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
       "overseas": "",
       "overseas_cities": "",
       "gender": "Female",
-      "age_bracket": "1 s",
+      "age_bracket": "1s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
-      "case_number": 440,
+      "case_number": 448,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Waikato",
@@ -5722,7 +5826,20 @@
       "arrival_date": ""
     },
     {
-      "case_number": 441,
+      "case_number": 449,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "70s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 450,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5735,7 +5852,7 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 442,
+      "case_number": 451,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5748,7 +5865,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 443,
+      "case_number": 452,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5761,7 +5878,7 @@
       "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 444,
+      "case_number": 453,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5774,7 +5891,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 445,
+      "case_number": 454,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5787,7 +5904,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 446,
+      "case_number": 455,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5800,7 +5917,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 447,
+      "case_number": 456,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5813,7 +5930,7 @@
       "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 448,
+      "case_number": 457,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5826,7 +5943,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 449,
+      "case_number": 458,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5839,7 +5956,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 450,
+      "case_number": 459,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5852,7 +5969,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 451,
+      "case_number": 460,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Southern",
@@ -5865,7 +5982,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 452,
+      "case_number": 461,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "South Canterbury",
@@ -5873,12 +5990,12 @@
       "overseas_cities": "United States of America",
       "gender": "Male",
       "age_bracket": "60s",
-      "flight": "NZ675",
+      "flight": "NZ67",
       "departure_date": "17/03/2020",
       "arrival_date": "17/03/2020"
     },
     {
-      "case_number": 453,
+      "case_number": 462,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Nelson Marlborough",
@@ -5891,7 +6008,20 @@
       "arrival_date": "16/03/2020"
     },
     {
-      "case_number": 454,
+      "case_number": 463,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Lakes",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "17/03/2020"
+    },
+    {
+      "case_number": 464,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Hawke's Bay",
@@ -5904,7 +6034,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 455,
+      "case_number": 465,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
@@ -5917,11 +6047,11 @@
       "arrival_date": "23/03/2020"
     },
     {
-      "case_number": 456,
+      "case_number": 466,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "40s",
@@ -5930,11 +6060,11 @@
       "arrival_date": ""
     },
     {
-      "case_number": 457,
+      "case_number": 467,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Counties Manukau",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Male",
       "age_bracket": "40s",
@@ -5943,7 +6073,20 @@
       "arrival_date": ""
     },
     {
-      "case_number": 458,
+      "case_number": 468,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Counties Manukau",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 469,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5956,7 +6099,20 @@
       "arrival_date": "25/03/2020"
     },
     {
-      "case_number": 459,
+      "case_number": 470,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "Yes",
+      "overseas_cities": "United Kingdom",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "22/03/2020"
+    },
+    {
+      "case_number": 471,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5969,7 +6125,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 460,
+      "case_number": 472,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5982,7 +6138,7 @@
       "arrival_date": "24/03/2020"
     },
     {
-      "case_number": 461,
+      "case_number": 473,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Capital and Coast",
@@ -5995,7 +6151,33 @@
       "arrival_date": "17/03/2020"
     },
     {
-      "case_number": 462,
+      "case_number": 474,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Canterbury",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 475,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Canterbury",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 476,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Canterbury",
@@ -6008,7 +6190,20 @@
       "arrival_date": "23/03/2020"
     },
     {
-      "case_number": 463,
+      "case_number": 477,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Canterbury",
+      "overseas": "Yes",
+      "overseas_cities": "France",
+      "gender": "Male",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "16/03/2020"
+    },
+    {
+      "case_number": 478,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Canterbury",
@@ -6021,7 +6216,7 @@
       "arrival_date": "24/03/2020"
     },
     {
-      "case_number": 464,
+      "case_number": 479,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Canterbury",
@@ -6034,33 +6229,33 @@
       "arrival_date": "24/03/2020"
     },
     {
-      "case_number": 465,
+      "case_number": 480,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Bay of Plenty",
       "overseas": "Yes",
-      "overseas_cities": "United Kingdom",
+      "overseas_cities": "Australia",
       "gender": "Female",
       "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
+      "flight": "EK2",
+      "departure_date": "23/03/2020",
       "arrival_date": "26/03/2020"
     },
     {
-      "case_number": 466,
+      "case_number": 481,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Bay of Plenty",
       "overseas": "Yes",
-      "overseas_cities": "",
+      "overseas_cities": "Northern America",
       "gender": "Female",
       "age_bracket": "70s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": "8/03/2020"
+      "flight": "NZ29",
+      "departure_date": "16/03/2020",
+      "arrival_date": "18/03/2020"
     },
     {
-      "case_number": 467,
+      "case_number": 482,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -6068,12 +6263,38 @@
       "overseas_cities": "United States of America",
       "gender": "Female",
       "age_bracket": "60s",
+      "flight": "NZ1",
+      "departure_date": "25/03/2020",
+      "arrival_date": "27/03/2020"
+    },
+    {
+      "case_number": 483,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "Indonesia",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "EK450",
+      "departure_date": "23/03/2020",
+      "arrival_date": "24/03/2020"
+    },
+    {
+      "case_number": 484,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "60s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
-      "case_number": 468,
+      "case_number": 485,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -6086,24 +6307,11 @@
       "arrival_date": ""
     },
     {
-      "case_number": 469,
+      "case_number": 486,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "60s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 470,
-      "report_date": "28/03/2020",
-      "status": "confirmed",
-      "dhb": "Auckland",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "50s",
@@ -6112,20 +6320,33 @@
       "arrival_date": ""
     },
     {
-      "case_number": 471,
+      "case_number": 487,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
-      "overseas": "",
-      "overseas_cities": "",
+      "overseas": "Yes",
+      "overseas_cities": "United Arab Emirates",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "EK448",
+      "departure_date": "23/03/2020",
+      "arrival_date": "24/03/2020"
+    },
+    {
+      "case_number": 488,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "Qatar",
       "gender": "Female",
       "age_bracket": "30s",
       "flight": "",
       "departure_date": "",
-      "arrival_date": ""
+      "arrival_date": "17/03/2020"
     },
     {
-      "case_number": 472,
+      "case_number": 489,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -6138,20 +6359,33 @@
       "arrival_date": ""
     },
     {
-      "case_number": 473,
+      "case_number": 490,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
+      "overseas": "Yes",
+      "overseas_cities": "Qatar",
+      "gender": "Male",
+      "age_bracket": "60s",
+      "flight": "EK448",
+      "departure_date": "21/03/2020",
+      "arrival_date": "22/03/2020"
     },
     {
-      "case_number": 474,
+      "case_number": 491,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "Qatar",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "EK448",
+      "departure_date": "20/03/2020",
+      "arrival_date": "21/03/2020"
+    },
+    {
+      "case_number": 492,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -6164,7 +6398,20 @@
       "arrival_date": ""
     },
     {
-      "case_number": 475,
+      "case_number": 493,
+      "report_date": "28/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 494,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
@@ -6177,10 +6424,23 @@
       "arrival_date": ""
     },
     {
-      "case_number": 476,
+      "case_number": 495,
       "report_date": "28/03/2020",
       "status": "confirmed",
       "dhb": "Auckland",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "15s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 496,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
       "overseas": "",
       "overseas_cities": "",
       "gender": "Female",
@@ -6188,6 +6448,734 @@
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
+    },
+    {
+      "case_number": 497,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "15s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 498,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 499,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "21/03/2020"
+    },
+    {
+      "case_number": 500,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 501,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "15s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 502,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 503,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "25/03/2020"
+    },
+    {
+      "case_number": 504,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "60s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "19/03/2020"
+    },
+    {
+      "case_number": 505,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 506,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "20/03/2020"
+    },
+    {
+      "case_number": 507,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 508,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 509,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 510,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 511,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 512,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 513,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 514,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 515,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 516,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 517,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 518,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 519,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 520,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Waikato",
+      "overseas": "Yes",
+      "overseas_cities": "Australia",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "18/03/2020",
+      "arrival_date": "18/03/2020"
+    },
+    {
+      "case_number": 521,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 522,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "15s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 523,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 524,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 525,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 526,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 527,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 528,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 529,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 530,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "60s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 531,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "60s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 532,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Southern",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 533,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Northland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 534,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Northland",
+      "overseas": "Yes",
+      "overseas_cities": "Canada",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "GB615",
+      "departure_date": "23/03/2020",
+      "arrival_date": "23/03/2020"
+    },
+    {
+      "case_number": 535,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Nelson Marlborough",
+      "overseas": "Yes",
+      "overseas_cities": "United Arab Emirates",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "NZ5069",
+      "departure_date": "20/03/2020",
+      "arrival_date": "19/03/2020"
+    },
+    {
+      "case_number": 536,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "MidCentral",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "NZ5107",
+      "departure_date": "18/03/2020",
+      "arrival_date": "18/03/2020"
+    },
+    {
+      "case_number": 537,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Counties Manukau",
+      "overseas": "Yes",
+      "overseas_cities": "United Arab Emirates",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "19/03/2020"
+    },
+    {
+      "case_number": 538,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 539,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 540,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "Yes",
+      "overseas_cities": "New Zealand",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "QF171",
+      "departure_date": "24/03/2020",
+      "arrival_date": "24/03/2020"
+    },
+    {
+      "case_number": 541,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "70s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 542,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "",
+      "departure_date": "23/03/2020",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 543,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Capital and Coast",
+      "overseas": "Yes",
+      "overseas_cities": "United Kingdom",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "23/03/2020"
+    },
+    {
+      "case_number": 544,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 545,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 546,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "10s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 547,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "25/03/2020"
+    },
+    {
+      "case_number": 548,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 549,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": " ",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 550,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 551,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "24/03/2020"
+    },
+    {
+      "case_number": 552,
+      "report_date": "29/03/2020",
+      "status": "confirmed",
+      "dhb": "Auckland",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "50s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": "22/03/2020"
     }
   ],
   "probable": [
@@ -6401,71 +7389,19 @@
     },
     {
       "case_number": 17,
-      "report_date": "24/03/2020",
+      "report_date": "25/03/2020",
       "status": "probable",
-      "dhb": "Bay of Plenty",
-      "overseas": "No",
+      "dhb": "Waitemata",
+      "overseas": "",
       "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "40s",
+      "gender": "Female",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""
     },
     {
       "case_number": 18,
-      "report_date": "25/03/2020",
-      "status": "probable",
-      "dhb": "Waitemata",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 19,
-      "report_date": "25/03/2020",
-      "status": "probable",
-      "dhb": "Waitemata",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Male",
-      "age_bracket": "50s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 20,
-      "report_date": "25/03/2020",
-      "status": "probable",
-      "dhb": "Waitemata",
-      "overseas": "Yes",
-      "overseas_cities": "United States of America",
-      "gender": "Male",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": "19/03/2020"
-    },
-    {
-      "case_number": 21,
-      "report_date": "25/03/2020",
-      "status": "probable",
-      "dhb": "Waitemata",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "20s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 22,
       "report_date": "25/03/2020",
       "status": "probable",
       "dhb": "Waikato",
@@ -6478,7 +7414,7 @@
       "arrival_date": "1/03/2020"
     },
     {
-      "case_number": 23,
+      "case_number": 19,
       "report_date": "25/03/2020",
       "status": "probable",
       "dhb": "MidCentral",
@@ -6491,7 +7427,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 24,
+      "case_number": 20,
       "report_date": "25/03/2020",
       "status": "probable",
       "dhb": "Canterbury",
@@ -6504,7 +7440,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 25,
+      "case_number": 21,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Waitemata",
@@ -6517,7 +7453,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 26,
+      "case_number": 22,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Waitemata",
@@ -6530,7 +7466,7 @@
       "arrival_date": "15/03/2020"
     },
     {
-      "case_number": 27,
+      "case_number": 23,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Waitemata",
@@ -6543,20 +7479,20 @@
       "arrival_date": ""
     },
     {
-      "case_number": 28,
+      "case_number": 24,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Northland",
-      "overseas": "",
-      "overseas_cities": "",
+      "overseas": "Yes",
+      "overseas_cities": "United States of America",
       "gender": "Female",
       "age_bracket": "60s",
       "flight": "",
       "departure_date": "",
-      "arrival_date": ""
+      "arrival_date": "20/03/2020"
     },
     {
-      "case_number": 29,
+      "case_number": 25,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Capital and Coast",
@@ -6569,7 +7505,7 @@
       "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 30,
+      "case_number": 26,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Canterbury",
@@ -6582,7 +7518,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 31,
+      "case_number": 27,
       "report_date": "26/03/2020",
       "status": "probable",
       "dhb": "Auckland",
@@ -6595,7 +7531,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 32,
+      "case_number": 28,
       "report_date": "27/03/2020",
       "status": "probable",
       "dhb": "Waitemata",
@@ -6608,20 +7544,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 33,
-      "report_date": "27/03/2020",
-      "status": "probable",
-      "dhb": "Canterbury",
-      "overseas": "Yes",
-      "overseas_cities": "United Kingdom",
-      "gender": "Female",
-      "age_bracket": "30s",
-      "flight": "EK412",
-      "departure_date": "18/03/2020",
-      "arrival_date": "19/03/2020"
-    },
-    {
-      "case_number": 34,
+      "case_number": 29,
       "report_date": "27/03/2020",
       "status": "probable",
       "dhb": "Canterbury",
@@ -6634,7 +7557,20 @@
       "arrival_date": "19/03/2020"
     },
     {
-      "case_number": 35,
+      "case_number": 30,
+      "report_date": "27/03/2020",
+      "status": "probable",
+      "dhb": "Canterbury",
+      "overseas": "Yes",
+      "overseas_cities": "United Kingdom",
+      "gender": "Female",
+      "age_bracket": "30s",
+      "flight": "EK412",
+      "departure_date": "18/03/2020",
+      "arrival_date": "19/03/2020"
+    },
+    {
+      "case_number": 31,
       "report_date": "27/03/2020",
       "status": "probable",
       "dhb": "Auckland",
@@ -6647,20 +7583,7 @@
       "arrival_date": ""
     },
     {
-      "case_number": 36,
-      "report_date": "28/03/2020",
-      "status": "probable",
-      "dhb": "Counties Manukau",
-      "overseas": "",
-      "overseas_cities": "",
-      "gender": "Female",
-      "age_bracket": "50s",
-      "flight": "",
-      "departure_date": "",
-      "arrival_date": ""
-    },
-    {
-      "case_number": 37,
+      "case_number": 32,
       "report_date": "28/03/2020",
       "status": "probable",
       "dhb": "Counties Manukau",
@@ -6673,14 +7596,66 @@
       "arrival_date": ""
     },
     {
-      "case_number": 38,
+      "case_number": 33,
       "report_date": "28/03/2020",
       "status": "probable",
       "dhb": "Auckland",
-      "overseas": "",
+      "overseas": "No",
       "overseas_cities": "",
       "gender": "Female",
       "age_bracket": "40s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 34,
+      "report_date": "29/03/2020",
+      "status": "probable",
+      "dhb": "Waitemata",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 35,
+      "report_date": "29/03/2020",
+      "status": "probable",
+      "dhb": "Capital and Coast",
+      "overseas": "Yes",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "20s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 36,
+      "report_date": "29/03/2020",
+      "status": "probable",
+      "dhb": "Auckland",
+      "overseas": "No",
+      "overseas_cities": "",
+      "gender": "Male",
+      "age_bracket": "60s",
+      "flight": "",
+      "departure_date": "",
+      "arrival_date": ""
+    },
+    {
+      "case_number": 37,
+      "report_date": "30/03/2020",
+      "status": "probable",
+      "dhb": "Counties Manukau",
+      "overseas": "",
+      "overseas_cities": "",
+      "gender": "Female",
+      "age_bracket": "20s",
       "flight": "",
       "departure_date": "",
       "arrival_date": ""

@@ -103,14 +103,16 @@ const saveData = data => {
 
 const updateCache = () => {
   // read locs from case data
-  const allLocs = caseData.cases
-    .flatMap(c => c.location_history.concat([{ location: c.location }]))
-    .concat(
-      caseData.probable_cases.flatMap(patient =>
-        patient.location_history.concat([{ location: patient.location }])
-      )
-    );
+  // const allLocs = caseData.cases
+  //   .flatMap(c => c.location_history.concat([{ location: c.location }]))
+  //   .concat(
+  //     caseData.probable_cases.flatMap(patient =>
+  //       patient.location_history.concat([{ location: patient.location }])
+  //     )
+  //   );
 
+  const newdata = require('../data/MoH/govtData202003291300.json');
+  const allLocs = newdata.confirmed.concat(newdata.probable).flatMap(patient => [patient.overseas_cities, patient.dhb]).filter(loc => !!loc)
   // read locs from loc cache
   const LOCATION_CACHE_PATH = path.resolve(
     __dirname,
@@ -122,7 +124,8 @@ const updateCache = () => {
   allLocs.forEach(caseLoc => {
     // console.log(caseLoc.location)
     //check if already contains
-    const location = dhbMap(caseLoc.location);
+    const location = dhbMap(caseLoc
+      );
 
     const cachedLocation = parsedCache.filter(
       cachedLoc => cachedLoc.location === location

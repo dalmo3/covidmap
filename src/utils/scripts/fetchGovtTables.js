@@ -59,7 +59,7 @@ document.querySelectorAll('table.table-style-two').forEach(table => {
   });
   switch (status) {
     case 'probable':
-      caseObj.probable_cases = arr;
+      caseObj.probable = arr;
       break;
     default:
       caseObj.confirmed = arr;
