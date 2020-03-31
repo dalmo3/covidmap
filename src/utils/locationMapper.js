@@ -19,7 +19,7 @@ const locMapper = new Map([
   ['Taranaki', 'taranaki base Hospital'],
   ['Waikato', 'waikato Hospital'],
   ['Wairarapa', '96 Blair Street, Masterton'],
-  ['Waitemata', 'waitemata auckland'],
+  ['Waitemata', 'waitakere hospital'],
   ['West Coast', 'greymouth hospital'],
   ['Whanganui', 'whanganui hospital'],
   ["Sydney Kingsford Smith Airport","Sydney Airport"]
