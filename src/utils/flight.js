@@ -4,12 +4,8 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const fs = require('fs');
 const path = require('path');
-const data = require('../data/newData3.json');
-const tr = require('tor-request');
-tr.TorControlPort.password = process.env.tor_pwd;
-const util = require('util');
-const torReq = util.promisify(tr.request);
-const dotenv = require('dotenv')
+const caseData = require('../data/newData3.json');
+const flightCache = require('../data/flightCache.json');
 
 const fetchFlightData = async (
   flightNumber,

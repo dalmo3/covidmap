@@ -1,0 +1,19 @@
+[
+  [
+    "test",
+    [
+      {
+        "departed": {
+          "airport": "",
+          "date": "",
+          "time": ""
+        },
+        "arrived": {
+          "airport": "",
+          "date": "",
+          "time": ""
+        }
+      }
+    ]
+  ]
+]

@@ -1,6 +1,7 @@
+const moment = require( 'moment')
 const fs = require('fs');
 // const caseData = require('../data/caseData.json');
-const caseData = require('../data/newData3.json');
+const oldData = require('../data/newData3.json');
 const newData = require('../data/caseData.json');
 const newCaseFormat = require('../data/newCaseFormat.json');
 const path = require('path');
@@ -9,15 +10,16 @@ const { fetch } = require('simple-fetch-cache');
 const dhbMap = require('../utils/locationMapper').get;
 const { findFlights } = require('./flight');
 
+
 const compareNewData = () => {
   const newobj = Object.assign({}, newCaseFormat);
   newobj.cases.forEach((c, i) => {
     // console.log(c)
-    Object.assign(c, caseData.cases[i]);
+    Object.assign(c, oldData.cases[i]);
     // console.log(c)
   });
   newobj.probable_cases.forEach((c, i) => {
-    Object.assign(c, caseData.probable_cases[i]);
+    Object.assign(c, oldData.probable_cases[i]);
   });
   console.log(newobj.probable_cases);
   console.log(newobj);
@@ -25,7 +27,6 @@ const compareNewData = () => {
   const NEWDATA_PATH = path.resolve(__dirname, '../data/newData2.json');
   fs.writeFileSync(NEWDATA_PATH, JSON.stringify(newobj));
 };
-
 // compareNewData()
 
 //
@@ -65,9 +66,8 @@ const excludeCase = patient => {
 };
 
 const updateFlights = () => {
-
   // const samples = caseData.cases.slice(-20);
-  const samples = caseData.cases;
+  const samples = oldData.cases;
   Promise.all(
       samples.map(async (patient, i) => {
           // console.log(case_number, location_history.length, travel_details); // if (patient.location_history.length) return;
@@ -86,9 +86,9 @@ const updateFlights = () => {
               );
             })
           ).then(cases => {
-              caseData.cases = cases;
+              oldData.cases = cases;
               // console.log(JSON.stringify(caseData))
-              saveData(caseData)
+              saveData(oldData)
             // updateCache()
             });
           }
@@ -99,18 +99,20 @@ const saveData = data => {
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
-
+const migrateFlights = () => {
+  const flightCache = require('../data/flightCache.json');
+  const flightMap = new Map(flightCache);
+  oldData.cases.map(c => {
+    const locs = c.location_history;
+    locs.map(l => {
+      // const date
+    })
+  })
+}
+// migrateFlights()
 
 const updateCache = () => {
   // read locs from case data
-  // const allLocs = caseData.cases
-  //   .flatMap(c => c.location_history.concat([{ location: c.location }]))
-  //   .concat(
-  //     caseData.probable_cases.flatMap(patient =>
-  //       patient.location_history.concat([{ location: patient.location }])
-  //     )
-  //   );
-
   const newdata = require('../data/MoH/govtData202003291300.json');
   const allLocs = newdata.confirmed.concat(newdata.probable).flatMap(patient => [patient.overseas_cities, patient.dhb]).filter(loc => !!loc)
   // read locs from loc cache
@@ -165,5 +167,4 @@ const updateCache = () => {
   console.log('end');
   return;
 };
-
 updateCache()
