@@ -1,17 +1,678 @@
 [
   [
-    "test",
+    "EK450",
     [
       {
         "departed": {
-          "airport": "",
-          "date": "",
-          "time": ""
+          "airport": "Denpasar International Airport",
+          "date": "25 Feb 2020",
+          "time": "4:34 pm"
         },
         "arrived": {
-          "airport": "",
-          "date": "",
-          "time": ""
+          "airport": "Auckland Airport",
+          "date": "26 Feb 2020",
+          "time": "5:10 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ8041",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "09 Mar 2020",
+          "time": "1:55 pm"
+        },
+        "arrived": {
+          "airport": "Taranaki",
+          "date": "09 Mar 2020",
+          "time": "2:49 pm"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "18 Mar 2020",
+          "time": "1:53 pm"
+        },
+        "arrived": {
+          "airport": "New Plymouth Airport",
+          "date": "18 Mar 2020",
+          "time": "1:53 pm"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "16 Mar 2020",
+          "time": "1:54 pm"
+        },
+        "arrived": {
+          "airport": "New Plymouth Airport",
+          "date": "16 Mar 2020",
+          "time": "2:36 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ8035",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "15 Mar 2020",
+          "time": "8:15 am"
+        },
+        "arrived": {
+          "airport": "New Plymouth Airport",
+          "date": "15 Mar 2020",
+          "time": "8:59 am"
+        }
+      }
+    ]
+  ],
+  [
+    "AA83",
+    [
+      {
+        "departed": {
+          "airport": "Los Angeles International Airport",
+          "date": "12 Mar 2020",
+          "time": "11:01 pm"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "14 Mar 2020",
+          "time": "8:36 am"
+        }
+      }
+    ]
+  ],
+  [
+    "SQ285",
+    [
+      {
+        "departed": {
+          "airport": "Singapore Changi Airport",
+          "date": "12 Mar 2020",
+          "time": "10:20 pm"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "13 Mar 2020",
+          "time": "1:20 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "QF161",
+    [
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "14 Mar 2020",
+          "time": "9:36 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "14 Mar 2020",
+          "time": "2:57 pm"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "15 Mar 2020",
+          "time": "10:08 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "15 Mar 2020",
+          "time": "3:22 pm"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "20 Mar 2020",
+          "time": "10:05 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "20 Mar 2020",
+          "time": "3:04 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ535",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "15 Mar 2020",
+          "time": "11:08 am"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "15 Mar 2020",
+          "time": "12:29 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ5107",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "16 Mar 2020",
+          "time": "10:45 am"
+        },
+        "arrived": {
+          "airport": "Palmerston North Airport",
+          "date": "16 Mar 2020",
+          "time": "11:52 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ5065",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport ",
+          "date": "16 Mar 2020",
+          "time": "8:35 am"
+        },
+        "arrived": {
+          "airport": "Nelson Airport",
+          "date": "16 Mar 2020",
+          "time": "10:00 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "16 Mar 2020",
+          "time": "8:35 am"
+        },
+        "arrived": {
+          "airport": "Nelson Airport",
+          "date": "16 Mar 2020",
+          "time": "10:00 am"
+        }
+      }
+    ]
+  ],
+  [
+    "EK448",
+    [
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "11 Mar 2020",
+          "time": "10:21 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "12 Mar 2020",
+          "time": "10:43 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "18 Mar 2020",
+          "time": "10:25 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "19 Mar 2020",
+          "time": "10:27 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "19 Mar 2020",
+          "time": "10:49 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "20 Mar 2020",
+          "time": "11:14 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "15 Mar 2020",
+          "time": "10:26 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "16 Mar 2020",
+          "time": "10:38 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "16 Mar 2020",
+          "time": "10:11 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "17 Mar 2020",
+          "time": "11:09 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "21 Mar 2020",
+          "time": "10:13 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "22 Mar 2020",
+          "time": "10:35 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "20 Mar 2020",
+          "time": "10:42 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "21 Mar 2020",
+          "time": "11:04 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Dubai International Airport",
+          "date": "14 Mar 2020",
+          "time": "10:55 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "15 Mar 2020",
+          "time": "10:52 am"
+        }
+      }
+    ]
+  ],
+  [
+    "SQ297",
+    [
+      {
+        "departed": {
+          "airport": "Singapore Changi Airport",
+          "date": "17 Mar 2020",
+          "time": "7:45 pm"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "18 Mar 2020",
+          "time": "10:12 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Singapore Changi Airport",
+          "date": "19 Mar 2020",
+          "time": "7:45 pm"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "20 Mar 2020",
+          "time": "10:06 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ523",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "17 Mar 2020",
+          "time": "8:07 am"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "17 Mar 2020",
+          "time": "9:28 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ842",
+    [
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "19 Mar 2020",
+          "time": "6:38 pm"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "19 Mar 2020",
+          "time": "11:46 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "QF143",
+    [
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "18 Mar 2020",
+          "time": "9:59 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "18 Mar 2020",
+          "time": "3:08 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ449",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "08 Mar 2020",
+          "time": "6:15 pm"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "08 Mar 2020",
+          "time": "7:03 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "MH133",
+    [
+      {
+        "departed": {
+          "airport": "Kuala Lumpur International Airport",
+          "date": "19 Mar 2020",
+          "time": "8:41 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "19 Mar 2020",
+          "time": "11:58 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "QR920",
+    [
+      {
+        "departed": {
+          "airport": "Doha Hamad International Airport",
+          "date": "17 Mar 2020",
+          "time": "2:20 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "18 Mar 2020",
+          "time": "4:58 am"
+        }
+      },
+      {
+        "departed": {
+          "airport": "Doha Hamad International Airport",
+          "date": "21 Mar 2020",
+          "time": "2:20 am"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "22 Mar 2020",
+          "time": "4:30 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ527",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "21 Mar 2020",
+          "time": "9:02 am"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "21 Mar 2020",
+          "time": "10:23 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ1",
+    [
+      {
+        "departed": {
+          "airport": "Los Angeles International Airport",
+          "date": "13 Mar 2020",
+          "time": "10:52 pm"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "15 Mar 2020",
+          "time": "7:35 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ5115",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "17 Mar 2020",
+          "time": "2:24 pm"
+        },
+        "arrived": {
+          "airport": "Palmerston North Airport",
+          "date": "17 Mar 2020",
+          "time": "3:37 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "VA171",
+    [
+      {
+        "departed": {
+          "airport": "Sydney Kingsford Smith Airport",
+          "date": "13 Mar 2020",
+          "time": "10:07 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "13 Mar 2020",
+          "time": "3:26 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ409",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport ",
+          "date": "19 Mar 2020",
+          "time": "7:59 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport ",
+          "date": "19 Mar 2020",
+          "time": "9:06 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ5",
+    [
+      {
+        "departed": {
+          "airport": "Los Angeles International Airport",
+          "date": "16 Mar 2020",
+          "time": "9:35 pm"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "18 Mar 2020",
+          "time": "6:43 am"
+        }
+      }
+    ]
+  ],
+  [
+    "JQ285",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "19 Mar 2020",
+          "time": "2:15 pm"
+        },
+        "arrived": {
+          "airport": "Dunedin International Airport",
+          "date": "19 Mar 2020",
+          "time": "3:59 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ407",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "20 Mar 2020",
+          "time": "7:30 am"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "20 Mar 2020",
+          "time": "8:36 am"
+        }
+      }
+    ]
+  ],
+  [
+    "EK412",
+    [
+      {
+        "departed": {
+          "airport": "Sydney Airport",
+          "date": "20 Mar 2020",
+          "time": "9:29 am"
+        },
+        "arrived": {
+          "airport": "Christchurch International Airport",
+          "date": "20 Mar 2020",
+          "time": "2:26 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ7",
+    [
+      {
+        "departed": {
+          "airport": "San Francisco International Airport",
+          "date": "19 Mar 2020",
+          "time": "8:38 pm"
+        },
+        "arrived": {
+          "airport": "Auckland Airport",
+          "date": "21 Mar 2020",
+          "time": "5:35 am"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ677",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "19 Mar 2020",
+          "time": "4:40 pm"
+        },
+        "arrived": {
+          "airport": "Dunedin International Airport",
+          "date": "19 Mar 2020",
+          "time": "6:30 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ625",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "21 Mar 2020",
+          "time": "5:29 pm"
+        },
+        "arrived": {
+          "airport": "Queenstown Airport",
+          "date": "21 Mar 2020",
+          "time": "7:15 pm"
+        }
+      }
+    ]
+  ],
+  [
+    "NZ433",
+    [
+      {
+        "departed": {
+          "airport": "Auckland Airport",
+          "date": "21 Mar 2020",
+          "time": "1:53 pm"
+        },
+        "arrived": {
+          "airport": "Wellington International Airport",
+          "date": "21 Mar 2020",
+          "time": "3:05 pm"
         }
       }
     ]

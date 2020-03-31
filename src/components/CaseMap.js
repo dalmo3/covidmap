@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Map.css';
+import './CaseMap.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import 'leaflet.markercluster';
@@ -12,41 +12,35 @@ import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
-// require('dotenv').config();
-// const data = require('../data/caseData').data;
-// const data = require('../data/caseData.json');
-// const data = require('../data/newData3.json');
-// const data = require('../data/MoH/govtData202003291300.json');
-const data = require('../data/MoH/govtData202003301300.json');
+const data = require('../data/MoH/govtData202003311300.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
-// import fs from 'fs'
+const flightMapper = new Map(require('../data/flightCache.json'));
 
-// const LOCATION_CACHE_PATH = './data/locationCache.js'
-
-// import cache from LOCATION_CACHE_PATH
-  
-toast.info('Disclaimer: The markers are placed where the case was reported, not where the patients live or stay.', {
-  position: 'bottom-right',
-  pauseOnHover: false,
-  pauseOnFocusLoss: false,
-  // progressStyle: {backgroundColor: 'C9171a'},
-  progressClassName: 'toast_progress',
-}) 
+toast.info(
+  'Disclaimer: The markers are placed where the case was reported, not where the patients live or stay.',
+  {
+    position: 'bottom-right',
+    pauseOnHover: false,
+    pauseOnFocusLoss: false,
+    // progressStyle: {backgroundColor: 'C9171a'},
+    progressClassName: 'toast_progress'
+  }
+);
 // toast.error('76 new cases announced today, will be added as soon as details are released.', {
 //   position: 'bottom-right',
 //   pauseOnHover: false,
 //   pauseOnFocusLoss: false,
 //   // progressStyle: {backgroundColor: 'C9171a'},
 //   progressClassName: 'toast_progress',
-// }) 
+// })
 const getCoordinates = async location =>
   new Promise((resolve, reject) => {
     // console.log(locationCache)
     // const locationCache = fs.readFileSync(LOCATION_CACHE_PATH)
     // const parsedCache = JSON.parse(locationCache) || [];
     location = dhbMap(location);
-    
+
     const cachedLocation = locationCache.filter(
       loc => loc.location === location
     );
@@ -76,16 +70,15 @@ const getCoordinates = async location =>
         });
     }
   });
-const dis = () => toast.dismiss()
+const dis = () => toast.dismiss();
 
-function Map() {
-
+function CaseMap() {
   document.addEventListener('keyup', e => {
     if (e.keyCode === 27) {
       resetMarkers();
       if (mymap.current.getZoom() < 6) resetZoom();
-      dis()
-    };
+      dis();
+    }
   });
   const initState = () => {
     resetMarkers();
@@ -103,9 +96,9 @@ function Map() {
   const markerCluster = useRef(
     L.markerClusterGroup({
       showCoverageOnHover: false,
-      spiderfyDistanceMultiplier: 2
+      spiderfyDistanceMultiplier: 2,
+      // zoomToBoundsOnClick: false
     }).on('clusterclick', e => {
-
       if (showTutorial.current) {
         // console.log(showTutorial)
         toast('Click on a case for details!', {
@@ -113,15 +106,12 @@ function Map() {
           pauseOnHover: false,
           pauseOnFocusLoss: false,
           // progressStyle: {backgroundColor: 'C9171a'},
-          progressClassName: 'toast_progress',
-        }) 
+          progressClassName: 'toast_progress'
+        });
         showTutorial.current = false;
       }
-    
-      
     })
   );
-
 
   const caseFeatures = useRef(L.featureGroup());
 
@@ -133,9 +123,7 @@ function Map() {
     zoom: 5 + (window.innerHeight > 800)
   };
 
-  
-  useEffect(() => {  
-  },[showTutorial])
+  useEffect(() => {}, [showTutorial]);
   // const [mapView, setMapView] = useState(initialMapView);
 
   // useEffect(()=>{
@@ -168,9 +156,9 @@ function Map() {
     // create map
     mymap.current = L.map('map', initialMapView);
     // mymap.current.zoomControl.setPosition('topright');
-    const accessToken =
-      process.env.REACT_APP_MAPBOX_TOKEN ||
-      'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A';
+    // const accessToken =
+    //   process.env.REACT_APP_mymap.currentBOX_TOKEN ||
+    //   'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A';
     // console.log(process.env);
     // alert(accessToken)
     L.tileLayer(
@@ -178,10 +166,11 @@ function Map() {
       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
         // attribution:
-          // 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+        // 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        attribution:
+          '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
         maxZoom: 14,
-        minZoom: 2,
+        minZoom: 2
         // id: 'mapbox/streets-v11',
         // tileSize: 512,
         // zoomOffset: -1
@@ -251,9 +240,9 @@ function Map() {
     // markerCluster = ;
     // console.log('case_number', data.cases.concat(data.probable_cases))
     data.confirmed.concat(data.probable).forEach(async patient => {
-      const location = 
-      // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location || 
-      patient.dhb;
+      const location =
+        // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
+        patient.dhb;
       const coords = await getCoordinates(location);
 
       const marker = L.marker(coords, {
@@ -262,16 +251,17 @@ function Map() {
         .bindTooltip(
           `${location + ' DHB'}
           <br>
-          ${getFormattedDateString(patient.report_date)}`,
+          ${moment(patient.report_date, 'DD/MM/YYYY').format('DD MMM')}`,
           {
             // permanent : true
           }
         )
         .on('click', () => {
           // setShowClusters(false);
-          // traceCase(patient);
-          showToast(patient)
-        }); 
+          dis();
+          traceCase(patient);
+          showToast(patient);
+        });
 
       markerCluster.current.addLayer(marker);
     });
@@ -289,13 +279,71 @@ function Map() {
   //   showClusters && mymap.current.addLayer(showClusters);
   // };
 
-  // display case paths
+  const findflight = (flightNumber, departureDate, arrivalDate) => {
+    const flightInstances = flightMapper.get(flightNumber) || [];
+    return flightInstances.filter(
+      ({ departed, arrived }) =>
+        moment(departed.date).isSame(moment(departureDate, 'DD/MM/YYYY')) ||
+        moment(arrived.date).isSame(moment(arrivalDate, 'DD/MM/YYYY'))
+    )[0];
+  };
+
+  useEffect(() => {
+    if (showTrace) setShowClusters(!showTrace);
+  }, [showTrace]);
+
   const traceCase = async patient => {
+    const {
+      flight: flightNumber,
+      arrival_date: arrivalDate,
+      departure_date: departureDate
+    } = patient;
+    // if (!flightNumber) return;
+    // const hasDates = patient.departure_date || patient.arrival_date;
+    const flight = findflight(flightNumber, departureDate, arrivalDate);
+    if (!flight) return;
+    setShowTrace(true);
+
+    const flightEventMarker = async flightEvent => {
+      const coords = await getCoordinates(flightEvent.airport);
+      const evtDate = moment(flightEvent.date + ' ' + flightEvent.time).format(
+        'DD MMM H:mm a'
+      );
+      return L.marker(coords, {
+        icon: getMarkerIcon_old()
+      }).bindTooltip(`${flightEvent.airport}<br>${evtDate}`, {
+        permanent: true
+      });
+    };
+    const depMarker = await flightEventMarker(flight.departed);
+    const arrMarker = await flightEventMarker(flight.arrived);
+    console.log(depMarker, arrMarker);
+    const line = new L.polyline(
+      [depMarker.getLatLng(), arrMarker.getLatLng()],
+      { wrap: false, steps: 10 }
+    );
+
+    caseFeatures.current = L.featureGroup([depMarker, arrMarker, line]);
+
+    let brPadding = [
+      isPortraitMode() ? 20 : window.innerWidth / 3,
+      isPortraitMode() ? window.innerHeight / 2 : 20
+    ];
+
+    mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
+      paddingBottomRight: brPadding,
+      paddingTopLeft: [20, 20],
+      duration: 1,
+      maxZoom: Math.min(12, mymap.current.getZoom())
+    });
+  };
+
+  // display case paths
+  const traceCase_old = async patient => {
     // find all markers
-    const locations = patient.location_history
+    const locations = patient.location_history;
     const hasConnections = !!patient.location_history.length;
-    if (!hasConnections) locations.push(
-    {location: patient.location})
+    if (!hasConnections) locations.push({ location: patient.location });
     const caseMarkers = await Promise.all(
       locations.map(async loc => {
         // console.log(loc)
@@ -358,11 +406,10 @@ function Map() {
       duration: 1,
       maxZoom
     });
-    showToast(patient)
+    // showToast(patient);
   };
 
-  const showToast = (patient) => {
-    
+  const showToast = patient => {
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
     let t = toast(
@@ -371,13 +418,17 @@ function Map() {
           Case {patient.case_number}
           {isProbable ? ` (Probable)` : ''}
         </h2>
-        <p>{getFormattedDateString(patient.report_date)}</p>
+        <p>{moment(patient.report_date, 'DD/MM/YYYY').format('DD MMM')}</p>
         <p>{patient.dhb + ' DHB'}</p>
         <p>
           {patient.gender} {patient.age_bracket}
         </p>
         <p>{patient.overseas_cities}</p>
-        <a href='https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details' target="_blank" rel='nofollow nopoener noreferrer'>
+        <a
+          href="https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details"
+          target="_blank"
+          rel="nofollow nopoener noreferrer"
+        >
           Source
         </a>
       </div>
@@ -411,7 +462,7 @@ function Map() {
         if (mymap.current.getZoom() < 6) resetZoom();
       }
     });
-  }
+  };
   const displayTrace = () => {
     if (showTrace) caseFeatures.current.addTo(mymap.current);
     else caseFeatures.current.remove();
@@ -421,10 +472,11 @@ function Map() {
   return <div id="map"></div>;
 }
 
-const getFormattedDateString = date => {
+const getFormattedDateString = (date, time = '') => {
   if (!date) return 'Date not available';
-  return moment(date,'DD/MM/YYYY').format('DD MMM')
-}
+  console.log(date + ' ' + time);
+  return moment(date + ' ' + time).format('DD MMM H:mm a');
+};
 const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
   const newDate = new Date(date);
@@ -473,4 +525,4 @@ const getMarkerIcon_old = () => {
   });
 };
 
-export default Map;
+export default CaseMap;

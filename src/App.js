@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from './components/Map';
+import CaseMap from './components/CaseMap';
 import './App.css';
 // import Menu from 'react-burger-menu/lib/menus/reveal';
 import Sidebar from './containers/Sidebar'
@@ -26,7 +26,7 @@ const Credits = () => (
 const App = props => (
     <Sidebar>
       <ToastContainer/>
-      <Map />   
+      <CaseMap />   
       <Credits/>
     </Sidebar>
   
