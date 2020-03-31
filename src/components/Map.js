@@ -362,7 +362,7 @@ function Map() {
   };
 
   const showToast = (patient) => {
-    
+    dis()
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
     let t = toast(
