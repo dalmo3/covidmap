@@ -12,7 +12,7 @@ import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
-const data = require('../data/MoH/govtData202003311300.json');
+const data = require('../data/MoH/current.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
 const flightMapper = new Map(require('../data/flightCache.json'));
@@ -251,7 +251,7 @@ function CaseMap() {
         .bindTooltip(
           `${location + ' DHB'}
           <br>
-          ${moment(patient.report_date, 'DD/MM/YYYY').format('DD MMM')}`,
+          ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`,
           {
             // permanent : true
           }
@@ -307,7 +307,7 @@ function CaseMap() {
     const flightEventMarker = async flightEvent => {
       const coords = await getCoordinates(flightEvent.airport);
       const evtDate = moment(flightEvent.date + ' ' + flightEvent.time).format(
-        'DD MMM H:mm a'
+        'D MMM H:mm a'
       );
       return L.marker(coords, {
         icon: getMarkerIcon_old()
@@ -418,7 +418,7 @@ function CaseMap() {
           Case {patient.case_number}
           {isProbable ? ` (Probable)` : ''}
         </h2>
-        <p>{moment(patient.report_date, 'DD/MM/YYYY').format('DD MMM')}</p>
+        <p>{moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}</p>
         <p>{patient.dhb + ' DHB'}</p>
         <p>
           {patient.gender} {patient.age_bracket}
@@ -475,7 +475,7 @@ function CaseMap() {
 const getFormattedDateString = (date, time = '') => {
   if (!date) return 'Date not available';
   console.log(date + ' ' + time);
-  return moment(date + ' ' + time).format('DD MMM H:mm a');
+  return moment(date + ' ' + time).format('D MMM H:mm a');
 };
 const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
