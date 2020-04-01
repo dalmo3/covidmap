@@ -421,10 +421,11 @@ function Map() {
   return <div id="map"></div>;
 }
 
-const getFormattedDateString = date => {
+const getFormattedDateString = (date, time) => {
   if (!date) return 'Date not available';
-  console.log(date + ' ' + time);
-  return moment(date + ' ' + time).format('D MMM H:mm a');
+  // console.log(date + ' ' + time);
+  // return moment(date + ' ' + time).format('D MMM H:mm a');
+  return moment(date).format('D MMM H:mm a');
 };
 const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
