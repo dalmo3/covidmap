@@ -16,8 +16,8 @@ import moment from 'moment';
 // const data = require('../data/caseData').data;
 // const data = require('../data/caseData.json');
 // const data = require('../data/newData3.json');
-// const data = require('../data/MoH/govtData202003291300.json');
-const data = require('../data/MoH/govtData202003311300.json');
+// const data = require('../data/MoH/govtData202003311300.json');
+const data = require('../data/MoH/current.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
 // import fs from 'fs'
@@ -262,7 +262,7 @@ function Map() {
         .bindTooltip(
           `${location + ' DHB'}
           <br>
-          ${getFormattedDateString(patient.report_date)}`,
+          ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`,
           {
             // permanent : true
           }
@@ -371,7 +371,7 @@ function Map() {
           Case {patient.case_number}
           {isProbable ? ` (Probable)` : ''}
         </h2>
-        <p>{getFormattedDateString(patient.report_date)}</p>
+        <p>{moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}</p>
         <p>{patient.dhb + ' DHB'}</p>
         <p>
           {patient.gender} {patient.age_bracket}
@@ -423,8 +423,9 @@ function Map() {
 
 const getFormattedDateString = date => {
   if (!date) return 'Date not available';
-  return moment(date,'DD/MM/YYYY').format('DD MMM')
-}
+  console.log(date + ' ' + time);
+  return moment(date + ' ' + time).format('D MMM H:mm a');
+};
 const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
   const newDate = new Date(date);
