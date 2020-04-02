@@ -8,7 +8,7 @@ const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
 const dhbMap = require('../utils/locationMapper').get;
-const { findFlights } = require('./flight');
+const flight = require('./flight');
 const currentData = require('../data/MoH/current.json')
 
 const compareNewData = () => {
@@ -64,7 +64,7 @@ const excludeCase = patient => {
   return criteria;
 };
 
-const updateFlights = () => {
+const updateFlights_old = () => {
   // const samples = caseData.cases.slice(-20);
   const samples = oldData.cases;
   Promise.all(
@@ -90,6 +90,13 @@ const updateFlights = () => {
   });
 };
 // updateFlights()
+
+const updateFlights = () => {
+  currentData.confirmed.concat(currentData.probable).forEach(patient => {
+
+    fetchFlightData(patient.flight, patient.departure_date, patient.arrival_date)
+  })
+}
 
 const saveData = data => {
   const NEW_DATA_PATH = path.resolve(__dirname, '../data/newData3.json');
@@ -155,4 +162,5 @@ const updateCache = () => {
   console.log('end');
   return;
 };
+flight.updateFlightCache()
 // updateCache()

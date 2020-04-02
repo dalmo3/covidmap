@@ -12,15 +12,25 @@ const saveData = (data, fileName) => {
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
-const fetchFlightData = async (flightNumber, departure, arrival) => {
+const fetchFlightData = async (
+  flightNumber,
+  departure,
+  arrival,
+  flightDate
+) => {
   if (!(departure || arrival)) return;
   const depMoment = moment(departure, 'DD/MM/YYYY');
   const arrMoment = moment(arrival, 'DD/MM/YYYY');
-  const date = (departure && depMoment) || (arrival && arrMoment);
+  const fdMoment = moment(flightDate, 'DD/MM/YYYY');
+  const date =
+    (flightDate && fdMoment) ||
+    (departure && depMoment) ||
+    (arrival && arrMoment);
   const queryDate = date.format('YYYY-MM-DD');
-  const formattedFlight = flightNumber
-    .replace(/.*flight /i, '')
-    .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3');
+  const formattedFlight = flightNumber.replace(
+    /(..)([ ]*)([0]*)([1-9][0-9]*)([ ].*)?/g,
+    '$1$4'
+  );
   console.log(
     `https://www.airportia.com/flights/${formattedFlight}/?date=${queryDate}`
   );
@@ -86,7 +96,8 @@ const fetchFlightData = async (flightNumber, departure, arrival) => {
       time: arrivalTime.format('h:mm a')
     }
   };
-  // console.log('fetched', flightInstance);
+  console.log('fetched', flightInstance);
+  console.log(departure, arrival);
   if (
     (departure && departureDate.isSame(depMoment, 'days')) ||
     (arrival && arrivalDate.isSame(arrMoment, 'days'))
@@ -107,7 +118,12 @@ const fetchFlightData = async (flightNumber, departure, arrival) => {
     //   setTimeout(() => res(fetchFlightData(flightNumber, previousFlightDate, arrival)), 3000)
     // )
     // return previousDayFlight
-    return fetchFlightData(formattedFlight, previousFlightDate, arrival);
+    return fetchFlightData(
+      formattedFlight,
+      departure,
+      arrival,
+      previousFlightDate
+    );
   } else if (
     (departure && departureDate.isBefore(depMoment, 'days')) ||
     (arrival && arrivalDate.isBefore(arrMoment, 'days'))
@@ -123,7 +139,7 @@ const fetchFlightData = async (flightNumber, departure, arrival) => {
     //   setTimeout(() => res(fetchFlightData(flightNumber, previousFlightDate, arrival)), 3000)
     // )
     // return previousDayFlight
-    return fetchFlightData(formattedFlight, nextFlightDate, arrival);
+    return fetchFlightData(formattedFlight, departure, arrival, nextFlightDate);
   }
 };
 
@@ -136,9 +152,10 @@ const fetchFlightData = async (flightNumber, departure, arrival) => {
 
 const getFlight = patient => {
   if (!patient.flight) return;
-  const formattedFlight = patient.flight
-    .replace(/.*flight /i, '')
-    .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3');
+  const formattedFlight = patient.flight.replace(
+    /(..)([ ]*)([0]*)([1-9][0-9]*)([ ].*)?/g,
+    '$1$4'
+  );
   const flightMap = new Map(flightCache);
   const flightInstances = flightMap.get(formattedFlight) || [];
   return flightInstances.filter(
@@ -159,41 +176,73 @@ const updateFlightCache = () => {
   const flightMap = new Map(flightCache);
   const currentData = require('../data/MoH/current.json');
   let delay = 0;
+  const delayedFlightFetch = (patient, i) => {
+    setTimeout(async () => {
+      const { case_number, flight, departure_date, arrival_date } = patient;
+      console.log(case_number, flight, departure_date, arrival_date);
+      const flightInstance = await fetchFlightData(
+        flight,
+        departure_date,
+        arrival_date
+      );
+      console.log(
+        case_number,
+        flight,
+        departure_date,
+        arrival_date,
+        flightInstance
+      );
+      // console.log(case_number, flight, departure_date, arrival_date, flightMap);
+      if (flightInstance) {
+        const flightInstances = flightMap.get(flight) || [];
+        const flightInstancesSet = new Set(flightInstances.map(JSON.stringify));
+        flightInstancesSet.add(JSON.stringify(flightInstance));
+        const flightInstancesArr = [...flightInstancesSet].map(JSON.parse);
+        flightMap.set(flight, flightInstancesArr);
+        // console.log(flightMap);
+        saveData([...flightMap], '../data/flightCache.json');
+      } else {
+      }
+    }, (i + 1) * 5000);
+  };
+
   currentData.confirmed
-    .concat(currentData.probable)
-    .filter(patient => patient.case_number > 400 && patient.flight && !getFlight(patient))
-    .forEach((patient, i) => {
-      setTimeout(async () => {
-        const { case_number, flight, departure_date, arrival_date } = patient;
-        console.log(case_number, flight, departure_date, arrival_date);
-        const flightInstance = await fetchFlightData(
-          flight,
-          departure_date,
-          arrival_date
+    .filter(patient => {
+      if (patient.flight) {
+        patient.hasFlightInfo = !!getFlight(patient);
+      }
+      return (
+        patient.flight &&
+        !patient.hasFlightInfo &&
+        !patient.flightError &&
+        patient.case_number > 0
+      );
+    })
+    .forEach(async (patient, i,arr) => {
+      const flightInfo = await delayedFlightFetch(patient, i)
+      patient.flightError = !flightInfo
+      saveData(currentData, '../data/MoH/current.json')
+      // if (i===arr.length-1) console.log(currentData)
+    });
+    currentData.probable
+    .filter(patient => {
+      if (patient.flight) {
+        patient.hasFlightInfo = !!getFlight(patient);
+      }
+      return (
+        patient.flight &&
+        !patient.hasFlightInfo &&
+        !patient.flightError &&
+        patient.case_number > 0
         );
-        console.log(
-          case_number,
-          flight,
-          departure_date,
-          arrival_date,
-          flightInstance
-        );
-        // console.log(case_number, flight, departure_date, arrival_date, flightMap);
-        if (flightInstance) {
-          const flightInstances = flightMap.get(flight) || [];
-          const flightInstancesSet = new Set(
-            flightInstances.map(JSON.stringify)
-          );
-          flightInstancesSet.add(JSON.stringify(flightInstance));
-          const flightInstancesArr = [...flightInstancesSet].map(JSON.parse);
-          flightMap.set(flight, flightInstancesArr);
-          // console.log(flightMap);
-          saveData([...flightMap], '../data/flightCache.json');
-        }
-      }, (i + 1) * 5000);
+    })
+    .forEach(async (patient, i, arr) => {
+      const flightInfo = await delayedFlightFetch(patient, i)
+      patient.flightError = !flightInfo
+      saveData(currentData, '../data/MoH/current.json')
+      // if (i===arr.length-1) console.log(currentData)
     });
 };
-updateFlightCache();
 
 const migrateFlights = () => {
   const oldData = require('../data/newFormatTest.json');
@@ -301,5 +350,6 @@ const migrateFlights = () => {
 
 module.exports = {
   fetchFlightData,
-  getFlight
+  getFlight,
+  updateFlightCache
 };
