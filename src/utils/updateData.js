@@ -1,13 +1,10 @@
 const moment = require('moment');
 const fs = require('fs');
 // const caseData = require('../data/caseData.json');
-const oldData = require('../data/newData3.json');
-const newData = require('../data/caseData.json');
-const newCaseFormat = require('../data/newCaseFormat.json');
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
-const dhbMap = require('../utils/locationMapper').get;
+const locationMapper = require('../utils/locationMapper').get;
 const flight = require('./flight');
 const currentData = require('../data/MoH/current.json')
 
@@ -103,15 +100,19 @@ const saveData = data => {
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
+const updateCacheAllLocs = () => {
 
-const updateCache = () => {
-  // read locs from case data
   const newdata = require('../data/MoH/govtData202003291300.json');
   const allLocs = newdata.confirmed
-    .concat(newdata.probable)
-    .flatMap(patient => [patient.overseas_cities, patient.dhb])
-    .filter(loc => !!loc);
+  .concat(newdata.probable)
+  .flatMap(patient => [patient.overseas_cities, patient.dhb])
+  .filter(loc => !!loc);
   // read locs from loc cache
+  updateCacheLoc(allLocs)
+}
+
+const updateCacheLoc = (locArr) => {
+  // read locs from case data
   const LOCATION_CACHE_PATH = path.resolve(
     __dirname,
     '../data/locationCache.json'
@@ -119,10 +120,10 @@ const updateCache = () => {
   const rawCache = fs.readFileSync(LOCATION_CACHE_PATH);
   const parsedCache = JSON.parse(rawCache) || new Array();
   // console.log(parsedCache)
-  allLocs.forEach(caseLoc => {
+  locArr.forEach(caseLoc => {
     // console.log(caseLoc.location)
     //check if already contains
-    const location = dhbMap(caseLoc);
+    const location = locationMapper(caseLoc);
 
     const cachedLocation = parsedCache.filter(
       cachedLoc => cachedLoc.location === location
@@ -162,5 +163,17 @@ const updateCache = () => {
   console.log('end');
   return;
 };
+
+const updateLocCacheFromFlights = () => {
+  const flightMap = require('../data/flightCache.json')
+  const flightLocs = flightMap.flatMap(([_, flightArr]) => 
+    flightArr.flatMap(flight => [flight.departed.airport, flight.arrived.airport])
+  )
+  const uniqueLocs = [...new Set(flightLocs)];
+  // const locsToFind = uniqueLocs.filter()
+  updateCacheLoc(uniqueLocs)
+}
 flight.updateFlightCache()
-// updateCache()
+updateLocCacheFromFlights()
+
+

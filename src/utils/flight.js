@@ -4,7 +4,6 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const fs = require('fs');
 const path = require('path');
-const caseData = require('../data/newData3.json');
 const flightCache = require('../data/flightCache.json');
 
 const saveData = (data, fileName) => {

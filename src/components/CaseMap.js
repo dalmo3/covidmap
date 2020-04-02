@@ -15,7 +15,7 @@ import moment from 'moment';
 import { getFlight } from '../utils/flight'
 const data = require('../data/MoH/current.json');
 const locationCache = require('../data/locationCache.json');
-const dhbMap = require('../utils/locationMapper').get;
+const locationMapper = require('../utils/locationMapper').get;
 const flightMapper = new Map(require('../data/flightCache.json'));
 
 toast.info(
@@ -40,7 +40,7 @@ const getCoordinates = async location =>
     // console.log(locationCache)
     // const locationCache = fs.readFileSync(LOCATION_CACHE_PATH)
     // const parsedCache = JSON.parse(locationCache) || [];
-    location = dhbMap(location);
+    location = locationMapper(location);
 
     const cachedLocation = locationCache.filter(
       loc => loc.location === location

@@ -22,7 +22,9 @@ const locMapper = new Map([
   ['Waitemata', 'waitakere hospital'],
   ['West Coast', 'greymouth hospital'],
   ['Whanganui', 'whanganui hospital'],
-  ["Sydney Kingsford Smith Airport","Sydney Airport"]
+  ["Sydney Kingsford Smith Airport","Sydney Airport"],
+  ["Palmerston North International Airport","Palmerston North Airport"],
+  ["Houston George Bush Intercontinental Airport","Houston Intercontinental Airport"]
 ]);
 
 exports.get = (location) => locMapper.get(location) || location;
