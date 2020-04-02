@@ -1,4 +1,9 @@
-let age_mapper = ageGroup => ageGroup.trim().slice(0, 2).concat('s').replace(' ','');
+let age_mapper = ageGroup =>
+  ageGroup
+    .trim()
+    .slice(0, 2)
+    .concat('s')
+    .replace(' ', '');
 let gender_mapper = gender => {
   switch (gender.trim().toLowerCase()) {
     case 'f':
@@ -21,19 +26,19 @@ let fn_new_partial = (row, status, i) => {
     dhb,
     overseas,
     overseas_cities,
-    flight,
+    arrival_date,
     departure_date,
-    arrival_date
+    flight
   ] = row.innerText.split('\t');
   let obj = {
     case_number: i + 1,
     report_date: report_date.trim(),
     status,
     dhb: dhb.trim(),
-    overseas: overseas.trim(),
-    overseas_cities: overseas_cities.trim(),
     gender: gender_mapper(gender),
     age_bracket: age_mapper(age_bracket),
+    overseas: overseas.trim(),
+    overseas_cities: overseas_cities.trim(),
     flight: flight.trim(),
     departure_date: departure_date.trim(),
     arrival_date: arrival_date.trim()
@@ -59,12 +64,36 @@ document.querySelectorAll('table.table-style-two').forEach(table => {
   });
   switch (status) {
     case 'probable':
-      caseObj.probable = arr;
+      caseObj.probable = arr
+        .sort((a, b) => (a.age_bracket < b.age_bracket ? 1 : -1))
+        .sort((a, b) => (a.gender < b.gender ? 1 : -1))
+        .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
+        .sort((a, b) => {
+          let aDate = a.report_date.split('/');
+          let bDate = b.report_date.split('/');
+          return aDate[1] + aDate[0] - (bDate[1] + bDate[0]);
+        });
       break;
     default:
-      caseObj.confirmed = arr;
+      caseObj.confirmed = arr
+        .sort((a, b) => (a.age_bracket < b.age_bracket ? 1 : -1))
+        .sort((a, b) => (a.gender < b.gender ? 1 : -1))
+        .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
+        .sort((a, b) => {
+          let aDate = a.report_date.split('/');
+          let bDate = b.report_date.split('/');
+          return aDate[1] + aDate[0] - (bDate[1] + bDate[0]);
+        });
       break;
   }
+  // caseObj.confirmed = caseObj.confirmed.map(
+  //   (c, i) => new Object({ case_number: i + 1, ...c })
+  // );
+  // caseObj.probable = caseObj.probable.map(
+  //   (c, i) => new Object({ case_number: i + 1, ...c })
+  // );
+  caseObj.confirmed.forEach((c, i) => Object.assign(c, { case_number: i + 1 }));
+  caseObj.probable.forEach((c, i) => Object.assign(c, { case_number: i + 1 }));
 });
 
 JSON.stringify(caseObj);
