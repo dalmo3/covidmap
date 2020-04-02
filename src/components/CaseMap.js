@@ -299,7 +299,7 @@ function CaseMap() {
     const flightEventMarker = async flightEvent => {
       const coords = await getCoordinates(flightEvent.airport);
       const evtDate = moment(flightEvent.date + ' ' + flightEvent.time).format(
-        'D MMM H:mm a'
+        'D MMM h:mm a'
       );
       return L.marker(coords, {
         icon: getMarkerIcon_old()
@@ -468,7 +468,7 @@ function CaseMap() {
 const getFormattedDateString = (date, time = '') => {
   if (!date) return 'Date not available';
   console.log(date + ' ' + time);
-  return moment(date + ' ' + time).format('D MMM H:mm a');
+  return moment(date + ' ' + time).format('D MMM h:mm a');
 };
 const getFormattedDateString_old = date => {
   if (!date) return 'Date not available';
