@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 
 const Credits = () => (
 
-  <a href='https://virtua.nz' target="_blank" style={
+  <a href='https://virtua.nz' target="_blank" rel="noopener noreferrer" style={
     {
       color: 'black',
       position: "absolute",
