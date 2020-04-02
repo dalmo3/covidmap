@@ -65,17 +65,27 @@ document.querySelectorAll('table.table-style-two').forEach(table => {
   switch (status) {
     case 'probable':
       caseObj.probable = arr
-        .sort((a, b) => (a.age_bracket < b.age_bracket ? 1 : -1))
-        .sort((a, b) => (a.gender < b.gender ? 1 : -1))
-        .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
-        .sort((a, b) => {
-          let aDate = a.report_date.split('/');
-          let bDate = b.report_date.split('/');
-          return aDate[1] + aDate[0] - (bDate[1] + bDate[0]);
-        });
+      .sort((a, b) => (a.overseas_cities < b.overseas_cities ? 1 : -1))
+      .sort((a, b) => (a.departure_date < b.departure_date ? 1 : -1))
+      .sort((a, b) => (a.arrival_date < b.arrival_date ? 1 : -1))
+      .sort((a, b) => (a.flight < b.flight ? 1 : -1))
+      .sort((a, b) => (a.overseas < b.overseas ? 1 : -1))
+      .sort((a, b) => (a.age_bracket < b.age_bracket ? 1 : -1))
+      .sort((a, b) => (a.gender < b.gender ? 1 : -1))
+      .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
+      .sort((a, b) => {
+        let aDate = a.report_date.split('/');
+        let bDate = b.report_date.split('/');
+        return aDate[1] + aDate[0] - (bDate[1] + bDate[0]);
+      });
       break;
-    default:
-      caseObj.confirmed = arr
+      default:
+        caseObj.confirmed = arr
+        .sort((a, b) => (a.overseas_cities < b.overseas_cities ? 1 : -1))
+        .sort((a, b) => (a.departure_date < b.departure_date ? 1 : -1))
+        .sort((a, b) => (a.arrival_date < b.arrival_date ? 1 : -1))
+        .sort((a, b) => (a.flight < b.flight ? 1 : -1))
+        .sort((a, b) => (a.overseas < b.overseas ? 1 : -1))
         .sort((a, b) => (a.age_bracket < b.age_bracket ? 1 : -1))
         .sort((a, b) => (a.gender < b.gender ? 1 : -1))
         .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
