@@ -9,6 +9,7 @@ const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
 const dhbMap = require('../utils/locationMapper').get;
 const { findFlights } = require('./flight');
+const currentData = require('../data/MoH/current.json')
 
 const compareNewData = () => {
   const newobj = Object.assign({}, newCaseFormat);

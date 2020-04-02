@@ -12,154 +12,194 @@ const saveData = (data, fileName) => {
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
-
-const fetchFlightData = async (
-  flightNumber,
-  flightDate,
-  targetDate = flightDate
-) => {
-  const date = flightDate ? moment(flightDate) : moment();
-  const target = targetDate ? moment(targetDate) : moment();
-  const queryDate = moment(date).format('YYYY-MM-DD');
-
-  let flightData = {}; // the returned object
-
-  //actual stuff
+const fetchFlightData = async (flightNumber, departure, arrival) => {
+  if (!(departure || arrival)) return;
+  const depMoment = moment(departure, 'DD/MM/YYYY');
+  const arrMoment = moment(arrival, 'DD/MM/YYYY');
+  const date = (departure && depMoment) || (arrival && arrMoment);
+  const queryDate = date.format('YYYY-MM-DD');
+  const formattedFlight = flightNumber
+    .replace(/.*flight /i, '')
+    .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3');
   console.log(
-    `https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`
+    `https://www.airportia.com/flights/${formattedFlight}/?date=${queryDate}`
   );
-  const html = await fetch(
-    `https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`
-  ).then(res => res.text());
 
-  // const data = await torReq(`https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`).then(async data => {
-  //   console.log(data.statusCode)
-  //   if (data.statusCode === 200) return data.body
-  //   tr.newTorSession(console.log);
-  //   return await torReq(`https://www.airportia.com/flights/${flightNumber}/?date=${queryDate}`).then(data => data.body)
-  // });
-  // TEST HTML
-  // const html = fs.readFileSync(
-  //   path.resolve(__dirname + '/ek450test.html'),
-  //   'utf8'
-  // );
+  const html = await new Promise((res, rej) => {
+    setTimeout(
+      () =>
+        res(
+          fetch(
+            `https://www.airportia.com/flights/${formattedFlight}/?date=${queryDate}`
+          )
+        ),
+      2000
+    );
+  }).then(res => res.text());
 
   const dom = new JSDOM(html).window.document;
   console.log(dom.title);
 
-  // get the 'Arrival' and 'Departure' elements
-  dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
-    // get scheduled and actual times
-    const flightEvent = schedule.querySelector('.flightInfo-date').textContent;
-    const displayDate = target.format('D MMM, YYYY');
-
-    // match arrival with target date (since our info usually has arrival date)
-    if (flightEvent.startsWith(`Arrival: `)) {
-      if (flightEvent.startsWith(`Arrival: ${displayDate}`)) {
-        // go up to schedule again, to get both Dep. and Arr. data
-        dom.querySelectorAll('.flightInfo-schedule').forEach(schedule => {
-          const flightEvent = schedule.querySelector('.flightInfo-date');
-
-          // get airport name without initials, helps withgeocoding
-          const airport = schedule
-            .querySelector('.flightInfo-airport')
-            .textContent.replace(/ \(...\)/, '');
-
-          // get only actual time
-          schedule
-            .querySelectorAll('.flightInfo-dateItem')
-            .forEach(dateItem => {
-              const dateLabel = dateItem.querySelector('.flightInfo-dateLabel');
-              if (dateLabel && dateLabel.textContent === 'Actual:') {
-                const dateTime = dateItem.querySelector('.flightInfo-dateTime');
-
-                // Arr/Dep and date
-                const [eventType, eventDate] = flightEvent.textContent.split(
-                  ': '
-                );
-                const legData = {
-                  airport,
-                  eventDate,
-                  time: dateTime.textContent,
-                  flightNumber
-                };
-
-                flightData[eventType] = legData;
-              }
-            });
-        });
-      } else {
-        // flight arrived a day later than departed, search for previous day
-        const previousDate = moment(date).subtract(1, 'days');
-        const previousFlightDate = moment(previousDate).format('YYYY-MM-DD');
-        console.log(' >>>>>>>>>> PREVIOUS DAY >>>>>>>>> ', previousFlightDate);
-
-        flightData = fetchFlightData(flightNumber, previousFlightDate, target);
-      }
-    }
-  });
-  return flightData;
-};
-
-// const flightNumber = 'EK450';
-// const flightDate = '21 Feb 2020';
-// fetchFlightData(flightNumber, flightDate);
-const parseTravelDetails = patient => {
-  const details = patient.travel_details;
-  const number = patient.case_number;
-  const sentences = details.split(/[,.]/);
-  // console.log(number, patient.location_history.length, details);
-
-  const resArr = sentences.flatMap(sentence => {
-    // console.log(s.match(/(flight ([A-Z][A-Z][0-9]{1,4}))/ig))
-    // console.log(s.match(/february/ig))
-    //flight date and code
-    const matches =
-      sentence.match(/.{1,3}march.*?flight ([A-Z][A-Z][0-9]{1,4})/gi) || [];
-    return matches.map(match => {
-      return {
-        flight: match
-          .replace(/.*flight /i, '')
-          .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3'),
-        date: match.replace(/march.*/i, 'march 2020')
-      };
-    });
-    // A to B on DD (no flight)
-    // console.log(s.match(/(.*)? to (.*)? on (.*) march/i))
-  });
-  // console.log(resArr);
-  return resArr;
-};
-
-const findFlights = async patient => {
-  // console.log(c.case_number);
-  const flightList = parseTravelDetails(patient);
-  // console.log(c.case_number, flightList);
-  const flightData = await Promise.all(
-    flightList.map(({ flight, date }) => fetchFlightData(flight, date))
+  const [departureInfo, arrivalInfo] = dom.querySelectorAll(
+    '.flightInfo-schedule'
   );
-  // c.location_history.push()
-  // console.log(c.case_number, 'returned', flightData);
-  const locationData = flightData
-    .flatMap(Object.values)
-    .map(({ airport, eventDate, time, flightNumber }) => {
-      return {
-        date: `${eventDate} ${time}`,
-        location: airport,
-        description: flightNumber
-      };
-    });
-  // console.log(patient.case_number, 'returned', locationData);
-  return locationData;
+  // console.log(departureInfo, arrivalInfo);
+  const departureAirport = departureInfo
+    .querySelector('.flightInfo-airport')
+    .textContent.replace(/ \(...\)/, '');
+  const departureDate = moment(
+    departureInfo
+      .querySelector('.flightInfo-date')
+      .textContent.replace('Departure: ', '')
+  );
+  const departureTime = moment(
+    departureInfo
+      .querySelectorAll('.flightInfo-dateItem')[2]
+      .querySelector('.flightInfo-dateTime').textContent,
+    'HH:mm'
+  );
+
+  const arrivalAirport = arrivalInfo
+    .querySelector('.flightInfo-airport')
+    .textContent.replace(/ \(...\)/, '');
+  const arrivalDate = moment(
+    arrivalInfo
+      .querySelector('.flightInfo-date')
+      .textContent.replace('Arrival: ', '')
+  );
+  const arrivalTime = moment(
+    arrivalInfo
+      .querySelectorAll('.flightInfo-dateItem')[2]
+      .querySelector('.flightInfo-dateTime').textContent,
+    'HH:mm'
+  );
+
+  const flightInstance = {
+    departed: {
+      airport: departureAirport,
+      date: departureDate.format('DD MMM YYYY'),
+      time: departureTime.format('h:mm a')
+    },
+    arrived: {
+      airport: arrivalAirport,
+      date: arrivalDate.format('DD MMM YYYY'),
+      time: arrivalTime.format('h:mm a')
+    }
+  };
+  // console.log('fetched', flightInstance);
+  if (
+    (departure && departureDate.isSame(depMoment, 'days')) ||
+    (arrival && arrivalDate.isSame(arrMoment, 'days'))
+  ) {
+    return flightInstance;
+  } else if (
+    (departure && departureDate.isAfter(depMoment, 'days')) ||
+    (arrival && arrivalDate.isAfter(arrMoment, 'days'))
+  ) {
+    const previousDate = moment(date).subtract(1, 'days');
+    const previousFlightDate = moment(previousDate).format('DD/MM/YYYY');
+    console.log(
+      flightNumber,
+      ' <<<<<<<<<< PREVIOUS DAY <<<<<<<<<<<<< ',
+      previousFlightDate
+    );
+    // const previousDayFlight = new Promise((res,rej) =>
+    //   setTimeout(() => res(fetchFlightData(flightNumber, previousFlightDate, arrival)), 3000)
+    // )
+    // return previousDayFlight
+    return fetchFlightData(formattedFlight, previousFlightDate, arrival);
+  } else if (
+    (departure && departureDate.isBefore(depMoment, 'days')) ||
+    (arrival && arrivalDate.isBefore(arrMoment, 'days'))
+  ) {
+    const nextDate = moment(date).add(1, 'days');
+    const nextFlightDate = moment(nextDate).format('DD/MM/YYYY');
+    console.log(
+      flightNumber,
+      ' >>>>>>>>>> NEXT DAY >>>>>>>>> ',
+      nextFlightDate
+    );
+    // const previousDayFlight = new Promise((res,rej) =>
+    //   setTimeout(() => res(fetchFlightData(flightNumber, previousFlightDate, arrival)), 3000)
+    // )
+    // return previousDayFlight
+    return fetchFlightData(formattedFlight, nextFlightDate, arrival);
+  }
 };
 
-const migrateFlights = () => {
-  const isSameDate = (oldDate, newDate) =>
-    moment(oldDate).isSame(moment(newDate, 'DD/MM/YYYY'), 'days');
-  const oldData = require('../data/newData3.json');
+// fetchFlightData('ek450','23/02/2020','24/02/2020').then(console.log)
+// fetchFlightData('ek450',undefined,'24/02/2020').then(console.log)
+// fetchFlightData('ek450','23/02/2020',undefined).then(console.log)
+// fetchFlightData('ek450',undefined,undefined).then(console.log)
+// fetchFlightData('ek450','26/02/2020','24/02/2020').then(console.log)
+// fetchFlightData('ek450','26/04/2020','24/04/2020').then(console.log)
+
+const getFlight = patient => {
+  if (!patient.flight) return;
+  const formattedFlight = patient.flight
+    .replace(/.*flight /i, '')
+    .replace(/(..)([ 0]+)?([1-9].*)/, '$1$3');
+  const flightMap = new Map(flightCache);
+  const flightInstances = flightMap.get(formattedFlight) || [];
+  return flightInstances.filter(
+    flight =>
+      isSameDate(flight.departed.date, patient.departure_date) ||
+      isSameDate(flight.arrived.date, patient.arrival_date)
+  )[0];
+};
+
+const isSameDate = (oldDate, newDate) =>
+  moment(oldDate).isSame(moment(newDate, 'DD/MM/YYYY'), 'days');
+
+const isSameDateOrBefore = (oldDate, newDate) =>
+  moment(oldDate).isSameOrBefore(moment(newDate, 'DD/MM/YYYY'), 'days');
+
+const updateFlightCache = () => {
   const flightCache = require('../data/flightCache.json');
   const flightMap = new Map(flightCache);
-  const currentData = require('../data/MoH/govtData202003311300.json');
+  const currentData = require('../data/MoH/current.json');
+  let delay = 0;
+  currentData.confirmed
+    .concat(currentData.probable)
+    .filter(patient => patient.case_number > 400 && patient.flight && !getFlight(patient))
+    .forEach((patient, i) => {
+      setTimeout(async () => {
+        const { case_number, flight, departure_date, arrival_date } = patient;
+        console.log(case_number, flight, departure_date, arrival_date);
+        const flightInstance = await fetchFlightData(
+          flight,
+          departure_date,
+          arrival_date
+        );
+        console.log(
+          case_number,
+          flight,
+          departure_date,
+          arrival_date,
+          flightInstance
+        );
+        // console.log(case_number, flight, departure_date, arrival_date, flightMap);
+        if (flightInstance) {
+          const flightInstances = flightMap.get(flight) || [];
+          const flightInstancesSet = new Set(
+            flightInstances.map(JSON.stringify)
+          );
+          flightInstancesSet.add(JSON.stringify(flightInstance));
+          const flightInstancesArr = [...flightInstancesSet].map(JSON.parse);
+          flightMap.set(flight, flightInstancesArr);
+          // console.log(flightMap);
+          saveData([...flightMap], '../data/flightCache.json');
+        }
+      }, (i + 1) * 5000);
+    });
+};
+updateFlightCache();
+
+const migrateFlights = () => {
+  const oldData = require('../data/newFormatTest.json');
+  const flightCache = require('../data/flightCache.json');
+  const flightMap = new Map(flightCache);
+  const currentData = require('../data/MoH/current.json');
   currentData.confirmed.forEach(newCase => {
     if (!newCase.flight) return;
     // console.log('flight : ', newCase.case_number, newCase.flight);
@@ -201,7 +241,9 @@ const migrateFlights = () => {
         let newFlightObject = [];
         if (arrLoc) {
           const flightInstances = flightMap.get(depLoc.description) || [];
-          const flightInstancesSet = new Set(flightInstances.map(JSON.stringify))
+          const flightInstancesSet = new Set(
+            flightInstances.map(JSON.stringify)
+          );
           const flightInstance = {
             departed: {
               airport: depLoc.location,
@@ -213,10 +255,10 @@ const migrateFlights = () => {
               date: moment(arrLoc.date).format('DD MMM YYYY'),
               time: moment(arrLoc.date).format('h:mm a')
             }
-          }
+          };
           flightInstancesSet.add(JSON.stringify(flightInstance));
-          const flightInstancesArr = [...flightInstancesSet].map(JSON.parse)
-          
+          const flightInstancesArr = [...flightInstancesSet].map(JSON.parse);
+
           flightMap.set(depLoc.description, flightInstancesArr);
           // console.log(newFlightObject);
         } else
@@ -224,11 +266,30 @@ const migrateFlights = () => {
             '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',
             oldCase.location_history
           );
+        if (
+          // newCase.dhb === oldCase.dhb
+          // &&
+          newCase.gender === oldCase.gender &&
+          newCase.age_bracket === oldCase.age_bracket
+        ) {
+          // if (true) {
+          console.log(
+            'case match: ',
+            oldCase.case_number,
+            oldCase.dhb,
+            oldCase.gender,
+            oldCase.age_bracket,
+            newCase.case_number,
+            newCase.dhb,
+            newCase.gender,
+            newCase.age_bracket
+          );
+        }
       });
   });
 
   // console.log(flightMap);
-  saveData([...flightMap], '../data/flightCache.json')
+  // saveData([...flightMap], '../data/flightCache.json')
   // oldData.cases.map(c => {
   //   const locs = c.location_history;
   //   locs.map(l => {
@@ -236,8 +297,9 @@ const migrateFlights = () => {
   //   })
   // })
 };
-migrateFlights();
+// migrateFlights();
 
 module.exports = {
-  findFlights
+  fetchFlightData,
+  getFlight
 };

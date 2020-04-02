@@ -12,6 +12,7 @@ import openGeocoder from 'node-open-geocoder';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
+import { getFlight } from '../utils/flight'
 const data = require('../data/MoH/current.json');
 const locationCache = require('../data/locationCache.json');
 const dhbMap = require('../utils/locationMapper').get;
@@ -279,15 +280,6 @@ function CaseMap() {
   //   showClusters && mymap.current.addLayer(showClusters);
   // };
 
-  const findflight = (flightNumber, departureDate, arrivalDate) => {
-    const flightInstances = flightMapper.get(flightNumber) || [];
-    return flightInstances.filter(
-      ({ departed, arrived }) =>
-        moment(departed.date).isSame(moment(departureDate, 'DD/MM/YYYY')) ||
-        moment(arrived.date).isSame(moment(arrivalDate, 'DD/MM/YYYY'))
-    )[0];
-  };
-
   useEffect(() => {
     if (showTrace) setShowClusters(!showTrace);
   }, [showTrace]);
@@ -300,7 +292,7 @@ function CaseMap() {
     } = patient;
     // if (!flightNumber) return;
     // const hasDates = patient.departure_date || patient.arrival_date;
-    const flight = findflight(flightNumber, departureDate, arrivalDate);
+    const flight = getFlight(patient);
     if (!flight) return;
     setShowTrace(true);
 
@@ -441,6 +433,7 @@ function CaseMap() {
         aria-label="close"
         onClick={() => {
           closeToast();
+          // dis();
           resetMarkers();
           if (mymap.current.getZoom() < 6) resetZoom();
         }}
@@ -454,12 +447,12 @@ function CaseMap() {
       autoClose: false,
       hideProgressBar: true,
       closeOnClick: false,
-      draggable: true,
-      draggablePercent: 40,
+      draggable: false,
+      // draggablePercent: 40,
       closeButton: <CloseButton />,
       onClose: () => {
-        resetMarkers();
-        if (mymap.current.getZoom() < 6) resetZoom();
+        // resetMarkers();
+        // if (mymap.current.getZoom() < 6) resetZoom();
       }
     });
   };
