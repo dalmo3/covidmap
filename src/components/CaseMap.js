@@ -115,64 +115,20 @@ function CaseMap() {
 
   // render map
   const initMap = () => {
-    // setClusters(2)
     // create map
     mymap.current = L.map('map', initialMapView);
-    // mymap.current.zoomControl.setPosition('topright');
-    // const accessToken =
-    //   process.env.REACT_APP_mymap.currentBOX_TOKEN ||
-    //   'pk.eyJ1IjoiZGFsbW8zIiwiYSI6ImNrODNwZjc5ajFkNmczbW5xdnVjenFmcDMifQ.BzOx7JrPoVOmkxl6sKCk4A';
-    // console.log(process.env);
-    // alert(accessToken)
     L.tileLayer(
-      // `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
-        // attribution:
-        // 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         attribution:
           '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
         maxZoom: 14,
         minZoom: 2
-        // id: 'mapbox/streets-v11',
-        // tileSize: 512,
-        // zoomOffset: -1
       }
     ).addTo(mymap.current);
     function onMapClick(e) {
       // alert('You clicked the map at ' + e.latlng);
     }
-    // mymap.current.on('click', onMapClick);
-
-    // L.control.addTo(mymap.current)
-
-    // mymap.current.on('click', () => updateMap())
-
-    //   var lastZoom;
-    //  mymap.current.on('zoomend', function() {
-    //     var zoom =mymap.current.getZoom();
-    //     let threshold = 15;
-    //     if (zoom < threshold && (!lastZoom || lastZoom >= threshold)) {
-    //      mymap.current.eachLayer(function(l) {
-    //         if (l.getTooltip) {
-    //           var toolTip = l.getTooltip();
-    //           if (toolTip) {
-    //             mymap.current.closeTooltip(toolTip);
-    //           }
-    //         }
-    //       });
-    //     } else if (zoom >= threshold && (!lastZoom || lastZoom < threshold)) {
-    //      mymap.current.eachLayer(function(l) {
-    //         if (l.getTooltip) {
-    //           var toolTip = l.getTooltip();
-    //           if (toolTip) {
-    //             mymap.current.addLayer(toolTip);
-    //           }
-    //         }
-    //       });
-    //     }
-    //     lastZoom = zoom;
-    //   });
   };
   useEffect(initMap, []);
 
@@ -200,8 +156,6 @@ function CaseMap() {
   // useEffect(getUserLocation, []);
 
   const generateClusters = () => {
-    // markerCluster = ;
-    // console.log('case_number', data.cases.concat(data.probable_cases))
     data.confirmed.concat(data.probable).forEach(async patient => {
       const location =
         // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
