@@ -149,7 +149,7 @@ const fetchFlightData = async (
 // fetchFlightData('ek450','26/02/2020','24/02/2020').then(console.log)
 // fetchFlightData('ek450','26/04/2020','24/04/2020').then(console.log)
 
-const getFlight = patient => {
+export const getFlight = patient => {
   if (!patient.flight) return;
   const formattedFlight = patient.flight.replace(
     /(..)([ ]*)([0]*)([1-9][0-9]*)([ ].*)?/g,
@@ -170,7 +170,7 @@ const isSameDate = (oldDate, newDate) =>
 const isSameDateOrBefore = (oldDate, newDate) =>
   moment(oldDate).isSameOrBefore(moment(newDate, 'DD/MM/YYYY'), 'days');
 
-const updateFlightCache = () => {
+export const updateFlightCache = () => {
   const flightCache = require('../data/flightCache.json');
   const flightMap = new Map(flightCache);
   const currentData = require('../data/MoH/current.json');
@@ -346,9 +346,3 @@ const migrateFlights = () => {
   // })
 };
 // migrateFlights();
-
-exports = {
-  fetchFlightData,
-  getFlight,
-  updateFlightCache
-};
