@@ -4,9 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
-const locationMapper = require('../utils/locationMapper').get;
-const flight = require('./flight');
-const currentData = require('../data/MoH/current.json')
+const locationMapper = require('../locationMapper').get;
+const flight = require('../flight');
+const currentData = require('../../data/MoH/current.json')
 
 const compareNewData = () => {
   const newobj = Object.assign({}, newCaseFormat);
@@ -95,14 +95,14 @@ const updateFlights = () => {
   })
 }
 
-const saveData = data => {
-  const NEW_DATA_PATH = path.resolve(__dirname, '../data/newData3.json');
+const saveData = (data, filePath) => {
+  const NEW_DATA_PATH = path.resolve(__dirname, filePath);
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
 const updateCacheAllLocs = () => {
 
-  const newdata = require('../data/MoH/govtData202003291300.json');
+  const newdata = require('../../data/MoH/govtData202003291300.json');
   const allLocs = newdata.confirmed
   .concat(newdata.probable)
   .flatMap(patient => [patient.overseas_cities, patient.dhb])
@@ -115,7 +115,7 @@ const updateCacheLoc = (locArr) => {
   // read locs from case data
   const LOCATION_CACHE_PATH = path.resolve(
     __dirname,
-    '../data/locationCache.json'
+    '../../data/locationCache.json'
   );
   const rawCache = fs.readFileSync(LOCATION_CACHE_PATH);
   const parsedCache = JSON.parse(rawCache) || new Array();
@@ -165,7 +165,7 @@ const updateCacheLoc = (locArr) => {
 };
 
 const updateLocCacheFromFlights = () => {
-  const flightMap = require('../data/flightCache.json')
+  const flightMap = require('../../data/flightCache.json')
   const flightLocs = flightMap.flatMap(([_, flightArr]) => 
     flightArr.flatMap(flight => [flight.departed.airport, flight.arrived.airport])
   )
@@ -173,7 +173,39 @@ const updateLocCacheFromFlights = () => {
   // const locsToFind = uniqueLocs.filter()
   updateCacheLoc(uniqueLocs)
 }
-flight.updateFlightCache()
-updateLocCacheFromFlights()
+
+const updateCases = () => {
+  const yesterday = require('../../data/MoH/yesterday.json')
+
+  currentData.confirmed.forEach((currentCase,i) => {
+    const yesterdayEquivalent = yesterday.confirmed.filter(yesterdayCase => 
+      currentCase.report_date === yesterdayCase.report_date &&
+      currentCase.dhb === yesterdayCase.dhb &&
+      currentCase.age_bracket === yesterdayCase.age_bracket &&
+      currentCase.gender === yesterdayCase.gender
+    )[0] || {}
+    // console.log(yesterdayEquivalent.case_number, currentCase.case_number)
+    currentData.confirmed[i] = Object.assign(yesterdayEquivalent, currentCase)
+    // if (yesterdayEquivalent.hasFlightInfo) console.log(yesterdayEquivalent)
+    // if (currentCase.hasFlightInfo) console.log(currentCase)
+  })
+  currentData.probable.forEach((currentCase,i) => {
+    const yesterdayEquivalent = yesterday.probable.filter(yesterdayCase => 
+      // moment(currentCase.report_date, 'DD/MM/YYYY').isAfter(moment().subtract(2,'days')) &&
+      currentCase.report_date === yesterdayCase.report_date &&
+      currentCase.dhb === yesterdayCase.dhb &&
+      currentCase.age_bracket === yesterdayCase.age_bracket &&
+      currentCase.gender === yesterdayCase.gender
+    )[0]  || {}
+    // console.log(yesterdayEquivalent.case_number, currentCase.case_number)
+    currentData.probable[i] = Object.assign(yesterdayEquivalent, currentCase)
+
+  })
+  // console.log(currentData)
+  saveData(currentData, '../../data/MoH/current.json')
+}
 
 
+// updateCases()
+// flight.updateFlightCache()
+// updateLocCacheFromFlights()

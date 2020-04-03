@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
 import { getCoordinates, getMarkerIcon, getMarkerIcon_old, getFormattedDateString } from '../utils/mapUtils'
-import { getFlight } from '../utils/flight'
+const { getFlight } = require ('../utils/flight');
 const data = require('../data/MoH/current.json');
 
 toast.info(

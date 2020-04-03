@@ -149,7 +149,7 @@ const fetchFlightData = async (
 // fetchFlightData('ek450','26/02/2020','24/02/2020').then(console.log)
 // fetchFlightData('ek450','26/04/2020','24/04/2020').then(console.log)
 
-export const getFlight = patient => {
+const getFlight = patient => {
   if (!patient.flight) return;
   const formattedFlight = patient.flight.replace(
     /(..)([ ]*)([0]*)([1-9][0-9]*)([ ].*)?/g,
@@ -170,7 +170,7 @@ const isSameDate = (oldDate, newDate) =>
 const isSameDateOrBefore = (oldDate, newDate) =>
   moment(oldDate).isSameOrBefore(moment(newDate, 'DD/MM/YYYY'), 'days');
 
-export const updateFlightCache = () => {
+const updateFlightCache = () => {
   const flightCache = require('../data/flightCache.json');
   const flightMap = new Map(flightCache);
   const currentData = require('../data/MoH/current.json');
@@ -214,10 +214,11 @@ export const updateFlightCache = () => {
         patient.flight &&
         !patient.hasFlightInfo &&
         !patient.flightError &&
-        patient.case_number > 0
+        patient.case_number > 650
       );
     })
     .forEach(async (patient, i,arr) => {
+      console.log('confirmed patient: ', patient.case_number)
       const flightInfo = await delayedFlightFetch(patient, i)
       patient.flightError = !flightInfo
       saveData(currentData, '../data/MoH/current.json')
@@ -225,17 +226,18 @@ export const updateFlightCache = () => {
     });
     currentData.probable
     .filter(patient => {
-      if (patient.flight) {
+      if (patient.flight){
         patient.hasFlightInfo = !!getFlight(patient);
       }
       return (
         patient.flight &&
         !patient.hasFlightInfo &&
         !patient.flightError &&
-        patient.case_number > 0
+        patient.case_number > 30
         );
     })
     .forEach(async (patient, i, arr) => {
+      console.log('probable patient: ', patient.case_number)
       const flightInfo = await delayedFlightFetch(patient, i)
       patient.flightError = !flightInfo
       saveData(currentData, '../data/MoH/current.json')
@@ -346,3 +348,9 @@ const migrateFlights = () => {
   // })
 };
 // migrateFlights();
+
+module.exports = {
+  fetchFlightData,
+  getFlight,
+  updateFlightCache
+};
