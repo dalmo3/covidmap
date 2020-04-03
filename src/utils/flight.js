@@ -347,7 +347,7 @@ const migrateFlights = () => {
 };
 // migrateFlights();
 
-module.exports = {
+exports = {
   fetchFlightData,
   getFlight,
   updateFlightCache

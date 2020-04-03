@@ -11,8 +11,8 @@ import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
-import { getFlight } from '../utils/flight'
 import { getCoordinates, getMarkerIcon, getMarkerIcon_old, getFormattedDateString } from '../utils/mapUtils'
+import { getFlight } from '../utils/flight'
 const data = require('../data/MoH/current.json');
 
 toast.info(
