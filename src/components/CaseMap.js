@@ -150,28 +150,28 @@ function CaseMap() {
     // function onLocationError(e) {
     //   alert(e.message);
     // }
-
+    
     // mymap.current.on('locationerror', onLocationError);
   };
   // useEffect(getUserLocation, []);
-
+  
   const generateClusters = () => {
     data.confirmed.concat(data.probable).forEach(async patient => {
       const location =
-        // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
-        patient.dhb;
+      // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
+      patient.dhb;
       const coords = await getCoordinates(location);
-
+      
       const marker = L.marker(coords, {
         icon: getMarkerIcon(patient)
       })
-        .bindTooltip(
-          `${location + ' DHB'}
-          <br>
-          ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`,
-          {
-            // permanent : true
-          }
+      .bindTooltip(
+        `${location + ' DHB'}
+        <br>
+        ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`,
+        {
+          // permanent : true
+        }
         )
         .on('click', () => {
           // setShowClusters(false);
@@ -179,27 +179,28 @@ function CaseMap() {
           traceCase(patient);
           showToast(patient);
         });
-
-      markerCluster.current.addLayer(marker);
-    });
-  };
-  // add datapoints to map
-  useEffect(generateClusters, []);
-
-  const displayClusters = () => {
-    if (showClusters) markerCluster.current.addTo(mymap.current);
-    else markerCluster.current.remove();
-  };
-  useEffect(displayClusters, [showClusters]);
-
-  // const updateMap = () => {
-  //   showClusters && mymap.current.addLayer(showClusters);
-  // };
-
+        
+        markerCluster.current.addLayer(marker);
+      });
+    };
+    // add datapoints to map
+    useEffect(generateClusters, []);
+    
+    const displayClusters = () => {
+      if (showClusters) markerCluster.current.addTo(mymap.current);
+      else markerCluster.current.remove();
+    };
+    useEffect(displayClusters, [showClusters]);
+    
+    // const updateMap = () => {
+      //   showClusters && mymap.current.addLayer(showClusters);
+      // };
+      
   useEffect(() => {
     if (showTrace) setShowClusters(!showTrace);
   }, [showTrace]);
-
+  
+  // display case paths
   const traceCase = async patient => {
     const {
       flight: flightNumber,
@@ -246,77 +247,6 @@ function CaseMap() {
     });
   };
 
-  // display case paths
-  const traceCase_old = async patient => {
-    // find all markers
-    const locations = patient.location_history;
-    const hasConnections = !!patient.location_history.length;
-    if (!hasConnections) locations.push({ location: patient.location });
-    const caseMarkers = await Promise.all(
-      locations.map(async loc => {
-        // console.log(loc)
-        // console.log(loc.location);
-        const coords = await getCoordinates(loc.location);
-        // const [lat, lon] = await getCoordinates(loc.location);
-        // console.log(lat, lon)
-        const locDate = getFormattedDateString(loc.date);
-        // const locMarker = L.marker([lat, lon], { icon: getMarkerIcon() })
-        const locMarker = L.marker(coords, {
-          icon: getMarkerIcon_old(patient.case_number)
-        }).bindTooltip(`${loc.location}<br>${locDate}`, {
-          permanent: hasConnections
-        });
-        // .bindPopup(`${loc.location}<br>${locDate}`);
-        // .openTooltip();
-        return locMarker;
-      })
-    );
-
-    // create connections between markers
-    const caseConnections = caseMarkers.reduce(
-      (featureGroup, marker, i, arr) => {
-        // console.log(marker)
-        featureGroup.push(marker);
-        if (arr[i + 1]) {
-          // const line = new L.Geodesic(
-          const line = new L.polyline(
-            [marker.getLatLng(), arr[i + 1].getLatLng()],
-            { wrap: false, steps: 10 }
-          );
-          // const line = L.polyline([marker.getLatLng(), arr[i + 1].getLatLng()]);
-          featureGroup.push(line);
-        }
-        return featureGroup;
-      },
-      []
-    );
-    caseFeatures.current = L.featureGroup(caseConnections);
-    // caseFeatures.addTo(mymap.current);
-    // console.log(caseFeatures);
-    setShowTrace(true);
-    // console.log(caseFeatures.current.getBounds());
-
-    const maxZoom = hasConnections
-      ? Math.min(12, mymap.current.getZoom())
-      : Math.max(8, mymap.current.getZoom());
-
-    // setPortraitMode(false)
-    // console.log('mode', isPortraitMode());
-
-    let brPadding = [
-      isPortraitMode() ? 20 : window.innerWidth / 3,
-      isPortraitMode() ? window.innerHeight / 2 : 20
-    ];
-
-    mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
-      paddingBottomRight: brPadding,
-      paddingTopLeft: [20, 20],
-      duration: 1,
-      maxZoom
-    });
-    // showToast(patient);
-  };
-
   const showToast = patient => {
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
@@ -335,7 +265,7 @@ function CaseMap() {
         <a
           href="https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details"
           target="_blank"
-          rel="nofollow nopoener noreferrer"
+          rel="nofollow noopener noreferrer"
         >
           Source
         </a>

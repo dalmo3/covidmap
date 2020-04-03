@@ -17,7 +17,6 @@ export const getCoordinates = async location =>
     // console.log(cachedLocation)
     if (cachedLocation.length) {
       const { lat, lon } = cachedLocation[0].geocode;
-      const coords = [Number.parseFloat(lat), Number.parseFloat(lon)];
       // console.log(location, lat, lon, '(cached)');
       const normalisedLatlng = L.latLng(
         Number.parseFloat(lat),
