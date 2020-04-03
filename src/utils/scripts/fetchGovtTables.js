@@ -26,9 +26,9 @@ let fn_new_partial = (row, status, i) => {
     dhb,
     overseas,
     overseas_cities,
-    arrival_date,
+    flight,
     departure_date,
-    flight
+    arrival_date,
   ] = row.innerText.split('\t');
   let obj = {
     case_number: i + 1,
@@ -90,9 +90,11 @@ document.querySelectorAll('table.table-style-two').forEach(table => {
         .sort((a, b) => (a.gender < b.gender ? 1 : -1))
         .sort((a, b) => (a.dhb < b.dhb ? 1 : -1))
         .sort((a, b) => {
-          let aDate = a.report_date.split('/');
-          let bDate = b.report_date.split('/');
-          return aDate[1] + aDate[0] - (bDate[1] + bDate[0]);
+          let aDateArr = a.report_date.split('/');
+          let bDateArr = b.report_date.split('/');
+          let aDate = new Date(aDateArr[2] + '-' + aDateArr[1] + '-' + aDateArr[0])
+          let bDate = new Date(bDateArr[2] + '-' + bDateArr[1] + '-' + bDateArr[0])
+          return aDate.getTime() - bDate.getTime();
         });
       break;
   }
