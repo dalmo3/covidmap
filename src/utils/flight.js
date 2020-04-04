@@ -11,7 +11,7 @@ const saveData = (data, fileName) => {
   fs.writeFileSync(NEW_DATA_PATH, JSON.stringify(data));
 };
 
-const fetchFlightData = async (
+export const fetchFlightData = async (
   flightNumber,
   departure,
   arrival,
@@ -149,7 +149,7 @@ const fetchFlightData = async (
 // fetchFlightData('ek450','26/02/2020','24/02/2020').then(console.log)
 // fetchFlightData('ek450','26/04/2020','24/04/2020').then(console.log)
 
-const getFlight = patient => {
+export const getFlight = patient => {
   if (!patient.flight) return;
   const formattedFlight = patient.flight.replace(
     /(..)([ ]*)([0]*)([1-9][0-9]*)([ ].*)?/g,
@@ -349,8 +349,8 @@ const migrateFlights = () => {
 };
 // migrateFlights();
 
-module.exports = {
-  fetchFlightData,
-  getFlight,
-  updateFlightCache
-};
+// module.exports = {
+//   fetchFlightData,
+//   getFlight,
+//   updateFlightCache
+// };
