@@ -208,4 +208,4 @@ const updateCases = () => {
 
 // updateCases()
 // flight.updateFlightCache()
-updateLocCacheFromFlights()
+// updateLocCacheFromFlights()
