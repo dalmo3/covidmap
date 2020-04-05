@@ -5,7 +5,7 @@ const path = require('path');
 const openGeocoder = require('node-open-geocoder');
 const { fetch } = require('simple-fetch-cache');
 const locationMapper = require('../locationMapper').get;
-const flight = require('../flight');
+// const flight = require('../flight').;
 const currentData = require('../../data/MoH/current.json')
 
 const compareNewData = () => {
@@ -206,6 +206,6 @@ const updateCases = () => {
 }
 
 
-// updateCases()
+updateCases()
 // flight.updateFlightCache()
 // updateLocCacheFromFlights()

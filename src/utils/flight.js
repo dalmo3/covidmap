@@ -214,7 +214,7 @@ const updateFlightCache = () => {
         patient.flight &&
         !patient.hasFlightInfo &&
         !patient.flightError &&
-        patient.case_number > 650
+        patient.case_number > 0
       );
     })
     .forEach(async (patient, i,arr) => {
@@ -233,7 +233,7 @@ const updateFlightCache = () => {
         patient.flight &&
         !patient.hasFlightInfo &&
         !patient.flightError &&
-        patient.case_number > 30
+        patient.case_number > 0
         );
     })
     .forEach(async (patient, i, arr) => {
@@ -348,6 +348,7 @@ const migrateFlights = () => {
   // })
 };
 // migrateFlights();
+// updateFlightCache()
 
 // module.exports = {
 //   fetchFlightData,
