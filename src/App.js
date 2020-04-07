@@ -12,7 +12,7 @@ const Credits = () => (
       color: 'black',
       position: "absolute",
       fontSize: "0.8em",
-      bottom: '30px',
+      bottom: '20px',
       right: '8px',
       zIndex: 999,
       textDecoration: 'none',
