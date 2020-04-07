@@ -5,7 +5,6 @@ import L from 'leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
-import 'leaflet.geodesic';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon';
 import 'leaflet.beautifymarker/leaflet-beautify-marker-icon.css';
 import { toast } from 'react-toastify';
@@ -354,7 +353,7 @@ function CaseMap() {
       <Slider
         style={{
           color: 'c9171a',
-          zIndex: 10000,
+          zIndex: 1000,
           width: '50vw',
           maxWidth: '400px',
           position: 'absolute',
