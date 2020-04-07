@@ -14,7 +14,6 @@ import {
   getCoordinates,
   getMarkerIcon,
   getMarkerIcon_old,
-  getFormattedDateString,
 } from '../utils/mapUtils';
 import { Slider } from '@material-ui/core';
 import { debounce } from 'lodash';
@@ -48,22 +47,20 @@ function CaseMap() {
     L.markerClusterGroup({
       showCoverageOnHover: false,
       spiderfyDistanceMultiplier: 2,
+      maxClusterRadius: 40
       // zoomToBoundsOnClick: false
     }).on('clusterclick', (e) => {
       if (showTutorial.current) {
-        // console.log(showTutorial)
         toast('Click on a case for details!', {
           position: 'bottom-right',
           pauseOnHover: false,
           pauseOnFocusLoss: false,
-          // progressStyle: {backgroundColor: 'C9171a'},
           progressClassName: 'toast_progress',
         });
         showTutorial.current = false;
       }
     })
   );
-
   const caseFeatures = useRef(L.featureGroup());
   const [showClusters, setShowClusters] = useState(true);
   const [showTrace, setShowTrace] = useState(false);
@@ -73,13 +70,6 @@ function CaseMap() {
     zoom: 5 + (window.innerHeight > 800),
   };
 
-  document.addEventListener('keyup', (e) => {
-    if (e.keyCode === 27) {
-      resetMarkers();
-      if (mymap.current.getZoom() < 6) resetZoom();
-      dis();
-    }
-  });
   const initState = () => {
     resetMarkers();
     // setMapView(initialMapView);
@@ -109,6 +99,14 @@ function CaseMap() {
     function onMapClick(e) {
       // alert('You clicked the map at ' + e.latlng);
     }
+
+    document.addEventListener('keyup', (e) => {
+      if (e.keyCode === 27) {
+        resetMarkers();
+        if (mymap.current.getZoom() < 6) resetZoom();
+        dis();
+      }
+    });
   };
   useEffect(initMap, []);
   useEffect(() => console.log('%cMounted', 'color: #FA0'), []);
@@ -136,7 +134,7 @@ function CaseMap() {
   };
   // useEffect(getUserLocation, []);
 
-  const generateClusters = (maxDate) => {
+  const generateMarkersFilteredByDate = (maxDate) => {
     const patientsFilteredByDate = data.confirmed
       .concat(data.probable)
       .filter((patient) => {
@@ -167,7 +165,7 @@ function CaseMap() {
           // setShowClusters(false);
           dis();
           traceCase(patient);
-          showToast(patient);
+          showTraceToast(patient);
         });
       return marker;
       // markerCluster.current.addLayer(marker);
@@ -177,26 +175,18 @@ function CaseMap() {
   };
 
   const [dateFilter, setDateFilter] = useState(moment());
-  const getClustersByDate = useMemo(()=>generateClusters(dateFilter),[dateFilter])
+  const getClustersForCurrentDate = useMemo(
+    () => generateMarkersFilteredByDate(dateFilter),
+    [dateFilter]
+  );
   useEffect(() => console.log('rendered'));
 
-  const showClustersByDate = () => getClustersByDate
-  .then((markers) => {
-    // console.log(markers);
-    // console.log(markerCluster.current);
-    // markers.forEach((marker) => markerCluster.current.addLayer(marker))
-    markerCluster.current.addLayers(markers);
-  });
+  const showClustersForCurrentDate = () =>
+    getClustersForCurrentDate.then((markers) =>
+      markerCluster.current.addLayers(markers)
+    );
 
-  useEffect(
-    // generateClusters(moment())
-    showClustersByDate
-  , []);
-  // setTimeout(() =>
-  // , 4000)
-  // add datapoints to map
-  // useEffect(generateClusters, []);
-  // useEffect(() => markerCluster.current = ), []);
+  useEffect(() => {showClustersForCurrentDate()}, []);
 
   const displayClusters = () => {
     if (showClusters) markerCluster.current.addTo(mymap.current);
@@ -259,7 +249,7 @@ function CaseMap() {
     });
   };
 
-  const showToast = (patient) => {
+  const showTraceToast = (patient) => {
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
     let t = toast(
@@ -322,21 +312,21 @@ function CaseMap() {
 
   const resetClusters = () => markerCluster.current.clearLayers();
 
+  //
+  // SERIES OF FUNCTIONS RULING THE SLIDER
+  //
 
   const [debouncedDate, setDebouncedDate] = useState(moment());
-  const deb = (fn) => debounce(fn, 100);
+  const deb = (fn) => debounce(fn, 10);
 
-  // useEffect(deb, [dateFilter]);
   useEffect(() => {
     resetClusters();
-    // generateClusters(dateFilter);
-    showClustersByDate()
-    // }, [debouncedDate]);
+    showClustersForCurrentDate();
   }, [dateFilter]);
 
-  const handleChange = (event, newValue) => {
+  const handleSliderChange = (event, newValue) => {
     const newDate = getDateFromDOY(newValue);
-    if (!newDate.isSame(dateFilter,'days')) {
+    if (!newDate.isSame(dateFilter, 'days')) {
       console.log('changed date');
       setDateFilter(newDate);
     }
@@ -347,36 +337,81 @@ function CaseMap() {
 
   // const valueLabelFormat
 
+  const sliderValueLabelFormat = (value) => (
+    <span>
+      {getDateFromDOY(value).format('D MMM').split(' ')[0]}
+      <br />
+      {getDateFromDOY(value).format('D MMM').split(' ')[1]}
+    </span>
+  )
+ 
+
+  const [clusterRadius,setClusterRadius] = useState(40)
+  
+  useEffect(() => {
+    markerCluster.current.options.maxClusterRadius = clusterRadius;
+
+    resetClusters();
+    showClustersForCurrentDate();
+  }, [clusterRadius]);
+
+  const handleRadiusChange = (event, newValue) => {
+    if (newValue !== clusterRadius) {
+      console.log('changed date');
+      setClusterRadius(newValue)
+    }
+  };
+  //
+  //
+  //
+
   return (
     <div id="controls-container">
       <div id="map"></div>
+      <Slider 
+        orientation="vertical"
+        style={{
+          zIndex: 1000,
+          height: '20vw',
+          maxHeight: '200px',
+          position: 'absolute',
+          bottom: '70px',
+          left: '10px',
+        }}
+        // value={clusterRadius}
+        defaultValue={clusterRadius}
+        getAriaValueText={(value) => `${value/0.8}%`}
+        valueLabelFormat={(value) => `${value/0.8}%`}
+        aria-labelledby="discrete-slider-small-steps"
+        step={8}
+        // marks
+        min={0}
+        max={80}
+        onChange={deb(handleRadiusChange)}
+        valueLabelDisplay="auto"
+      />
       <Slider
         style={{
-          color: 'c9171a',
           zIndex: 1000,
           width: '50vw',
           maxWidth: '400px',
           position: 'absolute',
-          bottom: '10px',
+          bottom: '20px',
           left: '30px',
         }}
         // value={dateFilter.dayOfYear()}
         defaultValue={moment().dayOfYear()}
-        // getAriaValueText={valueLabelFormat}
-        valueLabelFormat={(value) => 
-          <span>
-            {getDateFromDOY(value).format('D MMM').split(' ')[0]}
-            <br/>
-            {getDateFromDOY(value).format('D MMM').split(' ')[1]}
-            </span>}
+        getAriaValueText={sliderValueLabelFormat}
+        valueLabelFormat={sliderValueLabelFormat}
         aria-labelledby="discrete-slider-small-steps"
         step={1}
-        marks
+        // marks
         min={moment('2020-02-26').dayOfYear()}
         max={moment().dayOfYear()}
-        onChange={deb(handleChange)}
+        onChange={deb(handleSliderChange)}
         valueLabelDisplay="auto"
       />
+      <div id="map"></div>z
     </div>
   );
 }
