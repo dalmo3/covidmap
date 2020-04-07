@@ -15,7 +15,15 @@ import {
   getMarkerIcon,
   getMarkerIcon_old,
 } from '../utils/mapUtils';
-import { Slider } from '@material-ui/core';
+import {
+  Slider,
+  Typography,
+  Card,
+  CardContent,
+  CardActionArea,
+  createMuiTheme,
+  ThemeProvider,
+} from '@material-ui/core';
 import { debounce } from 'lodash';
 const { getFlight } = require('../utils/flight');
 // import { getFlight } from '../utils/flight';
@@ -47,7 +55,7 @@ function CaseMap() {
     L.markerClusterGroup({
       showCoverageOnHover: false,
       spiderfyDistanceMultiplier: 2,
-      maxClusterRadius: 40
+      maxClusterRadius: 40,
       // zoomToBoundsOnClick: false
     }).on('clusterclick', (e) => {
       if (showTutorial.current) {
@@ -69,6 +77,27 @@ function CaseMap() {
     center: [-40.9006, 172.586],
     zoom: 5 + (window.innerHeight > 800),
   };
+
+  const [clusterRadius, setClusterRadius] = useState(40);
+
+  const [dateFilter, setDateFilter] = useState(moment());
+
+  const getCasesForCurrentDate = useMemo(
+    () =>
+      data.confirmed
+        .concat(data.probable)
+        .filter((patient) =>
+          moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
+            dateFilter,
+            'days'
+          )
+        ),
+    [dateFilter]
+  );
+
+  const getNumCases = useMemo(() => getCasesForCurrentDate.length, [
+    dateFilter,
+  ]);
 
   const initState = () => {
     resetMarkers();
@@ -135,16 +164,17 @@ function CaseMap() {
   // useEffect(getUserLocation, []);
 
   const generateMarkersFilteredByDate = (maxDate) => {
-    const patientsFilteredByDate = data.confirmed
-      .concat(data.probable)
-      .filter((patient) => {
-        return moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
-          maxDate,
-          'days'
-        );
-      });
+    // const patientsFilteredByDate = data.confirmed
+    //   .concat(data.probable)
+    //   .filter((patient) => {
+    //     return moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
+    //       maxDate,
+    //       'days'
+    //     );
+    //   });
 
-    const markers = patientsFilteredByDate.map(async (patient) => {
+    // const markers = patientsFilteredByDate.map(async (patient) => {
+    const markers = getCasesForCurrentDate.map(async (patient) => {
       const location =
         // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
         patient.dhb;
@@ -173,20 +203,20 @@ function CaseMap() {
 
     return Promise.all(markers);
   };
+  // useEffect(() => console.log('rendered'));
 
-  const [dateFilter, setDateFilter] = useState(moment());
   const getClustersForCurrentDate = useMemo(
     () => generateMarkersFilteredByDate(dateFilter),
     [dateFilter]
   );
-  // useEffect(() => console.log('rendered'));
-
   const showClustersForCurrentDate = () =>
     getClustersForCurrentDate.then((markers) =>
       markerCluster.current.addLayers(markers)
     );
 
-  useEffect(() => {showClustersForCurrentDate()}, []);
+  useEffect(() => {
+    showClustersForCurrentDate();
+  }, []);
 
   const displayClusters = () => {
     if (showClusters) markerCluster.current.addTo(mymap.current);
@@ -316,7 +346,6 @@ function CaseMap() {
   // SERIES OF FUNCTIONS RULING THE SLIDER
   //
 
-  const [debouncedDate, setDebouncedDate] = useState(moment());
   const deb = (fn) => debounce(fn, 10);
 
   useEffect(() => {
@@ -343,14 +372,10 @@ function CaseMap() {
       <br />
       {getDateFromDOY(value).format('D MMM').split(' ')[1]}
     </span>
-  )
- 
+  );
 
-  const [clusterRadius,setClusterRadius] = useState(40)
-  
   useEffect(() => {
     markerCluster.current.options.maxClusterRadius = clusterRadius;
-
     resetClusters();
     showClustersForCurrentDate();
   }, [clusterRadius]);
@@ -358,17 +383,73 @@ function CaseMap() {
   const handleRadiusChange = (event, newValue) => {
     if (newValue !== clusterRadius) {
       console.log('changed date');
-      setClusterRadius(newValue)
+      setClusterRadius(newValue);
     }
   };
   //
   //
   //
-
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
+  });
   return (
     <div id="controls-container">
       <div id="map"></div>
-      <Slider 
+      <ThemeProvider theme={theme}>
+      <Card
+        style={{
+          color: 'white',
+          zIndex: 1000,
+          // height: '120px',
+          // width: '120px',
+          backgroundColor: '#c9171a',
+          position: 'absolute',
+          top: '100px',
+          left: '10px',
+          borderRadius: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          // maxWidth: '20vw',
+          // maxHeight: '20vw',
+          width: '95px',
+          height: '95px',
+        }}
+      >
+        <CardContent
+          style={{
+            padding: '5px',
+            textAlign: 'center',
+          }}
+        >
+          <Typography variant="button">
+            {dateFilter.format('D MMM')}
+            <br></br>
+          </Typography>
+          <Typography variant="h4">
+            {getNumCases}
+          </Typography>
+          <Typography variant="body2" 
+          // style={{margin: '-5px 0 5px'}}
+          >
+            {getNumCases !== 1 ? 'cases' : 'case'}
+          </Typography>
+        </CardContent>
+      </Card>
+      <Slider
         orientation="vertical"
         style={{
           zIndex: 1000,
@@ -380,8 +461,8 @@ function CaseMap() {
         }}
         // value={clusterRadius}
         defaultValue={40}
-        getAriaValueText={(value) => `${value/0.8}%`}
-        valueLabelFormat={(value) => `${value/0.8}%`}
+        getAriaValueText={(value) => `${value / 0.8}%`}
+        valueLabelFormat={(value) => `${value / 0.8}%`}
         aria-labelledby="discrete-slider-small-steps"
         step={8}
         // marks
@@ -410,7 +491,7 @@ function CaseMap() {
         max={moment().dayOfYear()}
         onChange={deb(handleSliderChange)}
         valueLabelDisplay="auto"
-      />
+      /></ThemeProvider>
     </div>
   );
 }
