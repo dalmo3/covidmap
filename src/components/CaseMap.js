@@ -179,7 +179,7 @@ function CaseMap() {
     () => generateMarkersFilteredByDate(dateFilter),
     [dateFilter]
   );
-  useEffect(() => console.log('rendered'));
+  // useEffect(() => console.log('rendered'));
 
   const showClustersForCurrentDate = () =>
     getClustersForCurrentDate.then((markers) =>
@@ -327,7 +327,7 @@ function CaseMap() {
   const handleSliderChange = (event, newValue) => {
     const newDate = getDateFromDOY(newValue);
     if (!newDate.isSame(dateFilter, 'days')) {
-      console.log('changed date');
+      // console.log('changed date');
       setDateFilter(newDate);
     }
   };
@@ -379,7 +379,7 @@ function CaseMap() {
           left: '10px',
         }}
         // value={clusterRadius}
-        defaultValue={clusterRadius}
+        defaultValue={40}
         getAriaValueText={(value) => `${value/0.8}%`}
         valueLabelFormat={(value) => `${value/0.8}%`}
         aria-labelledby="discrete-slider-small-steps"
@@ -411,7 +411,6 @@ function CaseMap() {
         onChange={deb(handleSliderChange)}
         valueLabelDisplay="auto"
       />
-      <div id="map"></div>z
     </div>
   );
 }
