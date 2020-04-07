@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.9",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,6 +12,7 @@
     "leaflet.geodesic": "^2.5.2",
     "leaflet.markercluster": "^1.4.1",
     "leaflet.polyline.snakeanim": "^0.2.0",
+    "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "node-open-geocoder": "^4.0.1",
     "react": "^16.13.0",

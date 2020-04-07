@@ -2,7 +2,8 @@ html,
 body,
 #page-wrap,
 #root,
-#outer-container {
+#outer-container,
+#controls-container {
   height: 100%!important;
 }
 
@@ -78,4 +79,9 @@ body,
 
 .toast_progress {
   background: #c9171a!important;
+}
+
+.MuiSlider-valueLabel {
+  /* transform: scale(1.2)!important; */
+  text-align: center;
 }
