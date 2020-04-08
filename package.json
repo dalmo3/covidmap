@@ -9,9 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "leaflet": "^1.6.0",
     "leaflet.beautifymarker": "^1.1.1",
-    "leaflet.geodesic": "^2.5.2",
     "leaflet.markercluster": "^1.4.1",
-    "leaflet.polyline.snakeanim": "^0.2.0",
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "node-open-geocoder": "^4.0.1",
@@ -22,6 +20,7 @@
     "react-toastify": "^5.5.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,6 +47,7 @@
     "jsdom": "^16.2.1",
     "moment": "^2.24.0",
     "simple-fetch-cache": "^1.4.1",
-    "tor-request": "^3.1.0"
+    "tor-request": "^3.1.0",
+    "source-map-explorer": "^2.4.2"
   }
 }

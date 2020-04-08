@@ -24,9 +24,9 @@ import {
   createMuiTheme,
   ThemeProvider,
 } from '@material-ui/core';
-import { debounce } from 'lodash';
-const { getFlight } = require('../utils/flight');
-// import { getFlight } from '../utils/flight';
+import debounce from 'lodash/debounce';
+// const { getFlight } = require('../utils/flight');
+import { getFlight } from '../utils/flight';
 const data = require('../data/MoH/current.json');
 
 toast.info(
