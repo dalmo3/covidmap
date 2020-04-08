@@ -102,7 +102,7 @@ const saveData = (data, filePath) => {
 
 const updateCacheAllLocs = () => {
 
-  const newdata = require('../../data/MoH/govtData202003291300.json');
+  const newdata = require('../../data/MoH/current.json');
   const allLocs = newdata.confirmed
   .concat(newdata.probable)
   .flatMap(patient => [patient.overseas_cities, patient.dhb])
