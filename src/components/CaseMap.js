@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react';
+import React, { useRef, useEffect, useState, useMemo, useCallback } from 'react';
 import './CaseMap.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -20,7 +20,6 @@ import {
   Typography,
   Card,
   CardContent,
-  CardActionArea,
   createMuiTheme,
   ThemeProvider,
 } from '@material-ui/core';
@@ -209,14 +208,14 @@ function CaseMap() {
     () => generateMarkersFilteredByDate(dateFilter),
     [dateFilter]
   );
-  const showClustersForCurrentDate = () =>
+  const showClustersForCurrentDate = useCallback(() =>
     getClustersForCurrentDate.then((markers) =>
       markerCluster.current.addLayers(markers)
-    );
+    ),[getClustersForCurrentDate]);
 
   useEffect(() => {
     showClustersForCurrentDate();
-  }, []);
+  }, [showClustersForCurrentDate]);
 
   const displayClusters = () => {
     if (showClusters) markerCluster.current.addTo(mymap.current);
@@ -234,11 +233,11 @@ function CaseMap() {
 
   // display case paths
   const traceCase = async (patient) => {
-    const {
-      flight: flightNumber,
-      arrival_date: arrivalDate,
-      departure_date: departureDate,
-    } = patient;
+    // const {
+    //   flight: flightNumber,
+    //   arrival_date: arrivalDate,
+    //   departure_date: departureDate,
+    // } = patient;
     // if (!flightNumber) return;
     // const hasDates = patient.departure_date || patient.arrival_date;
     const flight = getFlight(patient);
@@ -351,7 +350,7 @@ function CaseMap() {
   useEffect(() => {
     resetClusters();
     showClustersForCurrentDate();
-  }, [dateFilter]);
+  }, [dateFilter,showClustersForCurrentDate]);
 
   const handleSliderChange = (event, newValue) => {
     const newDate = getDateFromDOY(newValue);
@@ -378,7 +377,7 @@ function CaseMap() {
     markerCluster.current.options.maxClusterRadius = clusterRadius;
     resetClusters();
     showClustersForCurrentDate();
-  }, [clusterRadius]);
+  }, [clusterRadius,showClustersForCurrentDate]);
 
   const handleRadiusChange = (event, newValue) => {
     if (newValue !== clusterRadius) {
