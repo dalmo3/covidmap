@@ -94,3 +94,26 @@ export const getFormattedDateString_old = date => {
   }
   return newDate.toLocaleString('en-NZ', options);
 };
+
+export const getFlightMarkers = async (flight) => {
+
+  const flightEventMarker = async (flightEvent) => {
+    const coords = await getCoordinates(flightEvent.airport);
+    const evtDate = moment(flightEvent.date + ' ' + flightEvent.time).format(
+      'D MMM h:mm a'
+      );
+      return L.marker(coords, {
+        icon: getMarkerIcon_old(),
+      }).bindTooltip(`${flightEvent.airport}<br>${evtDate}`, {
+        permanent: true,
+      });
+    };
+const depMarker = await flightEventMarker(flight.departed);
+const arrMarker = await flightEventMarker(flight.arrived);
+// console.log(depMarker, arrMarker);
+const line = new L.polyline(
+  [depMarker.getLatLng(), arrMarker.getLatLng()],
+  { wrap: false, steps: 10 }
+);
+  return [depMarker, arrMarker, line]
+}

@@ -1,4 +1,10 @@
-import React, { useRef, useEffect, useState, useMemo, useCallback } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+} from 'react';
 import './CaseMap.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -14,6 +20,7 @@ import {
   getCoordinates,
   getMarkerIcon,
   getMarkerIcon_old,
+  getFlightMarkers
 } from '../utils/mapUtils';
 import {
   Slider,
@@ -26,7 +33,7 @@ import {
 import debounce from 'lodash/debounce';
 // const { getFlight } = require('../utils/flight');
 import { getFlight } from '../utils/flight';
-const data = require('../data/MoH/current.json');
+// import data1 from '../data/MoH/current.json';
 
 toast.info(
   'Disclaimer: The markers are placed where the case was reported, not where the patients live or stay.',
@@ -49,6 +56,24 @@ toast.info(
 const dis = () => toast.dismiss();
 
 function CaseMap() {
+
+
+  // FETCH CASE DATA
+  
+  const data = useRef();
+  const [dataReady, setDataReady] = useState(false);
+  useEffect(() => {
+    fetch(process.env.PUBLIC_URL + '/data/current.json')
+      .then((caseData) => caseData.json())
+      .then((json) => {
+        data.current = json;
+        setDataReady(true);
+      });
+  }, []);
+
+
+  // INITIALISE MAP VARIABLES
+
   const mymap = useRef(null);
   const markerCluster = useRef(
     L.markerClusterGroup({
@@ -68,7 +93,11 @@ function CaseMap() {
       }
     })
   );
-  const caseFeatures = useRef(L.featureGroup());
+  const traceFeatures = useRef(L.featureGroup());
+
+
+  // INITIALISE MAP STATE
+
   const [showClusters, setShowClusters] = useState(true);
   const [showTrace, setShowTrace] = useState(false);
   const showTutorial = useRef(true);
@@ -77,44 +106,15 @@ function CaseMap() {
     zoom: 5 + (window.innerHeight > 800),
   };
 
-  const [clusterRadius, setClusterRadius] = useState(40);
+
+  // SLIDERS STATE
 
   const [dateFilter, setDateFilter] = useState(moment());
+  const [clusterRadius, setClusterRadius] = useState(40);
 
-  const getCasesForCurrentDate = useMemo(
-    () =>
-      data.confirmed
-        .concat(data.probable)
-        .filter((patient) =>
-          moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
-            dateFilter,
-            'days'
-          )
-        ),
-    [dateFilter]
-  );
 
-  const getNumCases = useMemo(() => getCasesForCurrentDate.length, [
-    dateFilter,
-  ]);
+  // SETUP MAP INSTANCE
 
-  const initState = () => {
-    resetMarkers();
-    // setMapView(initialMapView);
-    resetZoom();
-  };
-  const resetMarkers = () => {
-    setShowClusters(true);
-    setShowTrace(false);
-  };
-  const resetZoom = () => {
-    mymap.current.flyTo(initialMapView.center, initialMapView.zoom);
-  };
-  // useEffect(() => {}, [showTutorial]);
-  // const [mapView, setMapView] = useState(initialMapView);
-  const isPortraitMode = () => window.innerHeight * 1.3 > window.innerWidth;
-
-  // render map
   const initMap = () => {
     // create map
     mymap.current = L.map('map', initialMapView);
@@ -124,9 +124,6 @@ function CaseMap() {
       maxZoom: 14,
       minZoom: 2,
     }).addTo(mymap.current);
-    function onMapClick(e) {
-      // alert('You clicked the map at ' + e.latlng);
-    }
 
     document.addEventListener('keyup', (e) => {
       if (e.keyCode === 27) {
@@ -139,149 +136,127 @@ function CaseMap() {
   useEffect(initMap, []);
   useEffect(() => console.log('%cMounted', 'color: #FA0'), []);
 
-  // get user location
-  const getUserLocation = () => {
-    mymap.current.locate({ setView: true, maxZoom: 12 });
-    function onLocationFound(e) {
-      var radius = e.accuracy;
-
-      // L.circleMarker(e.latlng)
-      //   .addTo(mymap.current)
-
-      L.circle(e.latlng, radius).addTo(mymap.current);
-      // .bindPopup('You are within ' + radius + ' meters from this point')
-      // .openPopup();
-    }
-
-    mymap.current.on('locationfound', onLocationFound);
-    // function onLocationError(e) {
-    //   alert(e.message);
-    // }
-
-    // mymap.current.on('locationerror', onLocationError);
-  };
-  // useEffect(getUserLocation, []);
-
-  const generateMarkersFilteredByDate = (maxDate) => {
-    // const patientsFilteredByDate = data.confirmed
-    //   .concat(data.probable)
-    //   .filter((patient) => {
-    //     return moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
-    //       maxDate,
-    //       'days'
-    //     );
-    //   });
-
-    // const markers = patientsFilteredByDate.map(async (patient) => {
-    const markers = getCasesForCurrentDate.map(async (patient) => {
-      const location =
-        // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
-        patient.dhb;
-      const coords = await getCoordinates(location);
-
-      const marker = L.marker(coords, {
-        icon: getMarkerIcon(patient),
-      })
-        .bindTooltip(
-          `${location + ' DHB'}
-        <br>
-        ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`,
-          {
-            // permanent : true
-          }
-        )
-        .on('click', () => {
-          // setShowClusters(false);
-          dis();
-          traceCase(patient);
-          showTraceToast(patient);
-        });
-      return marker;
-      // markerCluster.current.addLayer(marker);
-    });
-
-    return Promise.all(markers);
-  };
-  // useEffect(() => console.log('rendered'));
-
-  const getClustersForCurrentDate = useMemo(
-    () => generateMarkersFilteredByDate(dateFilter),
-    [dateFilter]
+  // CASE DATA PROCESSING
+  
+  const getCasesForCurrentDate = useMemo(
+    () =>
+      data.current?.confirmed
+        .concat(data.current.probable)
+        .filter((patient) =>
+          moment(patient.report_date, 'D/MM/YYYY').isSameOrBefore(
+            dateFilter,
+            'days'
+          )
+        ),
+    [dateFilter, dataReady]
   );
-  const showClustersForCurrentDate = useCallback(() =>
-    getClustersForCurrentDate.then((markers) =>
-      markerCluster.current.addLayers(markers)
-    ),[getClustersForCurrentDate]);
+
+  const getNumCases = useMemo(() => getCasesForCurrentDate?.length, [
+    getCasesForCurrentDate,
+  ]);
+
+  const getClustersForCurrentDate = useMemo(() => {
+    const generateMarkersFilteredByDate = (maxDate) => {
+      const markers = getCasesForCurrentDate?.map(async (patient) => {
+        const location = patient.dhb;
+        // patient.location_history.slice(-1)[0] && patient.location_history.slice(-1)[0].location || patient.location ||
+        const coords = await getCoordinates(location);
+        const marker = L.marker(coords, {
+          icon: getMarkerIcon(patient),
+        })
+          .bindTooltip(
+            `${location + ' DHB'}
+        <br>
+        ${moment(patient.report_date, 'DD/MM/YYYY').format('D MMM')}`
+          )
+          .on('click', () => {
+            // setShowClusters(false);
+            dis();
+            traceCase(patient);
+          });
+        return marker;
+      });
+
+      return Promise.resolve(markers && Promise.all(markers));
+    };
+    return generateMarkersFilteredByDate(dateFilter);
+  }, [dateFilter, dataReady]);
+
+  const showClustersForCurrentDate = useCallback(
+    () =>
+      getClustersForCurrentDate.then(
+        (markers) => markers && markerCluster.current.addLayers(markers)
+      ),
+    [getClustersForCurrentDate]
+  );
 
   useEffect(() => {
     showClustersForCurrentDate();
   }, [showClustersForCurrentDate]);
 
-  const displayClusters = () => {
+
+  // MAP VIEW MANIPULATION
+
+  const resetMarkers = () => {
+    setShowClusters(true);
+    setShowTrace(false);
+  };
+
+  const resetZoom = () => {
+    mymap.current.flyTo(initialMapView.center, initialMapView.zoom);
+  };
+
+  const resetClusters = () => markerCluster.current.clearLayers();
+
+  const isPortraitMode = () => window.innerHeight * 1.3 > window.innerWidth;
+
+  useEffect(() => {
     if (showClusters) markerCluster.current.addTo(mymap.current);
     else markerCluster.current.remove();
-  };
-  useEffect(displayClusters, [showClusters]);
+  }, [showClusters]);
 
   // const updateMap = () => {
   //   showClusters && mymap.current.addLayer(showClusters);
   // };
 
-  useEffect(() => {
-    if (showTrace) setShowClusters(!showTrace);
-  }, [showTrace]);
+
+  // CASE TRACING
+
+  const displayTrace = () => {
+    setShowClusters(!showTrace)
+    if (showTrace) {
+      traceFeatures.current.addTo(mymap.current);
+    }
+    else traceFeatures.current.remove();
+  };
+  useEffect(displayTrace, [showTrace]);
 
   // display case paths
   const traceCase = async (patient) => {
-    // const {
-    //   flight: flightNumber,
-    //   arrival_date: arrivalDate,
-    //   departure_date: departureDate,
-    // } = patient;
-    // if (!flightNumber) return;
-    // const hasDates = patient.departure_date || patient.arrival_date;
+    showTraceToast(patient)
+
     const flight = getFlight(patient);
     if (!flight) return;
-    setShowTrace(true);
-
-    const flightEventMarker = async (flightEvent) => {
-      const coords = await getCoordinates(flightEvent.airport);
-      const evtDate = moment(flightEvent.date + ' ' + flightEvent.time).format(
-        'D MMM h:mm a'
-      );
-      return L.marker(coords, {
-        icon: getMarkerIcon_old(),
-      }).bindTooltip(`${flightEvent.airport}<br>${evtDate}`, {
-        permanent: true,
-      });
-    };
-    const depMarker = await flightEventMarker(flight.departed);
-    const arrMarker = await flightEventMarker(flight.arrived);
-    console.log(depMarker, arrMarker);
-    const line = new L.polyline(
-      [depMarker.getLatLng(), arrMarker.getLatLng()],
-      { wrap: false, steps: 10 }
-    );
-
-    caseFeatures.current = L.featureGroup([depMarker, arrMarker, line]);
-
+    traceFeatures.current = L.featureGroup(await getFlightMarkers(flight));
+    
     let brPadding = [
       isPortraitMode() ? 20 : window.innerWidth / 3,
       isPortraitMode() ? window.innerHeight / 2 : 20,
     ];
 
-    mymap.current.flyToBounds(caseFeatures.current.getBounds(), {
+    mymap.current.flyToBounds(traceFeatures.current.getBounds(), {
       paddingBottomRight: brPadding,
       paddingTopLeft: [20, 20],
       duration: 1,
       maxZoom: Math.min(12, mymap.current.getZoom()),
     });
+    setShowTrace(true);
   };
 
   const showTraceToast = (patient) => {
     const isProbable = patient.status === 'probable';
     // console.log(patient.status);
-    let t = toast(
+    const t = toast(
       <div style={{ fontSize: '0.8em' }}>
         <h2>
           Case {patient.case_number}
@@ -311,7 +286,8 @@ function CaseMap() {
         onClick={() => {
           closeToast();
           // dis();
-          resetMarkers();
+          setShowTrace(false)
+          // resetMarkers();
           if (mymap.current.getZoom() < 6) resetZoom();
         }}
       >
@@ -333,24 +309,39 @@ function CaseMap() {
       },
     });
   };
-  const displayTrace = () => {
-    if (showTrace) caseFeatures.current.addTo(mymap.current);
-    else caseFeatures.current.remove();
+
+  // MAP FEATURES
+  // get user location
+  const getUserLocation = () => {
+    mymap.current.locate({ setView: true, maxZoom: 12 });
+    function onLocationFound(e) {
+      var radius = e.accuracy;
+
+      // L.circleMarker(e.latlng)
+      //   .addTo(mymap.current)
+
+      L.circle(e.latlng, radius).addTo(mymap.current);
+      // .bindPopup('You are within ' + radius + ' meters from this point')
+      // .openPopup();
+    }
+
+    mymap.current.on('locationfound', onLocationFound);
+    // function onLocationError(e) {
+    //   alert(e.message);
+    // }
+    // mymap.current.on('locationerror', onLocationError);
   };
-  useEffect(displayTrace, [showTrace]);
+  // useEffect(getUserLocation, []);
 
-  const resetClusters = () => markerCluster.current.clearLayers();
 
-  //
-  // SERIES OF FUNCTIONS RULING THE SLIDER
-  //
-
+  // SERIES OF FUNCTIONS RULING THE SLIDERS
+  
   const deb = (fn) => debounce(fn, 10);
 
   useEffect(() => {
     resetClusters();
     showClustersForCurrentDate();
-  }, [dateFilter,showClustersForCurrentDate]);
+  }, [dataReady, dateFilter, showClustersForCurrentDate]);
 
   const handleSliderChange = (event, newValue) => {
     const newDate = getDateFromDOY(newValue);
@@ -360,6 +351,7 @@ function CaseMap() {
     }
   };
 
+  useEffect(()=>console.log('rendered'))
   const getDateFromDOY = (doy) =>
     moment().subtract(moment().dayOfYear(), 'days').add(doy, 'days');
 
@@ -377,7 +369,7 @@ function CaseMap() {
     markerCluster.current.options.maxClusterRadius = clusterRadius;
     resetClusters();
     showClustersForCurrentDate();
-  }, [clusterRadius,showClustersForCurrentDate]);
+  }, [clusterRadius, showClustersForCurrentDate]);
 
   const handleRadiusChange = (event, newValue) => {
     if (newValue !== clusterRadius) {
@@ -408,89 +400,93 @@ function CaseMap() {
     <div id="controls-container">
       <div id="map"></div>
       <ThemeProvider theme={theme}>
-      <Card
-        style={{
-          color: 'white',
-          zIndex: 1000,
-          // height: '120px',
-          // width: '120px',
-          backgroundColor: '#c9171a',
-          position: 'absolute',
-          top: '100px',
-          left: '10px',
-          borderRadius: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          // maxWidth: '20vw',
-          // maxHeight: '20vw',
-          width: '95px',
-          height: '95px',
-        }}
-      >
-        <CardContent
+        {
+          (showClusters)? // only show button on clusters view
+        <Card
           style={{
-            padding: '5px',
-            textAlign: 'center',
+            color: 'white',
+            zIndex: 1000,
+            // height: '120px',
+            // width: '120px',
+            backgroundColor: '#c9171a',
+            position: 'absolute',
+            top: '100px',
+            left: '10px',
+            borderRadius: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            // maxWidth: '20vw',
+            // maxHeight: '20vw',
+            width: '95px',
+            height: '95px',
           }}
         >
-          <Typography variant="button">
-            {dateFilter.format('D MMM')}
-            <br></br>
-          </Typography>
-          <Typography variant="h4">
-            {getNumCases}
-          </Typography>
-          <Typography variant="body2" 
-          // style={{margin: '-5px 0 5px'}}
+          <CardContent
+            style={{
+              padding: '5px',
+              textAlign: 'center',
+            }}
           >
-            {getNumCases !== 1 ? 'cases' : 'case'}
-          </Typography>
-        </CardContent>
-      </Card>
-      <Slider
-        orientation="vertical"
-        style={{
-          zIndex: 1000,
-          height: '20vw',
-          maxHeight: '200px',
-          position: 'absolute',
-          bottom: '70px',
-          left: '10px',
-        }}
-        // value={clusterRadius}
-        defaultValue={40}
-        getAriaValueText={(value) => `${value / 0.8}%`}
-        valueLabelFormat={(value) => `${value / 0.8}%`}
-        aria-labelledby="discrete-slider-small-steps"
-        step={8}
-        // marks
-        min={0}
-        max={80}
-        onChange={deb(handleRadiusChange)}
-        valueLabelDisplay="auto"
-      />
-      <Slider
-        style={{
-          zIndex: 1000,
-          width: '50vw',
-          maxWidth: '400px',
-          position: 'absolute',
-          bottom: '20px',
-          left: '30px',
-        }}
-        // value={dateFilter.dayOfYear()}
-        defaultValue={moment().dayOfYear()}
-        getAriaValueText={sliderValueLabelFormat}
-        valueLabelFormat={sliderValueLabelFormat}
-        aria-labelledby="discrete-slider-small-steps"
-        step={1}
-        // marks
-        min={moment('2020-02-26').dayOfYear()}
-        max={moment().dayOfYear()}
-        onChange={deb(handleSliderChange)}
-        valueLabelDisplay="auto"
-      /></ThemeProvider>
+            <Typography variant="button">
+              {dateFilter.format('D MMM')}
+              <br></br>
+            </Typography>
+            <Typography variant="h4">{getNumCases}</Typography>
+            <Typography
+              variant="body2"
+              // style={{margin: '-5px 0 5px'}}
+            >
+              {getNumCases !== 1 ? 'cases' : 'case'}
+            </Typography>
+          </CardContent>
+        </Card>
+        : '' 
+      }
+        <Slider
+          orientation="vertical"
+          style={{
+            zIndex: 1000,
+            height: '20vw',
+            maxHeight: '200px',
+            position: 'absolute',
+            bottom: '70px',
+            left: '10px',
+          }}
+          // value={clusterRadius}
+          defaultValue={40}
+          getAriaValueText={(value) => `${value / 0.8}%`}
+          valueLabelFormat={(value) => `${value / 0.8}%`}
+          aria-labelledby="discrete-slider-small-steps"
+          step={8}
+          // marks
+          min={0}
+          max={80}
+          onChange={deb(handleRadiusChange)}
+          valueLabelDisplay="auto"
+        />
+        <Slider
+          style={{
+            zIndex: 1000,
+            width: '50vw',
+            maxWidth: '400px',
+            position: 'absolute',
+            bottom: '20px',
+            left: '30px',
+          }}
+          // value={dateFilter.dayOfYear()}
+          defaultValue={moment().dayOfYear()}
+          getAriaValueText={sliderValueLabelFormat}
+          valueLabelFormat={sliderValueLabelFormat}
+          aria-labelledby="discrete-slider-small-steps"
+          step={1}
+          // marks
+          min={moment('2020-02-26').dayOfYear()}
+          max={moment().dayOfYear()}
+          onChange={deb(handleSliderChange)}
+          valueLabelDisplay="auto"
+        />
+      </ThemeProvider>
     </div>
   );
 }
