@@ -19,7 +19,6 @@ import moment from 'moment';
 import {
   getCoordinates,
   getMarkerIcon,
-  getMarkerIcon_old,
   getFlightMarkers
 } from '../utils/mapUtils';
 import {
@@ -148,6 +147,7 @@ function CaseMap() {
             'days'
           )
         ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [dateFilter, dataReady]
   );
 
@@ -180,7 +180,8 @@ function CaseMap() {
       return Promise.resolve(markers && Promise.all(markers));
     };
     return generateMarkersFilteredByDate(dateFilter);
-  }, [dateFilter, dataReady]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dateFilter, dataReady, getCasesForCurrentDate, ]);
 
   const showClustersForCurrentDate = useCallback(
     () =>
@@ -312,26 +313,26 @@ function CaseMap() {
 
   // MAP FEATURES
   // get user location
-  const getUserLocation = () => {
-    mymap.current.locate({ setView: true, maxZoom: 12 });
-    function onLocationFound(e) {
-      var radius = e.accuracy;
+  // const getUserLocation = () => {
+  //   mymap.current.locate({ setView: true, maxZoom: 12 });
+  //   function onLocationFound(e) {
+  //     var radius = e.accuracy;
 
-      // L.circleMarker(e.latlng)
-      //   .addTo(mymap.current)
+  //     // L.circleMarker(e.latlng)
+  //     //   .addTo(mymap.current)
 
-      L.circle(e.latlng, radius).addTo(mymap.current);
-      // .bindPopup('You are within ' + radius + ' meters from this point')
-      // .openPopup();
-    }
+  //     L.circle(e.latlng, radius).addTo(mymap.current);
+  //     // .bindPopup('You are within ' + radius + ' meters from this point')
+  //     // .openPopup();
+  //   }
 
-    mymap.current.on('locationfound', onLocationFound);
-    // function onLocationError(e) {
-    //   alert(e.message);
-    // }
-    // mymap.current.on('locationerror', onLocationError);
-  };
-  // useEffect(getUserLocation, []);
+  //   mymap.current.on('locationfound', onLocationFound);
+  //   // function onLocationError(e) {
+  //   //   alert(e.message);
+  //   // }
+  //   // mymap.current.on('locationerror', onLocationError);
+  // };
+  // // useEffect(getUserLocation, []);
 
 
   // SERIES OF FUNCTIONS RULING THE SLIDERS
