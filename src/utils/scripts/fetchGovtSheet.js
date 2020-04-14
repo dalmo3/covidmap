@@ -101,9 +101,11 @@ const fetchXlsx = () =>
           const todaysFile = `../../data/MoH/daily/govtData${date.format('YYYYMMDDHHmm')}.json`;
           const CURRENT = '../../data/MoH/current.json';
           const YESTERDAY = '../../data/MoH/yesterday.json';
+          const PUBLIC = '../../../public/data/current.json';
           fs.copyFileSync(path.resolve(__dirname, CURRENT), path.resolve(__dirname, YESTERDAY));
-
+          
           saveData(data, CURRENT);
+          saveData(data, PUBLIC);
           saveData(data, todaysFile);
         });
       })
