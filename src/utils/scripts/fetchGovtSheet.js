@@ -50,7 +50,9 @@ const generateCaseObject = (row, status) => {
     departure_date: departure_date
       ? moment(departure_date).utc().format('D/MM/YYYY')
       : '',
-    arrival_date: arrival_date ? moment(arrival_date).utc().format('D/MM/YYYY') : '',
+    arrival_date: arrival_date
+      ? moment(arrival_date).utc().format('D/MM/YYYY')
+      : '',
   };
 };
 
@@ -74,19 +76,40 @@ const generateCaseArray = (array, status) =>
         : -1
     )
     .map((patient, i) => Object.assign(patient, { case_number: i + 1 }));
-fetch(
-  'https://www.health.govt.nz/system/files/documents/pages/covid-case-list-13april2020.xlsx'
-)
-  .then((d) => d.arrayBuffer())
-  .then((file) =>
-    readXlsxFile(file, { sheet: 'Confirmed' }).then((confirmed) => {
-      readXlsxFile(file, { sheet: 'Probable' }).then((probable) => {
-        const data = {
-          date: moment(confirmed[1][1]).toISOString,
-          confirmed: generateCaseArray(confirmed, 'confirmed'),
-          probable: generateCaseArray(probable, 'probable'),
-        };
-        saveData(data, '../../data/MoH/current.json');
-      });
-    })
-  );
+
+const MOH_DOMAIN = 'https://www.health.govt.nz';
+
+const MOH_PATH =
+  '/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details';
+
+const fetchXlsx = () =>
+  fetch(MOH_DOMAIN + MOH_PATH)
+    .then((res) => res.text())
+    .then((html) => html.match(/\/system.*?\.xlsx/)[0])
+    .then((path) => fetch(MOH_DOMAIN + path))
+    .then((d) => d.arrayBuffer())
+    .then((file) =>
+      readXlsxFile(file, { sheet: 'Confirmed' }).then((confirmed) => {
+        readXlsxFile(file, { sheet: 'Probable' }).then((probable) => {
+          const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
+          const data = {
+            date: date.toISOString(),
+            confirmed: generateCaseArray(confirmed, 'confirmed'),
+            probable: generateCaseArray(probable, 'probable'),
+          };
+
+          const todaysFile = `../../data/MoH/daily/govtData${date.format('YYYYMMDDHHmm')}.json`;
+          const CURRENT = '../../data/MoH/current.json';
+          const YESTERDAY = '../../data/MoH/yesterday.json';
+          fs.copyFileSync(path.resolve(__dirname, CURRENT), path.resolve(__dirname, YESTERDAY));
+
+          saveData(data, CURRENT);
+          saveData(data, todaysFile);
+        });
+      })
+    );
+
+fetchXlsx();
+// fetch(
+//   'https://www.health.govt.nz/system/files/documents/pages/covid-case-list-13april2020.xlsx'
+// )
