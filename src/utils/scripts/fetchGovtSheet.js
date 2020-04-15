@@ -82,34 +82,46 @@ const MOH_DOMAIN = 'https://www.health.govt.nz';
 const MOH_PATH =
   '/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases/covid-19-current-cases-details';
 
-const fetchXlsx = () =>
-  fetch(MOH_DOMAIN + MOH_PATH)
-    .then((res) => res.text())
-    .then((html) => html.match(/\/system.*?\.xlsx/)[0])
-    .then((path) => fetch(MOH_DOMAIN + path))
-    .then((d) => d.arrayBuffer())
-    .then((file) =>
-      readXlsxFile(file, { sheet: 'Confirmed' }).then((confirmed) => {
-        readXlsxFile(file, { sheet: 'Probable' }).then((probable) => {
-          const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
-          const data = {
-            date: date.toISOString(),
-            confirmed: generateCaseArray(confirmed, 'confirmed'),
-            probable: generateCaseArray(probable, 'probable'),
-          };
+const fetchXlsx = async () => {
+  console.log('Fetching govt page ...');
+  const govtPage = await fetch(MOH_DOMAIN + MOH_PATH);
 
-          const todaysFile = `../../data/MoH/daily/govtData${date.format('YYYYMMDDHHmm')}.json`;
-          const CURRENT = '../../data/MoH/current.json';
-          const YESTERDAY = '../../data/MoH/yesterday.json';
-          const PUBLIC = '../../../public/data/current.json';
-          fs.copyFileSync(path.resolve(__dirname, CURRENT), path.resolve(__dirname, YESTERDAY));
-          
-          saveData(data, CURRENT);
-          saveData(data, PUBLIC);
-          saveData(data, todaysFile);
-        });
-      })
-    );
+  console.log('Parsing response ...');
+  const html = await govtPage.text();
+  const xlsxPath = html.match(/\/system.*?\.xlsx/)[0];
+  
+  console.log(`Fetching xlsx ...${xlsxPath.split('/').slice(-1)}`);
+  const xlsxBinary = await fetch(MOH_DOMAIN + xlsxPath);
+  const xlsxFile = await xlsxBinary.arrayBuffer();
+
+  console.log(`Parsing xlsx ...`);
+  const confirmed = await readXlsxFile(xlsxFile, { sheet: 'Confirmed' });
+  const probable = await readXlsxFile(xlsxFile, { sheet: 'Probable' });
+
+  console.log(`Processing data ...`);
+  const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
+  const data = {
+    date: date.toISOString(),
+    confirmed: generateCaseArray(confirmed, 'confirmed'),
+    probable: generateCaseArray(probable, 'probable'),
+  };
+  
+  console.log(`Saving data ...`);
+  const todaysFile = `../../data/MoH/daily/govtData${date.format(
+    'YYYYMMDDHHmm'
+  )}.json`;
+  const CURRENT = '../../data/MoH/current.json';
+  const YESTERDAY = '../../data/MoH/yesterday.json';
+  const PUBLIC = '../../../public/data/current.json';
+  fs.copyFileSync(
+    path.resolve(__dirname, CURRENT),
+    path.resolve(__dirname, YESTERDAY)
+  );
+
+  saveData(data, CURRENT);
+  saveData(data, todaysFile);
+  saveData(data, PUBLIC);
+};
 
 fetchXlsx();
 // fetch(
