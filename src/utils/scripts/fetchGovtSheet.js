@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 const readXlsxFile = require('read-excel-file');
+const { getJsDateFromExcel } = require("excel-date-to-js");
 
 const saveData = (data, fileName) => {
   const NEW_DATA_PATH = path.resolve(__dirname, fileName);
@@ -25,6 +26,17 @@ const gender_mapper = (gender) => {
   }
 };
 
+const parseExcelDate = (excelDate, formatString) => {
+  switch (typeof excelDate) {
+    case 'number':
+      return moment(getJsDateFromExcel(excelDate)).format(formatString)
+    case 'string':
+      return moment(excelDate, 'D/MM/YYYY').format(formatString)
+    default:
+      return ''
+    } 
+}
+
 const generateCaseObject = (row, status) => {
   const [
     report_date,
@@ -39,7 +51,7 @@ const generateCaseObject = (row, status) => {
   ] = row;
   return {
     case_number: 0,
-    report_date: moment(report_date).utc().format('D/MM/YYYY'),
+    report_date: parseExcelDate(report_date, 'D/MM/YYYY'),
     status,
     dhb: dhb ? dhb.trim() : '',
     gender: gender ? gender_mapper(gender) : '',
@@ -47,12 +59,8 @@ const generateCaseObject = (row, status) => {
     overseas: overseas ? overseas.trim() : '',
     overseas_cities: overseas_cities ? overseas_cities.trim() : '',
     flight: flight ? flight.trim() : '',
-    departure_date: departure_date
-      ? moment(departure_date).utc().format('D/MM/YYYY')
-      : '',
-    arrival_date: arrival_date
-      ? moment(arrival_date).utc().format('D/MM/YYYY')
-      : '',
+    departure_date: parseExcelDate(departure_date, 'D/MM/YYYY'),
+    arrival_date: parseExcelDate(arrival_date, 'D/MM/YYYY')
   };
 };
 
@@ -99,15 +107,16 @@ const fetchXlsx = async () => {
   const probable = await readXlsxFile(xlsxFile, { sheet: 'Probable' });
 
   console.log(`Processing data ...`);
-  const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
+  // const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
+  const date = parseExcelDate(confirmed[1][0])
   const data = {
-    date: date.toISOString(),
+    date,
     confirmed: generateCaseArray(confirmed, 'confirmed'),
     probable: generateCaseArray(probable, 'probable'),
   };
   
   console.log(`Saving data ...`);
-  const todaysFile = `../../data/MoH/daily/govtData${date.format(
+  const todaysFile = `../../data/MoH/daily/govtData${moment(date).format(
     'YYYYMMDDHHmm'
   )}.json`;
   const CURRENT = '../../data/MoH/current.json';
