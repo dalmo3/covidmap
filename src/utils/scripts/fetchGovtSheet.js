@@ -36,7 +36,7 @@ const parseExcelDate = (excelDate, formatString) => {
       return ''
     } 
 }
-
+  
 const generateCaseObject = (row, status) => {
   const [
     report_date,
@@ -92,7 +92,7 @@ const MOH_PATH =
 
 const fetchXlsx = async () => {
   console.log('Fetching govt page ...');
-  const govtPage = await fetch(MOH_DOMAIN + MOH_PATH);
+  const govtPage = await fetch(MOH_DOMAIN + MOH_PATH, {refresh:'force', logToConsole: true});
 
   console.log('Parsing response ...');
   const html = await govtPage.text();
