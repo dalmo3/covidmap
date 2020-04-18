@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 const readXlsxFile = require('read-excel-file');
-const { getJsDateFromExcel } = require("excel-date-to-js");
+const { getJsDateFromExcel } = require('excel-date-to-js');
 
 const saveData = (data, fileName) => {
   const NEW_DATA_PATH = path.resolve(__dirname, fileName);
@@ -29,14 +29,16 @@ const gender_mapper = (gender) => {
 const parseExcelDate = (excelDate, formatString) => {
   switch (typeof excelDate) {
     case 'number':
-      return moment(getJsDateFromExcel(excelDate)).format(formatString)
+      return moment(getJsDateFromExcel(excelDate)).format(formatString);
     case 'string':
-      return moment(excelDate, 'D/MM/YYYY').format(formatString)
+      return moment(excelDate, 'D/MM/YYYY').format(formatString);
+    case 'object':
+      return moment(excelDate).utc().format(formatString);
     default:
-      return ''
-    } 
-}
-  
+      return '';
+  }
+};
+
 const generateCaseObject = (row, status) => {
   const [
     report_date,
@@ -60,7 +62,7 @@ const generateCaseObject = (row, status) => {
     overseas_cities: overseas_cities ? overseas_cities.trim() : '',
     flight: flight ? flight.trim() : '',
     departure_date: parseExcelDate(departure_date, 'D/MM/YYYY'),
-    arrival_date: parseExcelDate(arrival_date, 'D/MM/YYYY')
+    arrival_date: parseExcelDate(arrival_date, 'D/MM/YYYY'),
   };
 };
 
@@ -92,12 +94,15 @@ const MOH_PATH =
 
 const fetchXlsx = async () => {
   console.log('Fetching govt page ...');
-  const govtPage = await fetch(MOH_DOMAIN + MOH_PATH, {refresh:'force', logToConsole: true});
+  const govtPage = await fetch(MOH_DOMAIN + MOH_PATH, {
+    refresh: 60,
+    logToConsole: true,
+  });
 
   console.log('Parsing response ...');
   const html = await govtPage.text();
   const xlsxPath = html.match(/\/system.*?\.xlsx/)[0];
-  
+
   console.log(`Fetching xlsx ...${xlsxPath.split('/').slice(-1)}`);
   const xlsxBinary = await fetch(MOH_DOMAIN + xlsxPath);
   const xlsxFile = await xlsxBinary.arrayBuffer();
@@ -108,13 +113,13 @@ const fetchXlsx = async () => {
 
   console.log(`Processing data ...`);
   // const date = moment(confirmed[1][0], 'ha, D MMMM YYYY');
-  const date = parseExcelDate(confirmed[1][0])
+  const date = parseExcelDate(confirmed[1][0]);
   const data = {
     date,
     confirmed: generateCaseArray(confirmed, 'confirmed'),
     probable: generateCaseArray(probable, 'probable'),
   };
-  
+
   console.log(`Saving data ...`);
   const todaysFile = `../../data/MoH/daily/govtData${moment(date).format(
     'YYYYMMDDHHmm'
@@ -122,10 +127,10 @@ const fetchXlsx = async () => {
   const CURRENT = '../../data/MoH/current.json';
   const YESTERDAY = '../../data/MoH/yesterday.json';
   const PUBLIC = '../../../public/data/current.json';
-  fs.copyFileSync(
-    path.resolve(__dirname, CURRENT),
-    path.resolve(__dirname, YESTERDAY)
-  );
+  // fs.copyFileSync(
+  //   path.resolve(__dirname, CURRENT),
+  //   path.resolve(__dirname, YESTERDAY)
+  // );
 
   saveData(data, CURRENT);
   saveData(data, todaysFile);
