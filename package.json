@@ -11,7 +11,7 @@
     "leaflet.beautifymarker": "^1.1.1",
     "leaflet.markercluster": "^1.4.1",
     "lodash": "^4.17.15",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "node-open-geocoder": "^4.0.1",
     "react": "^16.13.0",
     "react-burger-menu": "^2.6.13",
